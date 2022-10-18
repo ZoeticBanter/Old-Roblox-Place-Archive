@@ -1,0 +1,323 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<token name="Controller">0</token>
+			<bool name="ControllerFlagShown">true</bool>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">RBX2</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">5</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>151.80394</X>
+					<Y>10.1536865</Y>
+					<Z>90.0689621</Z>
+					<R00>0.914691329</R00>
+					<R01>-0.0618050694</R01>
+					<R02>0.399399489</R02>
+					<R10>-3.7252903e-009</R10>
+					<R11>0.988237798</R11>
+					<R12>0.152924865</R12>
+					<R20>-0.404153198</R20>
+					<R21>-0.139879048</R21>
+					<R22>0.903932512</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>139.127563</X>
+					<Y>5.30006695</Y>
+					<Z>61.3794174</Z>
+					<R00>0.914691329</R00>
+					<R01>-0.0618050881</R01>
+					<R02>0.399399608</R02>
+					<R10>-2.48343013e-009</R10>
+					<R11>0.988237917</R11>
+					<R12>0.152924851</R12>
+					<R20>-0.404153347</R20>
+					<R21>-0.139879033</R21>
+					<R22>0.903932512</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="LocalScript" referent="RBX3">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Intro</string>
+				<string name="Source">local w = game:service(&quot;HtmlService&quot;):NewWindow()&#13;&#10;w.DocumentComplete:connect(function ()&#13;&#10;&#9;w:SetBody([==[&#13;&#10;&#9;&#9;&lt;html&gt;&#13;&#10;&#9;&#9;&#9;&lt;body&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;h4 style=&quot;font-family:arial&quot;&gt;Hey! Thanks for visiting my place!&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;Below are links to some of my sites, and some other good ones! &lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;A href=&quot;http://www.roblox.com/My/FriendInvitation.aspx?RecipientID=16483&quot; target=&quot;_blank&quot;&gt;Send me a friend request please!&lt;/A&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;A href=&quot;http://www.roblox.com/User.aspx?ID=16483&quot; target=&quot;_blank&quot;&gt;My ROBLOX&lt;/A&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;A href=&quot;http://www.freewebs.com/robloxreview&quot; target=&quot;_blank&quot;&gt;The ROBLOX Review Website&lt;/A&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;b&gt;AD:&lt;/b&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;To learn how to make a window like this, send me a message and I will sell you the script!&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;b&gt;AD:&lt;/b&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;To advertise in this window send me a message!(costs!)&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;&lt;b&gt;Thanks To:&lt;/b&gt;&lt;br&gt;&#13;&#10;&#9;&#9;&#9;&#9;Shanethe13&lt;/h4&gt;&#13;&#10;&#9;&#9;&#9;&lt;/body&gt;&#13;&#10;&#9;&#9;&lt;/html&gt;&#9;&#9;&#13;&#10;&#13;&#10;]==])&#9;&#13;&#10;&#9;w:Show()&#13;&#10;end)&#13;&#10;w:Navigate()&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX4">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Cloner</string>
+				<string name="Source">function onPlayerEntered(newPlayer)&#13;&#10;&#9;while true do&#13;&#10;&#9;&#9;if newPlayer.Character ~= nil then break end&#13;&#10;&#9;&#9;wait(1)&#13;&#10;&#9;end&#13;&#10;&#9;game.Workspace.Intro:clone().Parent = newPlayer.Character&#13;&#10;end&#13;&#10;game.Players.ChildAdded:connect(onPlayerEntered)</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">28</int>
+				<CoordinateFrame name="CFrame">
+					<X>122</X>
+					<Y>0.600000024</Y>
+					<Z>48.5</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<string name="Name">Smooth Block Model</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>88</X>
+					<Y>0.400000006</Y>
+					<Z>51</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="SpawnLocation" referent="RBX5">
+			<Properties>
+				<bool name="AllowTeamChangeOnTouch">false</bool>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">2</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>151</X>
+					<Y>1.4000001</Y>
+					<Z>58</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">2</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">2</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<string name="Name">SpawnLocation</string>
+				<bool name="Neutral">true</bool>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">2</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<int name="TeamColor">194</int>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>6</X>
+					<Y>1.20000005</Y>
+					<Z>6</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX6">
+				<Properties>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX7">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX8</External>
+	<External>RBX9</External>
+	<Item class="Players" referent="RBX10">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX11">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX12">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX13</External>
+		<External>RBX14</External>
+		<External>RBX15</External>
+		<External>RBX16</External>
+		<External>RBX17</External>
+		<External>RBX18</External>
+		<External>RBX19</External>
+		<External>RBX20</External>
+		<External>RBX21</External>
+		<External>RBX22</External>
+		<External>RBX23</External>
+		<External>RBX24</External>
+		<External>RBX25</External>
+		<External>RBX26</External>
+	</Item>
+	<Item class="Selection" referent="RBX27">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX28">
+		<Properties>
+			<Color3 name="BottomAmbientV9">4286228344</Color3>
+			<Color3 name="ClearColor">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="SpotLightV9">4292927712</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<Color3 name="TopAmbientV9">4294111738</Color3>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ControllerService" referent="RBX29">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX30</External>
+	<Item class="Timer" referent="RBX31">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="HtmlService" referent="RBX32">
+		<Properties>
+			<string name="Name">WindowService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX33</External>
+	<External>RBX34</External>
+</roblox>

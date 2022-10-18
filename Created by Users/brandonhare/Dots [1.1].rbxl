@@ -1,0 +1,1634 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Model" referent="RBX0">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+		</Properties>
+		<Item class="Part" referent="RBX1">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<bool name="Archivable">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">199</int>
+				<CoordinateFrame name="CFrame">
+					<X>8</X>
+					<Y>8</Y>
+					<Z>-8</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Part</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">0</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>16</X>
+					<Y>16</Y>
+					<Z>16</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX2">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609065</url></Content>
+					<float name="Transparency">0</float>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Script" referent="RBX3">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Script</string>
+				<ProtectedString name="Source">local players = game.Players
+local emptySong = string.rep(&quot;&#1;&quot;,37)
+
+function onPlayerAdded(player)
+&#9;if game.PlaceId ~= 0 then player:WaitForDataReady() end
+&#9;while player:findFirstChild(&quot;PlayerGui&quot;) == nil do wait(0.1) end
+
+&#9;local value = Instance.new(&quot;StringValue&quot;)
+&#9;value.Name = &quot;Song&quot;
+&#9;local val = game.PlaceId ~= 0 and player:LoadString(&quot;Song&quot;) or emptySong
+&#9;value.Value = val == &quot;&quot; and emptySong or val
+&#9;value.Parent = player
+&#9;workspace.Join.Value = player
+end
+
+function onPlayerRemoving(player)
+&#9;workspace.Leave.Value = player
+&#9;if game.PlaceId ~= 0 then player:SaveString(&quot;Song&quot;,player.Song.Value) end
+end
+
+for _,player in pairs(players:GetChildren()) do
+&#9;onPlayerAdded(player)
+end
+
+players.PlayerAdded:connect(onPlayerAdded)
+players.PlayerRemoving:connect(onPlayerRemoving)
+</ProtectedString>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX4">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<bool name="Archivable">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">199</int>
+				<CoordinateFrame name="CFrame">
+					<X>-8</X>
+					<Y>8</Y>
+					<Z>-8</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Part</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">0</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>16</X>
+					<Y>16</Y>
+					<Z>16</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX5">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609078</url></Content>
+					<float name="Transparency">0</float>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Part" referent="RBX6">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<bool name="Archivable">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">199</int>
+				<CoordinateFrame name="CFrame">
+					<X>8</X>
+					<Y>8</Y>
+					<Z>8</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Part</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">0</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>16</X>
+					<Y>16</Y>
+					<Z>16</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX7">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609100</url></Content>
+					<float name="Transparency">0</float>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Part" referent="RBX8">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<bool name="Archivable">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">199</int>
+				<CoordinateFrame name="CFrame">
+					<X>-8</X>
+					<Y>8</Y>
+					<Z>8</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Part</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">0</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>16</X>
+					<Y>16</Y>
+					<Z>16</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX9">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609113</url></Content>
+					<float name="Transparency">0</float>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="ObjectValue" referent="RBX10">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">Join</string>
+				<Ref name="Value">null</Ref>
+			</Properties>
+		</Item>
+		<Item class="ObjectValue" referent="RBX11">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">Leave</string>
+				<Ref name="Value">null</Ref>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="Model" referent="RBX12">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">CreatorId=22929 ___ PlaceId=479330</string>
+			<Ref name="PrimaryPart">null</Ref>
+		</Properties>
+		<Item class="Model" referent="RBX0">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Workspace</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+			<Item class="Part" referent="RBX1">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<bool name="Archivable">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">199</int>
+					<CoordinateFrame name="CFrame">
+						<X>8</X>
+						<Y>8</Y>
+						<Z>-8</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">0</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>16</X>
+						<Y>16</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX2">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609065</url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX3">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">local players = game.Players
+local emptySong = string.rep(&quot;&#1;&quot;,37)
+
+function onPlayerAdded(player)
+&#9;if game.PlaceId ~= 0 then player:WaitForDataReady() end
+&#9;while player:findFirstChild(&quot;PlayerGui&quot;) == nil do wait(0.1) end
+
+&#9;local value = Instance.new(&quot;StringValue&quot;)
+&#9;value.Name = &quot;Song&quot;
+&#9;local val = game.PlaceId ~= 0 and player:LoadString(&quot;Song&quot;) or emptySong
+&#9;value.Value = val == &quot;&quot; and emptySong or val
+&#9;value.Parent = player
+&#9;workspace.Join.Value = player
+end
+
+function onPlayerRemoving(player)
+&#9;workspace.Leave.Value = player
+&#9;if game.PlaceId ~= 0 then player:SaveString(&quot;Song&quot;,player.Song.Value) end
+end
+
+for _,player in pairs(players:GetChildren()) do
+&#9;onPlayerAdded(player)
+end
+
+players.PlayerAdded:connect(onPlayerAdded)
+players.PlayerRemoving:connect(onPlayerRemoving)
+</ProtectedString>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX4">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<bool name="Archivable">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">199</int>
+					<CoordinateFrame name="CFrame">
+						<X>-8</X>
+						<Y>8</Y>
+						<Z>-8</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">0</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>16</X>
+						<Y>16</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX5">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609078</url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX6">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<bool name="Archivable">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">199</int>
+					<CoordinateFrame name="CFrame">
+						<X>8</X>
+						<Y>8</Y>
+						<Z>8</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">0</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>16</X>
+						<Y>16</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX7">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609100</url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX8">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<bool name="Archivable">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">199</int>
+					<CoordinateFrame name="CFrame">
+						<X>-8</X>
+						<Y>8</Y>
+						<Z>8</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="formFactorRaw">0</token>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>16</X>
+						<Y>16</Y>
+						<Z>16</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX9">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=49609113</url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="ObjectValue" referent="RBX10">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<string name="Name">Join</string>
+					<Ref name="Value">null</Ref>
+				</Properties>
+			</Item>
+			<Item class="ObjectValue" referent="RBX11">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<string name="Name">Leave</string>
+					<Ref name="Value">null</Ref>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Model" referent="RBX13">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">StarterPack</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX14">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Lighting</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+			<Item class="Sky" referent="RBX15">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="CelestialBodiesShown">true</bool>
+					<string name="Name">Sky</string>
+					<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?id=43104174</url></Content>
+					<int name="StarCount">0</int>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Model" referent="RBX16">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">StarterGui</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+			<Item class="ScreenGui" referent="RBX17">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<string name="Name">ScreenGui</string>
+				</Properties>
+				<Item class="LocalScript" referent="RBX18">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">LocalScript</string>
+						<ProtectedString name="Source">local player = script.Parent.Parent.Parent
+
+while player.Character == nil do wait(0.1) end
+
+local char = player.Character
+player.Character = nil
+char:remove()
+char = nil
+
+while player:findFirstChild(&quot;Song&quot;) == nil do wait(0.1) end
+
+local currentCamera = workspace.CurrentCamera
+local world = script.Parent.World
+local players = game.Players
+local square = world.Square
+local area = square.Area
+local menu = square.Menu
+local menuButton = square.MenuButton.ImageButton
+local blocker = world.Blocker
+
+local playerList = {}
+local menuOpen = false
+local playing = false
+local pitches = {33,30,28,26,23,21,18,16,14,11,9,6,4,2,-1,-3}
+local fonts = {8,9,10,11,12,14,18,24,36,48}
+local textLabels = {menu.PlayerTitle}
+
+local currentPlayer = player
+local songValue = player.Song
+local songValues = {}
+local dots = {}
+local logoSong = [[&#1;&#5;&#1;&#23;&#1;U&#1;?&#3;&#1;&#9;&#1;/&#1;)&#2;a
+A!&#1; &#2;&#9;&#5;&#1;!&#1;&#19;&#2;U&#5;&#17;&quot;&#1;&#1;&#2;]]
+local emptySong = string.rep(&quot;&#1;&quot;,37)
+local editable = false
+
+local mouseMode = 0
+
+local note = &quot;rbxasset://Sounds/electronicpingshort.wav&quot;
+local song = {}
+
+game.Soundscape.AmbientReverb = &quot;Bathroom&quot;
+
+function correctSize(property)
+&#9;if property ~= &quot;AbsoluteSize&quot; and property ~= nil then return end
+&#9;if world.AbsoluteSize.x&gt;world.AbsoluteSize.y then
+&#9;&#9;square.SizeConstraint = &quot;RelativeYY&quot;
+&#9;&#9;square.Position = UDim2.new(0.5,-square.AbsoluteSize.x/2,0,0)
+&#9;elseif world.AbsoluteSize.x&lt;world.AbsoluteSize.y then
+&#9;&#9;square.SizeConstraint = &quot;RelativeXX&quot;
+&#9;&#9;square.Position = UDim2.new(0,0,0.5,-square.AbsoluteSize.y/2)
+&#9;elseif world.AbsoluteSize.x == world.AbsoluteSize.y then
+&#9;&#9;square.SizeConstraint = &quot;RelativeXY&quot;
+&#9;&#9;square.Position = UDim2.new(0,0,0,0)
+&#9;end
+&#9;correctFont()
+end
+
+function save()
+&#9;local bigOlString = &quot;&quot;
+&#9;local compiledString = &quot;&quot;
+&#9;for x = 1,16 do
+&#9;&#9;for y = 1,16 do
+&#9;&#9;&#9;bigOlString = bigOlString..(song[x][y] and 1 or 0)
+&#9;&#9;end
+&#9;end
+&#9;for i = 1, 259,7 do
+&#9;&#9;compiledString = compiledString..string.char(tonumber(string.reverse(string.sub(bigOlString,i,i+6)),2)+1)
+&#9;end
+&#9;return compiledString
+end
+
+function load(compiledString)
+&#9;if #compiledString~= 37 then compiledString = emptySong end
+&#9;local bigOlString = &quot;&quot;
+&#9;for x = 1, 37 do
+&#9;&#9;local temp = &quot;&quot;
+&#9;&#9;local char = string.byte(string.sub(compiledString,x,x))-1
+&#9;&#9;for y = 6,0,-1 do
+&#9;&#9;&#9;local thing = char-2^y
+&#9;&#9;&#9;if thing&gt;=0 then char = thing end
+&#9;&#9;&#9;temp = temp..(thing&gt;=0 and 1 or 0)
+&#9;&#9;end
+&#9;&#9;bigOlString = bigOlString..string.reverse(temp)
+&#9;end
+&#9;for x = 1, 16 do
+&#9;&#9;for y = 1,16 do
+&#9;&#9;&#9;local bool = string.sub(bigOlString,(x-1)*16+y,(x-1)*16+y) == &quot;1&quot;
+&#9;&#9;&#9;song[x][y] = bool
+&#9;&#9;&#9;dots[x][y].BackgroundColor3 = bool and Color3.new(.75,.75,.75) or Color3.new(.25,.25,.25)
+&#9;&#9;end
+&#9;end
+end
+
+function playNote(pitch)
+&#9;local sound = Instance.new(&quot;Sound&quot;)
+&#9;sound.SoundId = note
+&#9;sound.Volume = 0.25
+&#9;sound.Pitch = 2^(pitches[pitch]/12)*.57
+&#9;sound.Parent = currentCamera
+&#9;sound.PlayOnRemove = true
+&#9;delay(0,function() wait() sound:remove() end)
+end
+
+function flash(x,y,m,override)
+&#9;if not override then dots[x][y].BackgroundTransparency = m end
+&#9;wait(0.1)
+&#9;for i = math.max(x-1,1), math.min(x+1,16) do
+&#9;&#9;for o = math.max(y-1,1),math.min(y+1,16) do
+&#9;&#9;&#9;if not (x == i and o == y) and (dots[i][o].BackgroundTransparency==0 or override) and dots[i][o].BackgroundColor3 ~= Color3.new(.75,.75,.75) then
+&#9;&#9;&#9;&#9;dots[i][o].BackgroundTransparency = m-0.1
+&#9;&#9;&#9;&#9;if dots[i][o].BackgroundTransparency &gt;0 then delay(0.1,function() flash(i,o,m-0.1) end) else dots[i][o].BackgroundTransparency = 0 end
+&#9;&#9;&#9;&#9;delay(0,function() for a = m,0,-.1 do dots[i][o].BackgroundTransparency = a wait(0.1) end dots[i][o].BackgroundTransparency = 0 end)
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;end
+&#9;if not override then
+&#9;&#9;for a = m,0,-.1 do dots[x][y].BackgroundTransparency = a wait(0.1) end
+&#9;&#9;dots[x][y].BackgroundTransparency = 0
+&#9;end
+end
+
+function fade()
+&#9;while true do
+&#9;&#9;for i = 0,90 do
+&#9;&#9;&#9;local colour = Color3.new(math.sin(math.rad(i))/2,0,math.cos(math.rad(i))/2)
+&#9;&#9;&#9;if menuOpen then menu.BackgroundColor3 = colour else area.BackgroundColor3 = colour end
+&#9;&#9;&#9;menuButton.Parent.BackgroundColor3 = colour
+&#9;&#9;&#9;wait(0.1)
+&#9;&#9;end
+&#9;&#9;for i = 0,90 do
+&#9;&#9;&#9;local colour = Color3.new(math.cos(math.rad(i))/2,math.sin(math.rad(i))/2,0)
+&#9;&#9;&#9;if menuOpen then menu.BackgroundColor3 = colour else area.BackgroundColor3 = colour end
+&#9;&#9;&#9;menuButton.Parent.BackgroundColor3 = colour
+&#9;&#9;&#9;wait(0.1)
+&#9;&#9;end
+&#9;&#9;for i = 0,90 do
+&#9;&#9;&#9;local colour = Color3.new(0,math.cos(math.rad(i))/2,math.sin(math.rad(i))/2)
+&#9;&#9;&#9;if menuOpen then menu.BackgroundColor3 = colour else area.BackgroundColor3 = colour end
+&#9;&#9;&#9;menuButton.Parent.BackgroundColor3 = colour
+&#9;&#9;&#9;wait(0.1)
+&#9;&#9;end
+&#9;end
+end
+
+function play(once)
+&#9;playing = true
+&#9;while true do
+&#9;&#9;while playing do
+&#9;&#9;&#9;for x = 1, 16 do
+&#9;&#9;&#9;&#9;if not playing then break end
+&#9;&#9;&#9;&#9;for y = 1, 16 do
+&#9;&#9;&#9;&#9;&#9;if song[x][y] then
+&#9;&#9;&#9;&#9;&#9;&#9;playNote(y)
+&#9;&#9;&#9;&#9;&#9;&#9;delay(0,function() flash(x,y,0.8,true) end)
+&#9;&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;&#9;wait(0.1)
+&#9;&#9;&#9;end
+&#9;&#9;&#9;if once then playing = false return end
+&#9;&#9;&#9;correctSize()
+&#9;&#9;end
+&#9;&#9;wait(1)
+&#9;end
+end
+
+function arrangeButtons()
+&#9;num = 0
+&#9;for player,button in pairs(playerList) do
+&#9;&#9;button.Position = UDim2.new(0,0,num/16,0)
+&#9;&#9;num = num+1
+&#9;end
+end
+
+function onClickPlayerButton(selectedPlayer,button)
+&#9;for _,textLabel in pairs(textLabels) do
+&#9;&#9;textLabel.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
+&#9;end
+&#9;button.BackgroundColor3 = Color3.new(0.75,0.75,0.75)
+&#9;editable = player == selectedPlayer
+&#9;songValue = selectedPlayer.Song
+&#9;load(songValue.Value)
+&#9;currentPlayer = selectedPlayer
+&#9;toggleMenu(false)
+end
+
+function onSongValueChanged(player)
+&#9;if currentPlayer ~= player then return end
+&#9;load(songValue.Value)
+end
+
+function onPlayerAdded(newPlayer)
+&#9;if playerList[newPlayer.Name] ~= nil and newPlayer.Name ~= &quot;Player&quot; then return end
+&#9;while newPlayer:findFirstChild(&quot;Song&quot;) == nil do wait(0.1) end
+&#9;local button = Instance.new(&quot;TextButton&quot;)
+&#9;button.Text = newPlayer.Name
+&#9;button.BackgroundColor3 = player == newPlayer and Color3.new(0.75,0.75,0.75) or Color3.new(0.5,0.5,0.5)
+&#9;button.BorderColor3 = Color3.new(0,0,0)
+&#9;button.TextColor3 = Color3.new(0,0,0)
+&#9;button.ZIndex = 2
+&#9;button.Size = UDim2.new(1,0,1/16,0)
+&#9;playerList[newPlayer.Name] = button
+&#9;table.insert(textLabels,button)
+&#9;button.Parent = menu.Box
+&#9;button.MouseButton1Click:connect(function() onClickPlayerButton(newPlayer,button) end)
+&#9;newPlayer.Song.Changed:connect(function() onSongValueChanged(newPlayer) end)
+&#9;correctFont()
+&#9;arrangeButtons()
+end
+
+function onPlayerRemoving(leavingPlayer)
+&#9;if playerList[leavingPlayer.Name] ~= nil then playerList[leavingPlayer.Name]:remove() end
+&#9;playerList[leavingPlayer.Name] = nil
+&#9;if songValue == leavingPlayer.Song then
+&#9;&#9;songValue = player.SongValue
+&#9;&#9;load(songValue.Value)
+&#9;end
+&#9;arrangeButtons()
+end
+
+function toggleMenu(open)
+&#9;menu.Visible = open
+&#9;area.Visible = not open
+&#9;menuOpen = open
+&#9;playing = not open
+end
+
+function correctFont()
+&#9;for _,label in pairs(textLabels) do
+&#9;&#9;local bounds = label.TextBounds
+&#9;&#9;if bounds.x&gt;label.AbsoluteSize.x or bounds.y&gt;label.AbsoluteSize.y then
+&#9;&#9;&#9;for i = #fonts,1,-1 do
+&#9;&#9;&#9;&#9;label.FontSize = &quot;Size&quot;..fonts[i]
+&#9;&#9;&#9;&#9;bounds = label.TextBounds
+&#9;&#9;&#9;&#9;if bounds.x &lt;= label.AbsoluteSize.x and bounds.y &lt;= label.AbsoluteSize.y then break end
+&#9;&#9;&#9;end
+&#9;&#9;elseif bounds.x&lt; label.AbsoluteSize.x or bounds.y&lt; label.AbsoluteSize.y then
+&#9;&#9;&#9;local num = 1
+&#9;&#9;&#9;for i = 1,#fonts do
+&#9;&#9;&#9;&#9;label.FontSize = &quot;Size&quot;..fonts[i]
+&#9;&#9;&#9;&#9;bounds = label.TextBounds
+&#9;&#9;&#9;&#9;if bounds.x&gt;label.AbsoluteSize.x or bounds.y &gt; label.AbsoluteSize.y then label.FontSize = &quot;Size&quot;..fonts[num] break end
+&#9;&#9;&#9;&#9;num = i
+&#9;&#9;&#9;end
+&#9;&#9;end
+&#9;end
+end
+
+function fadeBlocker(out)
+&#9;local a,b = out and 92 or 2, out and 180 or 90
+&#9;for i = a,b,2 do
+&#9;&#9;blocker.BackgroundTransparency = math.sin(math.rad(i))
+&#9;&#9;wait()
+&#9;end
+end
+
+function setup()
+&#9;correctSize()
+&#9;wait(3)
+&#9;fadeBlocker()
+&#9;wait(1)
+&#9;fadeBlocker(true)
+&#9;wait(2)
+
+&#9;square.Lua:remove()
+&#9;square.brandonhare.Visible = true
+&#9;blocker.Visible = false
+
+&#9;square.brandonhare:TweenSizeAndPosition(UDim2.new(1,0,1,0),UDim2.new(0,0,0,0),&quot;Out&quot;,&quot;Bounce&quot;,1.5)
+&#9;wait(3)
+&#9;square.brandonhare:TweenSizeAndPosition(UDim2.new(0,1,0,1),UDim2.new(0.5,0,0.5,0),&quot;Out&quot;,&quot;Linear&quot;,0.5)
+
+&#9;wait(0.5)
+&#9;blocker.Visible = true
+&#9;square.brandonhare:remove()
+&#9;wait(1)
+
+&#9;for x = 0,16 do
+&#9;&#9;local bar = Instance.new(&quot;Frame&quot;)
+&#9;&#9;bar.Size = UDim2.new(1/81,0,1,0)
+&#9;&#9;bar.Position = UDim2.new(5*x/81,0,0,0)
+&#9;&#9;bar.BackgroundColor3 = Color3.new(0,0,0)
+&#9;&#9;bar.ZIndex = 3
+&#9;&#9;bar.BorderSizePixel = 0
+&#9;&#9;bar.Parent = area
+&#9;&#9;for y = 0,16 do
+&#9;&#9;&#9;local bar = Instance.new(&quot;Frame&quot;)
+&#9;&#9;&#9;bar.Size = UDim2.new(1,0,1/81,0)
+&#9;&#9;&#9;bar.Position = UDim2.new(0,0,5*y/81,0)
+&#9;&#9;&#9;bar.BackgroundColor3 = Color3.new(0,0,0)
+&#9;&#9;&#9;bar.ZIndex = 3
+&#9;&#9;&#9;bar.BorderSizePixel = 0
+&#9;&#9;&#9;bar.Parent = area
+&#9;&#9;end
+&#9;end
+
+&#9;for x = 1, 16 do
+&#9;&#9;song[x] = {}
+&#9;&#9;dots[x] = {}
+&#9;&#9;for y = 1, 16 do
+&#9;&#9;&#9;song[x][y] = false
+&#9;&#9;&#9;local button = Instance.new(&quot;ImageButton&quot;)
+&#9;&#9;&#9;button.BackgroundColor3 = Color3.new(.25,.25,.25)
+&#9;&#9;&#9;button.BorderSizePixel = 0
+&#9;&#9;&#9;button.AutoButtonColor = false
+&#9;&#9;&#9;button.ZIndex = 3
+&#9;&#9;&#9;button.Size = UDim2.new(4/81,0,4/81,0)
+&#9;&#9;&#9;button.Position = UDim2.new((5*x-4)/81,0,(5*y-4)/81,0)
+&#9;&#9;&#9;button.Parent = area
+&#9;&#9;&#9;table.insert(dots[x],button)
+&#9;&#9;&#9;button.MouseButton1Down:connect(function()
+&#9;&#9;&#9;&#9;if editable then
+&#9;&#9;&#9;&#9;&#9;song[x][y] = not song[x][y]
+&#9;&#9;&#9;&#9;&#9;mouseMode = song[x][y] and 1 or 2
+&#9;&#9;&#9;&#9;&#9;button.BackgroundColor3 = song[x][y] and Color3.new(.75,.75,.75) or Color3.new(.25,.25,.25)
+&#9;&#9;&#9;&#9;&#9;songValue.Value = save()
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;end)
+&#9;&#9;&#9;button.MouseButton1Up:connect(function() mouseMode = 0 end)
+&#9;&#9;&#9;button.MouseEnter:connect(function()
+&#9;&#9;&#9;&#9;if mouseMode ~= 0 and editable then
+&#9;&#9;&#9;&#9;&#9;song[x][y] = mouseMode == 1
+&#9;&#9;&#9;&#9;&#9;button.BackgroundColor3 = mouseMode==1 and Color3.new(.75,.75,.75) or Color3.new(.25,.25,.25)
+&#9;&#9;&#9;&#9;&#9;songValue.Value = save()
+&#9;&#9;&#9;&#9;end
+&#9;&#9;&#9;end)
+&#9;&#9;end
+&#9;end
+
+&#9;load(logoSong)
+&#9;area.Visible = true
+&#9;wait(1)
+&#9;fadeBlocker()
+&#9;wait(1)
+&#9;play(true)
+&#9;wait(1)
+&#9;fadeBlocker(true)
+
+
+&#9;load(songValue.Value)
+&#9;menuButton.Parent.Visible = true
+&#9;wait(1)
+&#9;correctSize()
+&#9;fadeBlocker()
+&#9;blocker:remove()
+&#9;blocker = nil
+&#9;fadeBlocker = nil
+&#9;editable = true
+end
+
+world.Changed:connect(correctSize)
+
+setup()
+area.MouseButton1Down:connect(function() mouseMode = 1 end)
+area.MouseButton1Up:connect(function() mouseMode = 0 end)
+menuButton.MouseButton1Click:connect(function() toggleMenu(not menuOpen) end)
+menuButton.MouseEnter:connect(function() menuButton.Parent:TweenPosition(UDim2.new(-.2,0,.125,0),&quot;Out&quot;,&quot;Sine&quot;,1,true) end)
+menuButton.MouseLeave:connect(function() menuButton.Parent:TweenPosition(UDim2.new(-.1,0,.125,0),&quot;Out&quot;,&quot;Sine&quot;,1,true) end)
+
+for _,player in pairs(players:GetChildren()) do onPlayerAdded(player) end
+workspace.Join.Changed:connect(function() onPlayerAdded(workspace.Join.Value) end)
+workspace.Leave.Changed:connect(function() onPlayerRemoving(workspace.Leave.Value) end)
+
+delay(0,fade)
+play()</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="Frame" referent="RBX19">
+					<Properties>
+						<bool name="Active">false</bool>
+						<bool name="Archivable">true</bool>
+						<Color3 name="BackgroundColor3">4278190080</Color3>
+						<float name="BackgroundTransparency">0</float>
+						<Color3 name="BorderColor3">4278190080</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<string name="Name">World</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>0</YS>
+							<YO>0</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Frame" referent="RBX20">
+						<Properties>
+							<bool name="Active">false</bool>
+							<bool name="Archivable">true</bool>
+							<Color3 name="BackgroundColor3">4278190080</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4278190080</Color3>
+							<int name="BorderSizePixel">0</int>
+							<bool name="Draggable">false</bool>
+							<string name="Name">Square</string>
+							<UDim2 name="Position">
+								<XS>0.5</XS>
+								<XO>-340</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">2</token>
+							<token name="Style">0</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="ImageLabel" referent="RBX21">
+							<Properties>
+								<bool name="Active">false</bool>
+								<bool name="Archivable">true</bool>
+								<Color3 name="BackgroundColor3">4288914085</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="Draggable">false</bool>
+								<Content name="Image"><url>http://www.roblox.com/asset/?id=28628178</url></Content>
+								<string name="Name">Lua</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>1</YS>
+									<YO>0</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">2</int>
+							</Properties>
+						</Item>
+						<Item class="ImageButton" referent="RBX22">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="Archivable">true</bool>
+								<bool name="AutoButtonColor">false</bool>
+								<Color3 name="BackgroundColor3">4278190208</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">0</int>
+								<bool name="Draggable">false</bool>
+								<Content name="Image"><null></null></Content>
+								<bool name="Modal">false</bool>
+								<string name="Name">Area</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>1</YS>
+									<YO>0</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">0</token>
+								<bool name="Visible">false</bool>
+								<int name="ZIndex">2</int>
+							</Properties>
+						</Item>
+						<Item class="ImageLabel" referent="RBX23">
+							<Properties>
+								<bool name="Active">false</bool>
+								<bool name="Archivable">true</bool>
+								<Color3 name="BackgroundColor3">4288914085</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="Draggable">false</bool>
+								<Content name="Image"><url>http://www.roblox.com/thumbs/avatar.ashx?x=512&amp;y=512&amp;format=png&amp;username=brandonhare</url></Content>
+								<string name="Name">brandonhare</string>
+								<UDim2 name="Position">
+									<XS>0.5</XS>
+									<XO>0</XO>
+									<YS>0.5</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>1</XO>
+									<YS>0</YS>
+									<YO>1</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<bool name="Visible">false</bool>
+								<int name="ZIndex">2</int>
+							</Properties>
+						</Item>
+						<Item class="Frame" referent="RBX24">
+							<Properties>
+								<bool name="Active">false</bool>
+								<bool name="Archivable">true</bool>
+								<Color3 name="BackgroundColor3">4278190208</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">0</int>
+								<bool name="Draggable">false</bool>
+								<string name="Name">Menu</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>1</YS>
+									<YO>0</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">0</token>
+								<bool name="Visible">false</bool>
+								<int name="ZIndex">2</int>
+							</Properties>
+							<Item class="Frame" referent="RBX25">
+								<Properties>
+									<bool name="Active">false</bool>
+									<bool name="Archivable">true</bool>
+									<Color3 name="BackgroundColor3">4282400832</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4278190080</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="Draggable">false</bool>
+									<string name="Name">Box</string>
+									<UDim2 name="Position">
+										<XS>0.0500000007</XS>
+										<XO>0</XO>
+										<YS>0.100000001</YS>
+										<YO>0</YO>
+									</UDim2>
+									<UDim2 name="Size">
+										<XS>0.899999976</XS>
+										<XO>0</XO>
+										<YS>0.850000024</YS>
+										<YO>0</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">0</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">2</int>
+								</Properties>
+							</Item>
+							<Item class="TextLabel" referent="RBX26">
+								<Properties>
+									<bool name="Active">false</bool>
+									<bool name="Archivable">true</bool>
+									<Color3 name="BackgroundColor3">4294967295</Color3>
+									<float name="BackgroundTransparency">0</float>
+									<Color3 name="BorderColor3">4278190080</Color3>
+									<int name="BorderSizePixel">1</int>
+									<bool name="Draggable">false</bool>
+									<token name="Font">1</token>
+									<token name="FontSize">8</token>
+									<string name="Name">PlayerTitle</string>
+									<UDim2 name="Position">
+										<XS>0.0500000007</XS>
+										<XO>0</XO>
+										<YS>0.0500000007</YS>
+										<YO>0</YO>
+									</UDim2>
+									<UDim2 name="Size">
+										<XS>0.899999976</XS>
+										<XO>0</XO>
+										<YS>0.0500000007</YS>
+										<YO>0</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<string name="Text">See people&apos;s tunes!</string>
+									<Color3 name="TextColor3">4278190080</Color3>
+									<float name="TextTransparency">0</float>
+									<bool name="TextWrap">false</bool>
+									<token name="TextXAlignment">2</token>
+									<token name="TextYAlignment">1</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">2</int>
+								</Properties>
+							</Item>
+						</Item>
+						<Item class="Frame" referent="RBX27">
+							<Properties>
+								<bool name="Active">false</bool>
+								<bool name="Archivable">true</bool>
+								<Color3 name="BackgroundColor3">4278190208</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4278190080</Color3>
+								<int name="BorderSizePixel">0</int>
+								<bool name="Draggable">false</bool>
+								<string name="Name">MenuButton</string>
+								<UDim2 name="Position">
+									<XS>-0.100000001</XS>
+									<XO>0</XO>
+									<YS>0.125</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>0.200000003</XS>
+									<XO>0</XO>
+									<YS>0.75</YS>
+									<YO>0</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<token name="Style">0</token>
+								<bool name="Visible">false</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+							<Item class="ImageButton" referent="RBX28">
+								<Properties>
+									<bool name="Active">true</bool>
+									<bool name="Archivable">true</bool>
+									<bool name="AutoButtonColor">false</bool>
+									<Color3 name="BackgroundColor3">4288914085</Color3>
+									<float name="BackgroundTransparency">1</float>
+									<Color3 name="BorderColor3">4278190080</Color3>
+									<int name="BorderSizePixel">0</int>
+									<bool name="Draggable">false</bool>
+									<Content name="Image"><url>http://www.roblox.com/asset/?id=48124174</url></Content>
+									<bool name="Modal">false</bool>
+									<string name="Name">ImageButton</string>
+									<UDim2 name="Position">
+										<XS>0</XS>
+										<XO>-3</XO>
+										<YS>0</YS>
+										<YO>-2</YO>
+									</UDim2>
+									<bool name="Selected">false</bool>
+									<UDim2 name="Size">
+										<XS>1</XS>
+										<XO>3</XO>
+										<YS>1</YS>
+										<YO>2</YO>
+									</UDim2>
+									<token name="SizeConstraint">0</token>
+									<token name="Style">0</token>
+									<bool name="Visible">true</bool>
+									<int name="ZIndex">1</int>
+								</Properties>
+							</Item>
+						</Item>
+					</Item>
+					<Item class="Frame" referent="RBX29">
+						<Properties>
+							<bool name="Active">true</bool>
+							<bool name="Archivable">true</bool>
+							<Color3 name="BackgroundColor3">4278190080</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4278190080</Color3>
+							<int name="BorderSizePixel">1</int>
+							<bool name="Draggable">false</bool>
+							<string name="Name">Blocker</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<token name="Style">0</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">4</int>
+						</Properties>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Model" referent="RBX30">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">SoundService</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX31">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Model</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+		</Item>
+	</Item>
+</roblox>

@@ -1,0 +1,900 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<token name="Controller">0</token>
+			<bool name="ControllerFlagShown">true</bool>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">RBX2</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX3">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>-5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">28</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0.200000048</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<string name="Name">Base</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">2</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>512</X>
+					<Y>0.400000006</Y>
+					<Z>512</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX4">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>-20.9717751</X>
+					<Y>44.6785736</Y>
+					<Z>62.3737679</Z>
+					<R00>0.999970376</R00>
+					<R01>-0.00416298257</R01>
+					<R02>0.00647163298</R02>
+					<R10>4.65661287e-010</R10>
+					<R11>0.841022015</R11>
+					<R12>0.541000903</R12>
+					<R20>-0.00769496337</R20>
+					<R21>-0.540984929</R21>
+					<R22>0.8409971</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-21.1012077</X>
+					<Y>33.8585472</Y>
+					<Z>45.5538216</Z>
+					<R00>0.999970376</R00>
+					<R01>-0.00416299049</R01>
+					<R02>0.00647164322</R02>
+					<R10>-1.67997824e-010</R10>
+					<R11>0.841021895</R11>
+					<R12>0.541001141</R12>
+					<R20>-0.00769497547</R20>
+					<R21>-0.540985107</R21>
+					<R22>0.840996981</R22>
+				</CoordinateFrame>
+				<string name="Name">Instance</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX5">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>-5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX6">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>46.6932411</X>
+					<Y>27.2573891</Y>
+					<Z>19.1226387</Z>
+					<R00>-0.0881567374</R00>
+					<R01>-0.329165548</R01>
+					<R02>0.940148115</R02>
+					<R10>0</R10>
+					<R11>0.943822742</R11>
+					<R12>0.330452144</R12>
+					<R20>-0.996106625</R20>
+					<R21>0.0291315764</R21>
+					<R22>-0.0832043365</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>27.8902588</X>
+					<Y>20.6483402</Y>
+					<Z>20.786726</Z>
+					<R00>-0.0881567374</R00>
+					<R01>-0.329165637</R01>
+					<R02>0.940148056</R02>
+					<R10>-1.29815747e-009</R10>
+					<R11>0.943822742</R11>
+					<R12>0.330452204</R12>
+					<R20>-0.996106625</R20>
+					<R21>0.0291315876</R21>
+					<R22>-0.083204329</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX7">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>42.8459206</X>
+					<Y>27.2328072</Y>
+					<Z>7.84268665</Z>
+					<R00>-0.294254959</R00>
+					<R01>-0.474843025</R01>
+					<R02>0.829420567</R02>
+					<R10>1.49011612e-008</R10>
+					<R11>0.867842376</R11>
+					<R12>0.496839643</R12>
+					<R20>-0.9557271</R20>
+					<R21>0.146197453</R21>
+					<R22>-0.255366921</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>26.2575092</X>
+					<Y>17.2960148</Y>
+					<Z>12.9500256</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX8">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>-5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX9">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>32.733902</X>
+					<Y>28.408886</Y>
+					<Z>14.9972267</Z>
+					<R00>-0.179997116</R00>
+					<R01>-0.560046971</R01>
+					<R02>0.808670938</R02>
+					<R10>0</R10>
+					<R11>0.822098017</R11>
+					<R12>0.569346011</R12>
+					<R20>-0.983667314</R20>
+					<R21>0.102480531</R21>
+					<R22>-0.147975296</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>16.5604839</X>
+					<Y>17.021965</Y>
+					<Z>17.956728</Z>
+					<R00>-0.179996923</R00>
+					<R01>-0.56004703</R01>
+					<R02>0.808670819</R02>
+					<R10>-5.01891373e-009</R10>
+					<R11>0.822098076</R11>
+					<R12>0.569346011</R12>
+					<R20>-0.983667254</R20>
+					<R21>0.102480523</R21>
+					<R22>-0.147975102</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX10">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>45.251667</X>
+					<Y>28.1342278</Y>
+					<Z>11.67134</Z>
+					<R00>-0.025108695</R00>
+					<R01>-0.451573431</R01>
+					<R02>0.89188081</R02>
+					<R10>-1.49011612e-008</R10>
+					<R11>0.892161906</R11>
+					<R12>0.451715827</R12>
+					<R20>-0.99968487</R20>
+					<R21>0.0113419145</R21>
+					<R22>-0.022401046</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>27.4139977</X>
+					<Y>19.0998859</Y>
+					<Z>12.119359</Z>
+					<R00>-0.0251085274</R00>
+					<R01>-0.451573402</R01>
+					<R02>0.891880691</R02>
+					<R10>2.40125919e-010</R10>
+					<R11>0.892161965</R11>
+					<R12>0.451715797</R12>
+					<R20>-0.999684751</R20>
+					<R21>0.0113419183</R21>
+					<R22>-0.0224008728</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX11">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>28.950325</X>
+					<Y>34.1981201</Y>
+					<Z>10.9690275</Z>
+					<R00>0.0061916858</R00>
+					<R01>-0.572090507</R01>
+					<R02>0.820167243</R02>
+					<R10>2.98023224e-008</R10>
+					<R11>0.82018286</R11>
+					<R12>0.572101474</R12>
+					<R20>-0.999980867</R20>
+					<R21>-0.00354227424</R21>
+					<R22>0.00507831573</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>12.5469713</X>
+					<Y>22.7560844</Y>
+					<Z>10.8674612</Z>
+					<R00>0.0061916844</R00>
+					<R01>-0.572090447</R01>
+					<R02>0.820167243</R02>
+					<R10>1.50766788e-010</R10>
+					<R11>0.820182979</R11>
+					<R12>0.572101414</R12>
+					<R20>-0.999980867</R20>
+					<R21>-0.00354227121</R21>
+					<R22>0.00507831387</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX12">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>-5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX13">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>73.1836395</X>
+					<Y>41.7838173</Y>
+					<Z>37.7339211</Z>
+					<R00>0.2267178</R00>
+					<R01>-0.409172297</R01>
+					<R02>0.883842349</R02>
+					<R10>-2.98023224e-008</R10>
+					<R11>0.907472372</R11>
+					<R12>0.420111805</R12>
+					<R20>-0.973960638</R20>
+					<R21>-0.0952468812</R21>
+					<R22>0.205740124</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>30.0272789</X>
+					<Y>21.270546</Y>
+					<Z>27.6880035</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX14">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>15.8840151</X>
+					<Y>19.918375</Y>
+					<Z>41.9177017</Z>
+					<R00>0.821149528</R00>
+					<R01>-0.221159279</R01>
+					<R02>0.526119828</R02>
+					<R10>-1.49011612e-008</R10>
+					<R11>0.921863854</R11>
+					<R12>0.387513906</R12>
+					<R20>-0.570713162</R20>
+					<R21>-0.318206877</R21>
+					<R22>0.756988049</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>5.36161613</X>
+					<Y>12.1680965</Y>
+					<Z>26.7779408</Z>
+					<R00>0.821149528</R00>
+					<R01>-0.221159294</R01>
+					<R02>0.526119888</R02>
+					<R10>7.75202302e-009</R10>
+					<R11>0.921863973</R11>
+					<R12>0.387513876</R12>
+					<R20>-0.570713222</R20>
+					<R21>-0.318206847</R21>
+					<R22>0.756988049</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX15">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>-19.7575397</X>
+					<Y>31.3998337</Y>
+					<Z>-28.7437057</Z>
+					<R00>0.636655748</R00>
+					<R01>-0.650533795</R01>
+					<R02>0.414095789</R02>
+					<R10>2.98023224e-008</R10>
+					<R11>0.536985993</R11>
+					<R12>0.843591213</R12>
+					<R20>-0.771148205</R20>
+					<R21>-0.537077188</R21>
+					<R22>0.341875255</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-28.0394554</X>
+					<Y>14.5280094</Y>
+					<Z>-35.5812111</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX16">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Script</string>
+				<string name="Source">function exclamation()&#13;&#10;   print(&quot;!&quot;)&#13;&#10;end&#13;&#10;&#13;&#10;print(&quot;Hello&quot;)&#13;&#10;delay(1,exclamation)&#13;&#10;print(&quot;world&quot;)&#13;&#10;</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX17">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>1.80349016</X>
+					<Y>16.7169247</Y>
+					<Z>-11.2288628</Z>
+					<R00>-0.988006353</R00>
+					<R01>-0.12549226</R01>
+					<R02>0.0899734199</R02>
+					<R10>0</R10>
+					<R11>0.582678497</R11>
+					<R12>0.812702775</R12>
+					<R20>-0.154413477</R20>
+					<R21>0.802955508</R21>
+					<R22>-0.575690091</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0.00402095914</X>
+					<Y>0.462862253</Y>
+					<Z>0.284943342</Z>
+					<R00>-0.988006353</R00>
+					<R01>-0.125492275</R01>
+					<R02>0.0899734199</R02>
+					<R10>1.58307922e-009</R10>
+					<R11>0.582678556</R11>
+					<R12>0.812702835</R12>
+					<R20>-0.154413491</R20>
+					<R21>0.802955568</R21>
+					<R22>-0.575690091</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX18">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">5</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>16.9155579</X>
+					<Y>15.6229143</Y>
+					<Z>-14.1106243</Z>
+					<R00>-0.616419792</R00>
+					<R01>-0.519586146</R01>
+					<R02>0.591656029</R02>
+					<R10>0</R10>
+					<R11>0.751387775</R11>
+					<R12>0.659860909</R12>
+					<R20>-0.78741771</R20>
+					<R21>0.406751335</R21>
+					<R22>-0.46317032</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>7.30105114</X>
+					<Y>4.90006733</Y>
+					<Z>-6.58403254</Z>
+					<R00>0.582867026</R00>
+					<R01>-3.68203698e-021</R01>
+					<R02>-0.812567532</R02>
+					<R10>-6.64207352e-022</R10>
+					<R11>1</R11>
+					<R12>-5.00780717e-021</R12>
+					<R20>0.812567532</R20>
+					<R21>3.45859885e-021</R21>
+					<R22>0.582867026</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX19">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">26</int>
+				<CoordinateFrame name="CFrame">
+					<X>-0.5</X>
+					<Y>0.899999976</Y>
+					<Z>-0.5</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">0</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<string name="Name">LandMine</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>5</X>
+					<Y>1</Y>
+					<Z>5</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Script" referent="RBX20">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<string name="Source">function onTouch()&#13;&#10;   local h = hit.Parent:FindFirstChild(&quot;Humanoid&quot;)&#13;&#10;&#13;&#10;   if (h ~= nil) then &#13;&#10;   game.Workspace.LandMine.BrickColor = BrickColor.new(192)&#13;&#10;&#13;&#10;   end&#13;&#10;&#13;&#10;function blow(hit)&#13;&#10;   local h = hit.Parent:FindFirstChild(&quot;Humanoid&quot;)&#13;&#10;&#13;&#10;   if (h ~= nil) then &#13;&#10;   delay(3,onTouch)&#13;&#10;   explosion = Instance.new(&quot;Explosion&quot;)&#13;&#10;   explosion.Position = script.Parent.Position &#13;&#10;   explosion.BlastRadius = 15 &#13;&#10;   explosion.BlastPressure = 1000000&#13;&#10;   &#13;&#10;&#13;&#10;   explosion.Parent = game.Workspace &#13;&#10;   end&#13;&#10;&#13;&#10;end&#13;&#10;&#13;&#10;end&#13;&#10;&#13;&#10;script.Parent.Touched:connect(blow)</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="SpecialMesh" referent="RBX21">
+				<Properties>
+					<Content name="MeshId"><null></null></Content>
+					<token name="MeshType">3</token>
+					<string name="Name">Mesh</string>
+					<Vector3 name="Scale">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+					<Content name="TextureId"><null></null></Content>
+					<Vector3 name="VertexColor">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>1</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Camera" referent="RBX22">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>5.21888161</X>
+					<Y>15.0002642</Y>
+					<Z>8.73881531</Z>
+					<R00>0.934825778</R00>
+					<R01>-0.253714025</R01>
+					<R02>0.248455092</R02>
+					<R10>0</R10>
+					<R11>0.699663281</R11>
+					<R12>0.714472711</R12>
+					<R20>-0.355106652</R20>
+					<R21>-0.667907536</R21>
+					<R22>0.654063284</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>0.24977982</X>
+					<Y>0.710807323</Y>
+					<Z>-4.34245062</Z>
+					<R00>0.934825838</R00>
+					<R01>-0.253714055</R01>
+					<R02>0.248455077</R02>
+					<R10>-1.89800176e-010</R10>
+					<R11>0.699663281</R11>
+					<R12>0.71447283</R12>
+					<R20>-0.355106652</R20>
+					<R21>-0.667907655</R21>
+					<R22>0.654063284</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">RBX23</Ref>
+				<token name="CameraType">5</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0.0310675036</X>
+					<Y>13.8967438</Y>
+					<Z>11.120574</Z>
+					<R00>0.998404503</R00>
+					<R01>-0.0488470569</R01>
+					<R02>0.028327439</R02>
+					<R10>1.86264515e-009</R10>
+					<R11>0.501667023</R11>
+					<R12>0.865060806</R12>
+					<R20>-0.056466613</R20>
+					<R21>-0.863680601</R21>
+					<R22>0.500866652</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-0.263539433</X>
+					<Y>4.90006733</Y>
+					<Z>5.91153336</Z>
+					<R00>-0.944518268</R00>
+					<R01>-2.86113777e-021</R01>
+					<R02>-0.328458726</R02>
+					<R10>-3.8113308e-021</R10>
+					<R11>1</R11>
+					<R12>2.24909177e-021</R12>
+					<R20>0.328458726</R20>
+					<R21>3.37617301e-021</R21>
+					<R22>-0.944518268</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<External>RBX24</External>
+	</Item>
+	<Item class="RunService" referent="RBX25">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX26</External>
+	<External>RBX27</External>
+	<Item class="Players" referent="RBX28">
+		<Properties>
+			<int name="MaxPlayers">8</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX29">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX30">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">SoundService</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX31</External>
+		<External>RBX32</External>
+		<External>RBX33</External>
+		<External>RBX34</External>
+		<External>RBX35</External>
+		<External>RBX36</External>
+		<External>RBX37</External>
+		<External>RBX38</External>
+		<External>RBX39</External>
+		<External>RBX40</External>
+		<External>RBX41</External>
+		<External>RBX42</External>
+		<External>RBX43</External>
+		<External>RBX44</External>
+	</Item>
+	<Item class="Selection" referent="RBX45">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX46">
+		<Properties>
+			<Color3 name="BottomAmbientV9">4286230136</Color3>
+			<Color3 name="ClearColor">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="SpotLightV9">4290818406</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<Color3 name="TopAmbientV9">4294572287</Color3>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ControllerService" referent="RBX47">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX48">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX49</External>
+	<External>RBX50</External>
+	<External>RBX51</External>
+</roblox>

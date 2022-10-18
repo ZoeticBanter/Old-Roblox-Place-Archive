@@ -1,0 +1,843 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<token name="Controller">0</token>
+			<bool name="ControllerFlagShown">true</bool>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>15.8530512</X>
+					<Y>20.631773</Y>
+					<Z>-46.2299042</Z>
+					<R00>-0.932663858</R00>
+					<R01>-0.164332584</R01>
+					<R02>0.32114318</R02>
+					<R10>3.50721496e-009</R10>
+					<R11>0.890218079</R11>
+					<R12>0.455534607</R12>
+					<R20>-0.360746652</R20>
+					<R21>0.424860656</R21>
+					<R22>-0.830274224</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>3</X>
+					<Y>2.4000001</Y>
+					<Z>-13</Z>
+					<R00>-0.932663858</R00>
+					<R01>-0.164332598</R01>
+					<R02>0.32114321</R02>
+					<R10>1.35919862e-008</R10>
+					<R11>0.890218079</R11>
+					<R12>0.455534637</R12>
+					<R20>-0.360746682</R20>
+					<R21>0.424860686</R21>
+					<R22>-0.830274165</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX2">
+			<Properties>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Model</string>
+				<Ref name="PrimaryPart">null</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX3">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">26</int>
+					<CoordinateFrame name="CFrame">
+						<X>3</X>
+						<Y>0.600000024</Y>
+						<Z>-17</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<string name="Name">Smooth Block Model</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>8</X>
+						<Y>1.20000005</Y>
+						<Z>14</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX4">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=7400793</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX5">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=7401158</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX6">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">26</int>
+					<CoordinateFrame name="CFrame">
+						<X>3</X>
+						<Y>0.600000024</Y>
+						<Z>-24.5</Z>
+						<R00>0</R00>
+						<R01>0</R01>
+						<R02>-1</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>-0</R12>
+						<R20>1</R20>
+						<R21>0</R21>
+						<R22>-0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<string name="Name">Smooth Block Model</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>1.20000005</Y>
+						<Z>6</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX7">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">26</int>
+					<CoordinateFrame name="CFrame">
+						<X>3</X>
+						<Y>0.600000024</Y>
+						<Z>-25.5</Z>
+						<R00>0</R00>
+						<R01>0</R01>
+						<R02>-1</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>-0</R12>
+						<R20>1</R20>
+						<R21>0</R21>
+						<R22>-0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<string name="Name">Smooth Block Model</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>1.20000005</Y>
+						<Z>4</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part" referent="RBX8">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">26</int>
+					<CoordinateFrame name="CFrame">
+						<X>2.98509216</X>
+						<Y>5.95898581</Y>
+						<Z>-4.76739883</Z>
+						<R00>0.999939442</R00>
+						<R01>-0.0076278043</R01>
+						<R02>0.00793481059</R02>
+						<R10>3.46060847e-010</R10>
+						<R11>0.720915794</R11>
+						<R12>0.693022728</R12>
+						<R20>-0.0110065714</R20>
+						<R21>-0.692980766</R21>
+						<R22>0.720872104</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<string name="Name">Smooth Block Model</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>8</X>
+						<Y>1.20000005</Y>
+						<Z>14</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX9">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=7400875</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX10">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=7401028</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="SpawnLocation" referent="RBX11">
+			<Properties>
+				<bool name="AllowTeamChangeOnTouch">false</bool>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">2</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>3</X>
+					<Y>57.6000023</Y>
+					<Z>-13</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<int name="Duration">0</int>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">2</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">2</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<string name="Name">SpawnLocation</string>
+				<bool name="Neutral">true</bool>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">2</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<int name="TeamColor">194</int>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">1</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>6</X>
+					<Y>1.20000005</Y>
+					<Z>6</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX12">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX13</External>
+	<External>RBX14</External>
+	<Item class="ContentProvider" referent="RBX15">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX16">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX17">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Tool" referent="RBX18">
+			<Properties>
+				<int name="ActivationState">0</int>
+				<int name="BackendToolState">1</int>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>-0</X>
+					<Y>1</Y>
+					<Z>1</Z>
+					<R00>0.707106769</R00>
+					<R01>0.707106829</R01>
+					<R02>0</R02>
+					<R10>0.707106769</R10>
+					<R11>-0.707106829</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<string name="Name">Phone</string>
+				<Content name="TextureId"><url>http://www.roblox.com/asset/?version=1&amp;id=1412994</url></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX19">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">1</int>
+					<CoordinateFrame name="CFrame">
+						<X>-0.238883972</X>
+						<Y>3.13016105</Y>
+						<Z>0.460144043</Z>
+						<R00>0.125091448</R00>
+						<R01>0.125982985</R01>
+						<R02>-0.984114051</R02>
+						<R10>0.707106709</R10>
+						<R11>-0.707106709</R11>
+						<R12>-0.000640586601</R12>
+						<R20>-0.695954263</R20>
+						<R21>-0.69579339</R21>
+						<R22>-0.177536413</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">false</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>0.400000006</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX20">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Blackberry</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><binary>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
+j9GOZ3s7Ff/Z</binary></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX21">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX22</External>
+		<External>RBX23</External>
+		<External>RBX24</External>
+		<External>RBX25</External>
+		<External>RBX26</External>
+		<External>RBX27</External>
+		<External>RBX28</External>
+		<External>RBX29</External>
+		<External>RBX30</External>
+		<External>RBX31</External>
+		<External>RBX32</External>
+		<External>RBX33</External>
+		<External>RBX34</External>
+		<External>RBX35</External>
+	</Item>
+	<Item class="PhysicsService" referent="RBX36">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX37</External>
+	<Item class="Selection" referent="RBX38">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX39</External>
+	<Item class="Lighting" referent="RBX40">
+		<Properties>
+			<Color3 name="Ambient">4286611584</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4289967032</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Sky" referent="RBX41">
+			<Properties>
+				<bool name="CelestialBodiesShown">true</bool>
+				<string name="Name">Sky</string>
+				<Content name="SkyboxBk"><url>http://www.roblox.com/asset/?version=1&amp;id=1013844</url></Content>
+				<Content name="SkyboxDn"><url>http://www.roblox.com/asset/?version=1&amp;id=1013845</url></Content>
+				<Content name="SkyboxFt"><url>http://www.roblox.com/asset/?version=1&amp;id=1013842</url></Content>
+				<Content name="SkyboxLf"><url>http://www.roblox.com/asset/?version=1&amp;id=1013843</url></Content>
+				<Content name="SkyboxRt"><url>http://www.roblox.com/asset/?version=1&amp;id=1013841</url></Content>
+				<Content name="SkyboxUp"><url>http://www.roblox.com/asset/?version=1&amp;id=1013848</url></Content>
+				<int name="StarCount">3000</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="ControllerService" referent="RBX42">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX43">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX44</External>
+</roblox>

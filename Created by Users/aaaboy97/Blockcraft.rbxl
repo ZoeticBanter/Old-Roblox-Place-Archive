@@ -1,0 +1,1683 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>-24.999754</X>
+					<Y>103.805496</Y>
+					<Z>-38.1080017</Z>
+					<R00>-1</R00>
+					<R01>-5.8789592e-006</R01>
+					<R02>1.14563172e-005</R02>
+					<R10>-4.54747405e-013</R10>
+					<R11>0.889693677</R11>
+					<R12>0.45655787</R12>
+					<R20>-1.28766997e-005</R20>
+					<R21>0.45655787</R21>
+					<R22>-0.889693677</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-25</X>
+					<Y>93.9999771</Y>
+					<Z>-19</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX2">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">_TERRAINGEN</string>
+				<ProtectedString name="Source">-- 4/16/2011 Aaaboy97
+math.randomseed(tick())
+
+local _BIN = Instance.new(&quot;Model&quot;, game.Workspace)
+local _X, _Z = 31, 31
+local _Y = 0
+local _OFFSET = 5
+local _SCALE = 3
+
+local _MESSAGE = Instance.new(&quot;Message&quot;, game.Workspace)
+
+_MESSAGE.Text = &quot;Running script &apos;_TERRAINGEN&apos;&quot;
+
+_BIN.Name = &quot;_TERRAIN&quot;
+
+local _SPAWN = Instance.new(&quot;SpawnLocation&quot;, _BIN)
+
+_SPAWN.Anchored = true
+_SPAWN.BottomSurface = Enum.SurfaceType.Smooth
+_SPAWN.CFrame = CFrame.new((_X / 2) * _SCALE, _OFFSET * (_SCALE ^ 2), (_Z / 2) * _SCALE)
+_SPAWN.Size = Vector3.new(6, 1.2, 6)
+_SPAWN.TopSurface = Enum.SurfaceType.Smooth
+
+local _BEDROCK = Instance.new(&quot;Part&quot;)
+
+_BEDROCK.Anchored = true
+_BEDROCK.BottomSurface = Enum.SurfaceType.Smooth
+_BEDROCK.CFrame = CFrame.new((_X / 2) * _SCALE + (_SCALE / 2), (-_OFFSET -1) * _SCALE, (_Z / 2) * _SCALE + (_SCALE / 2))
+_BEDROCK.formFactor = Enum.FormFactor.Symmetric
+_BEDROCK.Name = &quot;_BEDROCK&quot;
+_BEDROCK.Size = Vector3.new(_X * _SCALE, _SCALE, _Z * _SCALE)
+_BEDROCK.TopSurface = Enum.SurfaceType.Smooth
+_BEDROCK.Transparency = 1
+_BEDROCK.Parent = _BIN
+
+local _TEXTURE = Instance.new(&quot;Texture&quot;)
+
+_TEXTURE.Texture = &quot;http://www.roblox.com/asset/?id=39257824&quot;
+_TEXTURE.StudsPerTileU = 3
+_TEXTURE.StudsPerTileV = 3
+
+local _SURFACETAB = {&quot;Back&quot;, &quot;Bottom&quot;, &quot;Front&quot;, &quot;Left&quot;, &quot;Right&quot;, &quot;Top&quot;}
+
+for _, _SURFACE in pairs(_SURFACETAB) do
+	local _DECAL = _TEXTURE:clone()
+
+	_DECAL.Face = _SURFACE
+	_DECAL.Parent = _BEDROCK
+end
+
+function _DECALS(_PART, boolean)
+	Instance.new(&quot;BlockMesh&quot;, _PART)
+
+	local _DECALTAB = {
+		Back = boolean and 39257179 or 39257368,
+		Bottom = boolean and 39257368 or 39257368,
+		Front = boolean and 39257179 or 39257368,
+		Left = boolean and 39257179 or 39257368,
+		Right = boolean and 39257179 or 39257368,
+		Top = boolean and 39257114 or 39257368,
+	}
+
+	for _SURFACE, _ASSETID in pairs(_DECALTAB) do
+		local _DECAL = Instance.new(&quot;Decal&quot;, _PART)
+
+		_DECAL.Face = _SURFACE
+		_DECAL.Texture = &quot;http://www.roblox.com/asset/?id=&quot; .. _ASSETID
+	end
+end
+
+function _GENERATE(_Y, _VALUE)
+	local _BIN = _BIN
+
+	for _X = 1, _X do
+		local _XMOD = Instance.new(&quot;Model&quot;, _BIN)
+		_XMOD.Name = _X
+
+		for _Z = 1, _Z do
+			local _PART = Instance.new(&quot;Part&quot;)
+
+			_PART.Anchored = true
+			_PART.BottomSurface = Enum.SurfaceType.Smooth
+			_PART.CFrame = CFrame.new(_X * _SCALE, _Y * _SCALE, _Z * _SCALE)
+			_PART.formFactor = Enum.FormFactor.Symmetric
+			_PART.Name = _Z
+			_PART.Size = Vector3.new(3, 3, 3)
+			_PART.TopSurface = Enum.SurfaceType.Smooth
+			_PART.Parent = _XMOD
+
+			_DECALS(_PART, _VALUE)
+
+			if _Z % 11 == 0 then
+				wait()
+			end
+		end
+	end
+end
+
+function _GET(x, z)
+	local _XMOD = _BIN:findFirstChild(x)
+
+	if _XMOD ~= nil then
+		local _ZPART = _XMOD:findFirstChild(z)
+
+		return _ZPART
+	end
+end
+
+function _GETNEAR(x, z)
+	local _PART = _GET(x, z)
+
+	if _PART ~= nil then
+		local _VECTORS = {
+			Vector2.new(1, 0),
+			Vector2.new(0, 1),
+			Vector2.new(-1, 0),
+			Vector2.new(0, -1),
+		}
+
+		local _PARTS = {}
+
+		for _, _OFF in ipairs(_VECTORS) do
+			local _OFFPART = _GET(x + _OFF.x, z + _OFF.y)
+
+			if _OFFPART ~= nil then
+				table.insert(_PARTS, _OFFPART)
+			end
+		end
+
+		return _PARTS
+	end
+end
+
+local _CUMULATED = 0
+
+function _MOUNTAIN(x, y, z)
+	_CUMULATED = _CUMULATED + 1
+
+	local _PART = _GET(x, z)
+	local _NEAR = _GETNEAR(x, z)
+
+	if _PART == nil then
+		return
+	end
+
+	_PART.CFrame = CFrame.new(x * _SCALE, y * _SCALE, z * _SCALE)
+
+	for _, _OFFPART in ipairs(_NEAR) do
+		if _OFFPART.Position.y &lt; _PART.Position.y then
+			_MOUNTAIN(_OFFPART.Position.x / _SCALE, y - 1, _OFFPART.Position.z / _SCALE)
+
+			if _CUMULATED % 32 == 0 then
+				wait()
+			end
+		end
+	end
+end
+
+function _HOLE(x, y, z)
+	_CUMULATED = _CUMULATED + 1
+
+	local _PART = _GET(x, z)
+	local _NEAR = _GETNEAR(x, z)
+
+	if _PART == nil then
+		return
+	end
+
+	_PART.CFrame = CFrame.new(x * _SCALE, -y * _SCALE, z * _SCALE)
+
+	for _, _OFFPART in ipairs(_NEAR) do
+		if _OFFPART.Position.y &gt; _PART.Position.y then
+			_HOLE(_OFFPART.Position.x / _SCALE, y - 1, _OFFPART.Position.z / _SCALE)
+
+			if _CUMULATED % 32 == 0 then
+				wait()
+			end
+		end
+	end
+end
+
+function _FILL(x, z)
+	_CUMULATED = _CUMULATED + 1
+
+	local _PART = _GET(x, z)
+
+	if _PART == nil then
+		return
+	end
+
+	for _Y = _PART.Position.y / _SCALE - 1, -_OFFSET, -1 do
+		local _PART = Instance.new(&quot;Part&quot;)
+
+		_PART.Anchored = true
+		_PART.BottomSurface = Enum.SurfaceType.Smooth
+		_PART.CFrame = CFrame.new(x * _SCALE, _Y * _SCALE, z * _SCALE)
+		_PART.formFactor = Enum.FormFactor.Symmetric
+		_PART.Name = x
+		_PART.Size = Vector3.new(3, 3, 3)
+		_PART.TopSurface = Enum.SurfaceType.Smooth
+		_PART.Parent = _BIN
+
+		_DECALS(_PART, false)
+
+		if _CUMULATED % 32 == 0 then
+			wait()
+		end
+	end
+end
+
+_GENERATE(0, true)
+
+for _ = 1, _X do
+	_MOUNTAIN(math.random(_X), math.random(_OFFSET), math.random(_Z))
+
+	wait()
+end
+
+for _ = 1, _X do
+	_HOLE(math.random(_X), math.random(_OFFSET), math.random(_Z))
+
+	wait()
+end
+
+for _X = 1, _X do
+	for _Z = 1, _Z do
+		_FILL(_X, _Z)
+	end
+end
+
+_MESSAGE:remove()</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX3">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><url>http://www.roblox.com/asset/?id=1311981</url></Content>
+				<string name="Name">VoteKicker</string>
+				<ProtectedString name="Source">print(&quot;Hello world!&quot;)
+</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX4">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Mob_Control</string>
+				<ProtectedString name="Source">-- Aaaboy97 4/16/2011
+math.randomseed(tick())
+
+local l = game:service(&quot;Lighting&quot;)
+while true do
+	l:setMinutesAfterMidnight(l:getMinutesAfterMidnight() + wait())
+
+	local m = l:getMinutesAfterMidnight() % 1440
+
+	if m &lt; (1440 / 4) or m &gt; (1440 * (3 / 4)) then
+		if  math.random() &gt; 0.98 then
+			
+		end
+	else
+		-- Day
+	end
+end</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX5">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Kicker</string>
+				<ProtectedString name="Source">game.Players.PlayerAdded:connect(function(player)
+	if player.Name:lower() == &apos;aaaboy97&apos; then
+		player.Chatted:connect(function(message, recipient)
+			if string.sub(message, 1, 5):lower() == &apos;kick/&apos; then
+				pcall(function()
+					game.Players[string.sub(message, 6)]:remove()
+				end)
+			end
+		end)
+	end
+end)</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX6">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Showcase</string>
+				<ProtectedString name="Source">script:Remove()</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX7">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">194</int>
+					<CoordinateFrame name="CFrame">
+						<X>-25</X>
+						<Y>93.9999771</Y>
+						<Z>-19</Z>
+						<R00>0.707106769</R00>
+						<R01>0</R01>
+						<R02>0.707106769</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>-0.707106769</R20>
+						<R21>0</R21>
+						<R22>0.707106769</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>10</X>
+						<Y>10</Y>
+						<Z>10</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX8">
+					<Properties>
+						<token name="Face">5</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424821</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX9">
+					<Properties>
+						<token name="Face">3</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424821</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX10">
+					<Properties>
+						<token name="Face">0</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424821</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX11">
+					<Properties>
+						<token name="Face">2</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424821</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX12">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424786</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX13">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=38424723</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX14">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">1003</int>
+					<CoordinateFrame name="CFrame">
+						<X>-22.5</X>
+						<Y>299.999969</Y>
+						<Z>0</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Part</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>600</X>
+						<Y>600</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX15">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ContentProvider" referent="RBX16">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ContentFilter" referent="RBX17">
+		<Properties>
+			<string name="Name">ContentFilter</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="KeyframeSequenceProvider" referent="RBX18">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX19">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX20">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="LocalScript" referent="RBX21">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">_BLOCKCRAFT</string>
+				<ProtectedString name="Source">-- 2/16/2011 Aaaboy97
+wait(1)
+
+local _PLAYER = game.Players.LocalPlayer
+local _CHARACTER = _PLAYER.Character
+local _HUMANOID = _CHARACTER.Humanoid
+local _HEAD = _CHARACTER.Head
+local _TORSO = _CHARACTER.Torso
+local _TOOL = Instance.new(&quot;Tool&quot;)
+local _PART = Instance.new(&quot;Part&quot;, _TOOL)
+local _SELECTION = Instance.new(&quot;SelectionBox&quot;)
+local _SCREENGUI = nil
+local _CLEAN = {_SELECTION}
+local _GUISIZE = 44
+local _SELECTEDGUI = nil
+local _SELECT = &quot;Stone&quot;
+local _MODE = &quot;Deleting&quot;
+local _MODEGUI = nil
+local _BANNEDLIST = {}
+local _BLOCKSMODIFIED
+local _LOADER = script.Loader
+local _LOAD = Instance.new(&quot;Message&quot;, workspace)
+_LOAD.Text = &quot;Loading data for &quot; .. _PLAYER.Name
+
+local _CUBEICONS = {
+	Bedrock = 39460063,
+	Bookshelf = 39460044,
+	Brick = 39460023,
+	Cloth2 = 39459971,
+	Cloth3 = 39459954,
+	Cloth4 = 39459923,
+	Cloth5 = 39459900,
+	Cloth6 = 39459885,
+	Cloth7 = 39459837,
+	Cloth8 = 39459791,
+	Cloth9 = 39459671,
+	Cloth10 = 39459587,
+	Cloth11 = 39459565,
+	Cloth12 = 39459542,
+	Cloth13 = 39459524,
+	Cloth14 = 39459500,
+	Cloth15 = 39459162,
+	Cloth16 = 39459133,
+	Cloth = 39459045,
+	CoalOre = 39458974,
+	Cobblestone = 39458946,
+	Dirt = 39458920,
+	Glass = 39458866,
+	GoldOre = 39458846,
+	Gold = 39458825,
+	Grass = 39458786,
+	Gravel = 39458666,
+	HalfBlock = 39458575,
+	IronOre = 39458553,
+	Iron = 39458528,
+	Lava = 39458498,
+	Leaves = 39458479,
+	Log = 39458456,
+	MossyCobblestone = 39458433,
+	Obsidian = 39458411,
+	Sand = 39458389,
+	Sponge = 39458367,
+	Stone = 39458342,
+	TNT = 39458320,
+	Water = 39458299,
+	Wood = 39458273,
+}
+
+local _CUBETEXTURES = {
+	Bedrock = {
+		Back = 39257824,
+		Bottom = 39257824,
+		Front = 39257824,
+		Left = 39257824,
+		Right = 39257824,
+		Top = 39257824,
+		Special = function(_PART) end,
+	},
+	Bookshelf = {
+		Back = 39257795,
+		Bottom = 39256412,
+		Front = 39257795,
+		Left = 39257795,
+		Right = 39257795,
+		Top = 39256412,
+		Special = function(_PART) end,
+	},
+	Brick = {
+		Back = 39257782,
+		Bottom = 39257782,
+		Front = 39257782,
+		Left = 39257782,
+		Right = 39257782,
+		Top = 39257782,
+		Special = function(_PART) end,
+	},
+	Cloth2 = {
+		Back = 39257760,
+		Bottom = 39257760,
+		Front = 39257760,
+		Left = 39257760,
+		Right = 39257760,
+		Top = 39257760,
+		Special = function(_PART) end,
+	},
+	Cloth3 = {
+		Back = 39257737,
+		Bottom = 39257737,
+		Front = 39257737,
+		Left = 39257737,
+		Right = 39257737,
+		Top = 39257737,
+		Special = function(_PART) end,
+	},
+	Cloth4 = {
+		Back = 39257718,
+		Bottom = 39257718,
+		Front = 39257718,
+		Left = 39257718,
+		Right = 39257718,
+		Top = 39257718,
+		Special = function(_PART) end,
+	},
+	Cloth5 = {
+		Back = 39257692,
+		Bottom = 39257692,
+		Front = 39257692,
+		Left = 39257692,
+		Right = 39257692,
+		Top = 39257692,
+		Special = function(_PART) end,
+	},
+	Cloth6 = {
+		Back = 39257677,
+		Bottom = 39257677,
+		Front = 39257677,
+		Left = 39257677,
+		Right = 39257677,
+		Top = 39257677,
+		Special = function(_PART) end,
+	},
+	Cloth7 = {
+		Back = 39257660,
+		Bottom = 39257660,
+		Front = 39257660,
+		Left = 39257660,
+		Right = 39257660,
+		Top = 39257660,
+		Special = function(_PART) end,
+	},
+	Cloth8 = {
+		Back = 39257644,
+		Bottom = 39257644,
+		Front = 39257644,
+		Left = 39257644,
+		Right = 39257644,
+		Top = 39257644,
+		Special = function(_PART) end,
+	},
+	Cloth9 = {
+		Back = 39257631,
+		Bottom = 39257631,
+		Front = 39257631,
+		Left = 39257631,
+		Right = 39257631,
+		Top = 39257631,
+		Special = function(_PART) end,
+	},
+	Cloth10 = {
+		Back = 39257607,
+		Bottom = 39257607,
+		Front = 39257607,
+		Left = 39257607,
+		Right = 39257607,
+		Top = 39257607,
+		Special = function(_PART) end,
+	},
+	Cloth11 = {
+		Back = 39257587,
+		Bottom = 39257587,
+		Front = 39257587,
+		Left = 39257587,
+		Right = 39257587,
+		Top = 39257587,
+		Special = function(_PART) end,
+	},
+	Cloth12 = {
+		Back = 39257564,
+		Bottom = 39257564,
+		Front = 39257564,
+		Left = 39257564,
+		Right = 39257564,
+		Top = 39257564,
+		Special = function(_PART) end,
+	},
+	Cloth13 = {
+		Back = 39257546,
+		Bottom = 39257546,
+		Front = 39257546,
+		Left = 39257546,
+		Right = 39257546,
+		Top = 39257546,
+		Special = function(_PART) end,
+	},
+	Cloth14 = {
+		Back = 39257525,
+		Bottom = 39257525,
+		Front = 39257525,
+		Left = 39257525,
+		Right = 39257525,
+		Top = 39257525,
+		Special = function(_PART) end,
+	},
+	Cloth15 = {
+		Back = 39257504,
+		Bottom = 39257504,
+		Front = 39257504,
+		Left = 39257504,
+		Right = 39257504,
+		Top = 39257504,
+		Special = function(_PART) end,
+	},
+	Cloth16 = {
+		Back = 39257475,
+		Bottom = 39257475,
+		Front = 39257475,
+		Left = 39257475,
+		Right = 39257475,
+		Top = 39257475,
+		Special = function(_PART) end,
+	},
+	Cloth = {
+		Back = 39257426,
+		Bottom = 39257426,
+		Front = 39257426,
+		Left = 39257426,
+		Right = 39257426,
+		Top = 39257426,
+		Special = function(_PART) end,
+	},
+	CoalOre = {
+		Back = 39257410,
+		Bottom = 39257410,
+		Front = 39257410,
+		Left = 39257410,
+		Right = 39257410,
+		Top = 39257410,
+		Special = function(_PART) end,
+	},
+	Cobblestone = {
+		Back = 39257395,
+		Bottom = 39257395,
+		Front = 39257395,
+		Left = 39257395,
+		Right = 39257395,
+		Top = 39257395,
+		Special = function(_PART) end,
+	},
+	Dirt = {
+		Back = 39257368,
+		Bottom = 39257368,
+		Front = 39257368,
+		Left = 39257368,
+		Right = 39257368,
+		Top = 39257368,
+		Special = function(_PART) end,
+	},
+	Glass = {
+		Back = 39257330,
+		Bottom = 39257330,
+		Front = 39257330,
+		Left = 39257330,
+		Right = 39257330,
+		Top = 39257330,
+		Special = function(_PART) _PART.Transparency = 1 end,
+	},
+	Gold = {
+		Back = 39257298,
+		Bottom = 39257274,
+		Front = 39257298,
+		Left = 39257298,
+		Right = 39257298,
+		Top = 39257219,
+		Special = function(_PART) end,
+	},
+	GoldOre = {
+		Back = 39257245,
+		Bottom = 39257245,
+		Front = 39257245,
+		Left = 39257245,
+		Right = 39257245,
+		Top = 39257245,
+		Special = function(_PART) end,
+	},
+	Grass = {
+		Back = 39257179,
+		Bottom = 39257368,
+		Front = 39257179,
+		Left = 39257179,
+		Right = 39257179,
+		Top = 39257114,
+		Special = function(_PART) end,
+	},
+	Gravel = {
+		Back = 39257076,
+		Bottom = 39257076,
+		Front = 39257076,
+		Left = 39257076,
+		Right = 39257076,
+		Top = 39257076,
+		Special = function(_PART) end,
+	},
+	HalfBlock = {
+		Back = 39257030,
+		Bottom = 39257009,
+		Front = 39257030,
+		Left = 39257030,
+		Right = 39257030,
+		Top = 39257009,
+		Special = function(_PART) end,
+	},
+	Iron = {
+		Back = 39256975,
+		Bottom = 39256953,
+		Front = 39256975,
+		Left = 39256975,
+		Right = 39256975,
+		Top = 39256894,
+		Special = function(_PART) end,
+	},
+	IronOre = {
+		Back = 39256926,
+		Bottom = 39256926,
+		Front = 39256926,
+		Left = 39256926,
+		Right = 39256926,
+		Top = 39256926,
+		Special = function(_PART) end,
+	},
+	Lava = {
+		Back = 39256874,
+		Bottom = 39256874,
+		Front = 39256874,
+		Left = 39256874,
+		Right = 39256874,
+		Top = 39256874,
+		Special = function(_PART) _PART.CanCollide = false end,
+	},
+	Leaves = {
+		Back = 39256859,
+		Bottom = 39256859,
+		Front = 39256859,
+		Left = 39256859,
+		Right = 39256859,
+		Top = 39256859,
+		Special = function(_PART) _PART.Transparency = 1 end,
+	},
+	Log = {
+		Back = 39256811,
+		Bottom = 39256840,
+		Front = 39256811,
+		Left = 39256811,
+		Right = 39256811,
+		Top = 39256840,
+		Special = function(_PART) end,
+	},
+	MossyCobblestone = {
+		Back = 39256689,
+		Bottom = 39256689,
+		Front = 39256689,
+		Left = 39256689,
+		Right = 39256689,
+		Top = 39256689,
+		Special = function(_PART) end,
+	},
+	Obsidian = {
+		Back = 39256669,
+		Bottom = 39256669,
+		Front = 39256669,
+		Left = 39256669,
+		Right = 39256669,
+		Top = 39256669,
+		Special = function(_PART) end,
+	},
+	Sand = {
+		Back = 39256624,
+		Bottom = 39256624,
+		Front = 39256624,
+		Left = 39256624,
+		Right = 39256624,
+		Top = 39256624,
+		Special = function(_PART) end,
+	},
+	Sponge = {
+		Back = 39256592,
+		Bottom = 39256592,
+		Front = 39256592,
+		Left = 39256592,
+		Right = 39256592,
+		Top = 39256592,
+		Special = function(_PART) end,
+	},
+	Stone = {
+		Back = 39256563,
+		Bottom = 39256563,
+		Front = 39256563,
+		Left = 39256563,
+		Right = 39256563,
+		Top = 39256563,
+		Special = function(_PART) end,
+	},
+	TNT = {
+		Back = 39256469,
+		Bottom = 39256491,
+		Front = 39256469,
+		Left = 39256469,
+		Right = 39256469,
+		Top = 39256526,
+		Special = function(_PART) end,
+	},
+	Water = {
+		Back = 39256447,
+		Bottom = 39256447,
+		Front = 39256447,
+		Left = 39256447,
+		Right = 39256447,
+		Top = 39256447,
+		Special = function(_PART) _PART.CanCollide = false _PART.Transparency = 1 end,
+	},
+	Wood = {
+		Back = 39256412,
+		Bottom = 39256412,
+		Front = 39256412,
+		Left = 39256412,
+		Right = 39256412,
+		Top = 39256412,
+		Special = function(_PART) end,
+	},
+}
+
+_SELECTION.Color = BrickColor.new(26)
+_SELECTION.Parent = _PLAYER.PlayerGui
+
+function _TAG(_CLASSNAME, _PARENT)
+	local _OBJECT = Instance.new(_CLASSNAME)
+	local _BCTAG = Instance.new(&quot;IntValue&quot;, _OBJECT)
+
+	_BCTAG.Name = &quot;_BCTAG&quot;
+
+	_OBJECT.Parent = _PARENT
+
+	return _OBJECT
+end
+
+function _CLEANCHARACTER()
+	for _, _CHILD in pairs(_CHARACTER:GetChildren()) do
+		if _CHILD:IsA(&quot;Script&quot;) == false and _CHILD:IsA(&quot;BasePart&quot;) == false and _CHILD:IsA(&quot;Humanoid&quot;) == false then
+			if _CHILD:findFirstChild(&quot;_BCTAG&quot;) == nil then
+				_CHILD:remove()
+			end
+		end
+	end
+
+	for _, _CHILD in pairs(_HEAD:GetChildren()) do
+		if string.find(_CHILD.className, &quot;Mesh&quot;) ~= nil or _CHILD:IsA(&quot;Decal&quot;) then
+			if _CHILD:findFirstChild(&quot;_BCTAG&quot;) == nil then
+				_CHILD:remove()
+			end
+		end
+	end
+
+	for _, _CHILD in pairs(_TORSO:GetChildren()) do
+		if _CHILD:IsA(&quot;Decal&quot;) then
+			if _CHILD:findFirstChild(&quot;_BCTAG&quot;) == nil then
+				_CHILD:remove()
+			end
+		end
+	end
+end
+
+function _GENCHARACTER()
+	_CLEANCHARACTER()
+
+	local _BLOCKMESH = _TAG(&quot;BlockMesh&quot;, _HEAD)
+
+	_BLOCKMESH.Offset = Vector3.new(0, 0.05, 0) * 1.25
+	_BLOCKMESH.Scale = Vector3.new(0.56, 1.1, 1.1) * 1.25
+
+	local _SHIRT = _TAG(&quot;Shirt&quot;, _CHARACTER)
+	local _PANTS = _TAG(&quot;Pants&quot;, _CHARACTER)
+
+	_SHIRT.ShirtTemplate = &quot;http://www.roblox.com/asset/?id=38639373&quot;
+	_PANTS.PantsTemplate = &quot;http://www.roblox.com/asset/?id=38639421&quot;
+
+	local _HEADTEXTURES = {
+		Back = 38737978,
+		Bottom = 38738009,
+		Front = 38738031,
+		Left = 38738071,
+		Right = 38738114,
+		Top = 38738151,
+	}
+
+	for _SURFACE, _ASSETID in pairs(_HEADTEXTURES) do
+		local _DECAL = _TAG(&quot;Decal&quot;, _HEAD)
+
+		_DECAL.Face = _SURFACE
+		_DECAL.Texture = &quot;http://www.roblox.com/asset/?id=&quot; .. _ASSETID
+	end
+end
+
+function _SELECTBOX(_IMAGEBOX)
+	_IMAGEBOX.Image = &quot;http://www.roblox.com/asset/?id=39810304&quot;
+
+	_SELECTEDGUI = _IMAGEBOX
+	_SELECT = _IMAGEBOX.Name
+end
+
+function _DESELECTBOX()
+	_SELECTEDGUI.Image = &quot;http://www.roblox.com/asset/?id=39381146&quot;
+	_SELECTEDGUI.ZIndex = 1
+end
+
+function _GUIBOX(_MATERIAL)
+	local _IMAGEBOX = Instance.new(&quot;ImageLabel&quot;)
+	local _IMAGEBUTTON = Instance.new(&quot;ImageButton&quot;, _IMAGEBOX)
+
+	_IMAGEBOX.BackgroundTransparency = 1
+	_IMAGEBOX.Image = &quot;http://www.roblox.com/asset/?id=39381146&quot;
+	_IMAGEBOX.Name = _MATERIAL
+	_IMAGEBOX.Size = UDim2.new(0, _GUISIZE, 0, _GUISIZE)
+
+	_IMAGEBUTTON.BackgroundTransparency = 1
+	_IMAGEBUTTON.Image = &quot;http://www.roblox.com/asset/?id=&quot; .. _CUBEICONS[_MATERIAL]
+	_IMAGEBUTTON.Position = UDim2.new(0, 6, 0, 6)
+	_IMAGEBUTTON.Size = UDim2.new(0, _GUISIZE - 12, 0, _GUISIZE - 12)
+
+	return _IMAGEBOX, _IMAGEBUTTON
+end
+
+function _INVENTORYBOX()
+	local _TRAY = Instance.new(&quot;Frame&quot;)
+
+	_TRAY.BackgroundTransparency = 1
+	_TRAY.Name = &quot;_INVENTORY&quot;
+	_TRAY.Size = UDim2.new(0, _GUISIZE * 10, 0, _GUISIZE * 4)
+	_TRAY.Position = UDim2.new(0.5, -_GUISIZE * 5, 0.5, -_GUISIZE * 2)
+
+	local _CUBETAB = {}
+
+	for _CUBE, _ in pairs(_CUBEICONS) do
+		_CUBETAB[#_CUBETAB + 1] = _CUBE
+	end
+
+	for _Y = 1, 5 do
+		for _X = 1, 10 do
+			pcall(function()
+				local _NUM = _X + ((_Y - 1) * 10)
+				local _IMAGEBOX, _IMAGEBUTTON = _GUIBOX(_CUBETAB[_NUM])
+
+				_IMAGEBOX.Parent = _TRAY
+				_IMAGEBOX.Position = UDim2.new(0, ((_NUM - 1) * _GUISIZE) - (((_Y - 1) * 10) * _GUISIZE), 0, (_Y - 1) * _GUISIZE)
+			end)
+		end
+	end
+
+	return _TRAY
+end
+
+function _SELECTIONBOX()
+	local _TRAY = Instance.new(&quot;Frame&quot;)
+
+	_TRAY.BackgroundTransparency = 1
+	_TRAY.Name = &quot;_SELECTION&quot;
+	_TRAY.Size = UDim2.new(0, _GUISIZE * 9, 0, _GUISIZE)
+	_TRAY.Position = UDim2.new(0.5, -_GUISIZE * 4.5, 1, -100 - _GUISIZE)
+
+	local _CUBETAB = {}
+
+	for _CUBE, _ in pairs(_CUBEICONS) do
+		_CUBETAB[#_CUBETAB + 1] = _CUBE
+
+		if #_CUBETAB &gt;= 9 then
+			break
+		end
+	end
+
+	for _NUM = 1, 9 do
+		local _IMAGEBOX, _IMAGEBUTTON = _GUIBOX(_CUBETAB[_NUM])
+
+		_IMAGEBOX.Parent = _TRAY
+		_IMAGEBOX.Position = UDim2.new(0, (_NUM - 1) * _GUISIZE, 0, 0)
+	end
+
+	local _IMAGEBOX = _TRAY:findFirstChild(_SELECT)
+
+	if _IMAGEBOX ~= nil then
+		_SELECTBOX(_IMAGEBOX)
+	end
+
+	return _TRAY
+end
+
+function _MODELABEL()
+	_MODEGUI = Instance.new(&quot;TextLabel&quot;)
+
+	_MODEGUI.BackgroundColor3 = BrickColor.Red().Color
+	_MODEGUI.Name = &quot;_MODELABEL&quot;
+	_MODEGUI.Position = UDim2.new(0, 5, 1, -120)
+	_MODEGUI.Size = UDim2.new(0, 100, 0, 50)
+	_MODEGUI.Text = _MODE .. &quot;\n   Blocks changed: &quot; .. _BLOCKSMODIFIED
+	_MODEGUI.TextColor3 = BrickColor.White().Color
+	_MODEGUI.TextWrap = true
+
+	return _MODEGUI
+end
+
+function _BUILDGUI()
+	local _SCREENGUI = Instance.new(&quot;ScreenGui&quot;)
+	local _INVENTORY = _INVENTORYBOX()
+	local _SELECTED = _SELECTIONBOX()
+	local _MODELABEL = _MODELABEL()
+
+	_INVENTORY.Parent = _SCREENGUI
+	_INVENTORY.Visible = false
+
+	_SELECTED.Parent = _SCREENGUI
+
+	_MODELABEL.Parent = _SCREENGUI
+
+	return _SCREENGUI
+end
+
+function _INVENTORYBUTTON1DOWN(_GUI, _GUI2)
+	local _IMAGEBUTTON = _SELECTEDGUI:findFirstChild(&quot;ImageButton&quot;)
+	local _IMAGEBUTTON2 = _GUI:findFirstChild(&quot;ImageButton&quot;)
+
+	if _IMAGEBUTTON ~= nil and _IMAGEBUTTON2 ~= nil then
+		_SELECTEDGUI.Name = _GUI.Name
+		_IMAGEBUTTON.Image = _IMAGEBUTTON2.Image
+
+		_SELECT = _GUI.Name
+	end
+
+	_GUI.Parent.Visible = false
+end
+
+function _SELECTEDBUTTON1DOWN(_GUI)
+	_DESELECTBOX()
+	_SELECTBOX(_GUI)
+end	
+
+function _HANDLEGUI(_SCREENGUI)
+	local _INVENTORY = _SCREENGUI:findFirstChild(&quot;_INVENTORY&quot;)
+	local _SELECTED = _SCREENGUI:findFirstChild(&quot;_SELECTION&quot;)
+
+	if _INVENTORY ~= nil and _SELECTED ~= nil then
+		for _, _CHILD in pairs(_INVENTORY:GetChildren()) do
+			local _IMAGEBUTTON = _CHILD:findFirstChild(&quot;ImageButton&quot;)
+
+			if _IMAGEBUTTON ~= nil then
+				_IMAGEBUTTON.MouseButton1Down:connect(function() _INVENTORYBUTTON1DOWN(_CHILD, _SELECTED) end)
+			end
+		end
+
+		for _, _CHILD in pairs(_SELECTED:GetChildren()) do
+			local _IMAGEBUTTON = _CHILD:findFirstChild(&quot;ImageButton&quot;)
+
+			if _IMAGEBUTTON ~= nil then
+				_IMAGEBUTTON.MouseButton1Down:connect(function() _SELECTEDBUTTON1DOWN(_CHILD) end)
+			end
+		end
+	end
+
+	table.insert(_CLEAN, _SCREENGUI)
+end
+
+function _PLAYSOUND(_SOUNDID)
+	local _SOUND = _PLAYER:findFirstChild(_SOUNDID)
+
+	if _SOUND == nil then
+		_SOUND = Instance.new(&quot;Sound&quot;, _PLAYER)
+
+		_SOUND.Name = _SOUNDID
+		_SOUND.SoundId = &quot;http://www.roblox.com/asset/?id=&quot; .. _SOUNDID
+	end
+
+	_SOUND:Play()
+end
+
+function _APPLYDECAL(_PART)
+	Instance.new(&quot;BlockMesh&quot;, _PART)
+
+	local _DECALTAB = _CUBETEXTURES[_SELECT]
+
+	if _DECALTAB ~= nil then
+		for _SURFACE, _ASSETID in pairs(_DECALTAB) do
+			if _SURFACE ~= &quot;Special&quot; then
+				local _DECAL = Instance.new(&quot;Decal&quot;, _PART)
+
+				_DECAL.Face = _SURFACE
+				_DECAL.Texture = &quot;http://www.roblox.com/asset/?id=&quot; .. _ASSETID
+			end
+		end
+
+		pcall(function() _DECALTAB.Special(_PART) end)
+	end
+end
+
+function _PLACE(_TARGET, _SURFACE)
+	local _PART = Instance.new(&quot;Part&quot;)
+
+	_PART.Anchored = true
+	_PART.BottomSurface = Enum.SurfaceType.Smooth
+	_PART.CFrame = _TARGET.CFrame + (Vector3.FromNormalId(_SURFACE) * _TARGET.Size)
+	_PART.formFactor = Enum.FormFactor.Symmetric
+	_PART.Name = math.modf(tick())
+	_PART.Size = Vector3.new(3, 3, 3)
+	_PART.TopSurface = Enum.SurfaceType.Smooth
+	_PART.Parent = game.Workspace._TERRAIN
+
+	_APPLYDECAL(_PART)
+end
+
+function _ISBANNED(_NAME)
+	for _NUMBER, _BANNED in ipairs(_BANNEDLIST) do
+		if string.lower(_NAME) == string.lower(_BANNED) then
+			return true
+		end
+	end
+
+	return false
+end
+
+function _ONBUTTON1DOWN(_MOUSE)
+	local _TARGET = _MOUSE.Target
+
+	if _TARGET ~= nil and tonumber(_TARGET.Name) ~= nil then
+		local _MAGNITUDE = (_TARGET.Position - _TORSO.Position).magnitude
+
+		if _MAGNITUDE &lt;= 18 then
+			if _MODE == &quot;Deleting&quot; then
+				_TARGET:remove()
+
+				_PLAYSOUND(19326853)
+			elseif _MODE == &quot;Placing&quot; then
+				_PLACE(_TARGET, _MOUSE.TargetSurface)
+
+				_PLAYSOUND(12814239)
+			end
+
+			_BLOCKSMODIFIED = _BLOCKSMODIFIED + 1
+			_LOADER.SaveNumber.Value = _BLOCKSMODIFIED
+			_MODEGUI.Text = _MODE .. &quot;\n   Blocks changed: &quot; .. _BLOCKSMODIFIED
+		end
+	end
+end
+
+function _ONMOVE(_MOUSE)
+	local _TARGET = _MOUSE.Target
+
+	if _TARGET ~= nil and tonumber(_TARGET.Name) ~= nil then
+		local _MAGNITUDE = (_TARGET.Position - _TORSO.Position).magnitude
+
+		if _MAGNITUDE &lt;= 18 then
+			_SELECTION.Adornee = _TARGET
+		else
+			_SELECTION.Adornee = nil
+		end
+	else
+		_SELECTION.Adornee = nil
+	end
+end
+
+function _ONIDLE(_MOUSE)
+	local _TARGET = _MOUSE.Target
+
+	if _TARGET ~= nil and tonumber(_TARGET.Name) ~= nil then
+		local _MAGNITUDE = (_TARGET.Position - _TORSO.Position).magnitude
+
+		if _MAGNITUDE &lt;= 18 then
+			_SELECTION.Adornee = _TARGET
+		else
+			_SELECTION.Adornee = nil
+		end
+	else
+		_SELECTION.Adornee = nil
+	end
+end
+
+function _ONKEYDOWN(_KEY)
+	if _KEY == &apos;b&apos; or _KEY == &apos;B&apos; then
+		local _INVENTORY = _SCREENGUI:findFirstChild(&quot;_INVENTORY&quot;)
+
+		if _INVENTORY ~= nil then
+			_INVENTORY.Visible = true
+		end
+	elseif _KEY == &apos;q&apos; or _KEY == &apos;Q&apos; then
+		_MODE = &quot;Deleting&quot;
+
+		_MODEGUI.Text = _MODE .. &quot;\n   Blocks changed: &quot; .. _BLOCKSMODIFIED
+	elseif _KEY == &apos;e&apos; or _KEY == &apos;E&apos; then
+		_MODE = &quot;Placing&quot;
+
+		_MODEGUI.Text = _MODE .. &quot;\n   Blocks changed: &quot; .. _BLOCKSMODIFIED
+	elseif tonumber(_KEY) and tonumber(_KEY) ~= 0 then
+		pcall(function() _SELECTEDBUTTON1DOWN(_SCREENGUI._SELECTION:GetChildren()[tonumber(_KEY)]) end)
+	end
+end
+
+local _EQUIPPED = false
+
+function _ONEQUIPPED(_MOUSE)
+	if _EQUIPPED == true then
+		return
+	end
+
+	_EQUIPPED = true
+
+	_GENCHARACTER()
+	_CHARACTER.ChildAdded:connect(_CLEANCHARACTER)
+
+	local start = tick()
+
+	while not _LOADER[&quot;DataReady&quot;].Value do
+		wait()
+
+		if tick() - start &gt; 10 then
+			start = false
+
+			break
+		end
+	end
+
+	_LOAD:remove()
+
+	if start then
+		_LOADER.LoadNumber.Value = true
+
+		wait(1)
+
+		local err = pcall(function() _BLOCKSMODIFIED = _LOADER._BLOCKSMODIFIED.Value end)
+	end
+
+	if not _BLOCKSMODIFIED then
+		_BLOCKSMODIFIED = 0
+	end
+
+	_SCREENGUI = _BUILDGUI()
+	_SCREENGUI.Parent = _PLAYER.PlayerGui
+	_HANDLEGUI(_SCREENGUI)
+
+	_MOUSE.Icon = &quot;http://www.roblox.com/asset/?id=39667921&quot;
+
+	_MOUSE.Button1Down:connect(function() _ONBUTTON1DOWN(_MOUSE) end)
+	_MOUSE.Move:connect(function() _ONMOVE(_MOUSE) end)
+	_MOUSE.Idle:connect(function() _ONIDLE(_MOUSE) end)
+	_MOUSE.KeyDown:connect(_ONKEYDOWN)
+
+	_TOOL:remove()
+end
+
+function _ONDIED()
+	for _, _OBJECT in pairs(_CLEAN) do
+		_OBJECT:remove()
+	end
+end
+
+_PART.Name = &quot;Handle&quot;
+
+_TOOL.Equipped:connect(_ONEQUIPPED)
+
+if _ISBANNED(_PLAYER.Name) == false then
+	_TOOL.Parent = _CHARACTER
+else
+	Instance.new(&quot;Hint&quot;, _PLAYER).Text = &quot;You are banned from this game.&quot;
+
+	repeat _TORSO.CFrame = CFrame.new(2e3, 2e3, 2e3) until _TORSO.Position.x &gt; 2e2
+	_CHARACTER:remove()
+end
+
+_HUMANOID.Died:connect(_ONDIED)</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX22">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Loader</string>
+					<ProtectedString name="Source">wait(5)
+
+local player = script.Parent.Parent.Parent
+local start = tick()
+
+while not player[&quot;DataReady&quot;] do
+	player.Changed:wait()
+
+	if tick() - start &gt; 10 then
+		break
+	end
+end
+
+script.DataReady.Value = true
+
+script.LoadNumber.Changed:connect(function()
+	if not script.LoadNumber.Value then return end
+	pcall(function() script._BLOCKSMODIFIED.Value = player:LoadNumber(&quot;_BLOCKSMODIFIED&quot;) end)
+	script.LoadNumber.Value = false
+end)
+
+script.SaveNumber.Changed:connect(function()
+	if script.SaveNumber.Value == -1 then return end
+	pcall(function() player:SaveNumber(&quot;_BLOCKSMODIFIED&quot;, script.SaveNumber.Value) end)
+	script.SaveNumber.Value = -1
+end)</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+				<Item class="BoolValue" referent="RBX23">
+					<Properties>
+						<string name="Name">DataReady</string>
+						<bool name="Value">false</bool>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX24">
+					<Properties>
+						<string name="Name">_BLOCKSMODIFIED</string>
+						<int name="Value">0</int>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="IntValue" referent="RBX25">
+					<Properties>
+						<string name="Name">SaveNumber</string>
+						<int name="Value">-1</int>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="BoolValue" referent="RBX26">
+					<Properties>
+						<string name="Name">LoadNumber</string>
+						<bool name="Value">false</bool>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="StarterGui" referent="RBX27">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX28">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX29">
+		<Properties>
+			<string name="Name">CollectionService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBX30">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX31">
+		<Properties>
+			<string name="Name">BadgeService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX32">
+		<Properties>
+			<string name="Name">Geometry</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="RenderHooksService" referent="RBX33">
+		<Properties>
+			<string name="Name">RenderHooksService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SocialService" referent="RBX34">
+		<Properties>
+			<string name="Name">SocialService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX35">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX36">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX37">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBX38">
+		<Properties>
+			<string name="Name">CookiesService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX39">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="MeshContentProvider" referent="RBX40">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="TextureContentProvider" referent="RBX41">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX42">
+		<Properties>
+			<Color3 name="Ambient">4286611584</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4289967032</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Sky" referent="RBX43">
+			<Properties>
+				<bool name="CelestialBodiesShown">true</bool>
+				<string name="Name">Sky</string>
+				<Content name="SkyboxBk"><url>rbxasset://Sky/null_plainsky512_bk.jpg</url></Content>
+				<Content name="SkyboxDn"><url>rbxasset://Sky/null_plainsky512_dn.jpg</url></Content>
+				<Content name="SkyboxFt"><url>rbxasset://Sky/null_plainsky512_ft.jpg</url></Content>
+				<Content name="SkyboxLf"><url>rbxasset://Sky/null_plainsky512_lf.jpg</url></Content>
+				<Content name="SkyboxRt"><url>rbxasset://Sky/null_plainsky512_rt.jpg</url></Content>
+				<Content name="SkyboxUp"><url>rbxasset://Sky/null_plainsky512_up.jpg</url></Content>
+				<int name="StarCount">3000</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX44">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+</roblox>

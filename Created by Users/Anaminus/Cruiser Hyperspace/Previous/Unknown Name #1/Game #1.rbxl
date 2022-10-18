@@ -1,0 +1,908 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">5.2000002712011337</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>20.2026424</X>
+					<Y>-0.201245964</Y>
+					<Z>22.6575413</Z>
+					<R00>0.582510173</R00>
+					<R01>-0.0249660555</R01>
+					<R02>0.812439919</R02>
+					<R10>-2.66645372e-010</R10>
+					<R11>0.99952817</R11>
+					<R12>0.0307152271</R12>
+					<R20>-0.812823415</R20>
+					<R21>-0.0178919323</R21>
+					<R22>0.582235336</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-0.108353496</X>
+					<Y>-0.969126582</Y>
+					<Z>8.10165977</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX2">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Module</string>
+				<string name="Source">function add(player,character)
+	character.Humanoid.WalkSpeed = 0
+	character.Torso.CFrame = CFrame.new(9e9,9e9,9e9)
+	for i,v in pairs(character:GetChildren()) do
+		if v.className == &quot;Part&quot; then
+			v.Anchored = true
+			v.Transparency = 1
+		end
+	end
+--	character:Remove()
+--	player.Character = nil
+end
+
+game.Players.PlayerAdded:connect(function(player)
+	wait()
+	player.StarterGear:Remove()
+	if player.Character then
+		add(player,player.Character)
+	else
+		player.Changed:connect(function(p)
+			if p == &quot;Character&quot; and player.Character then
+				add(player,player.Character)
+			end
+		end)
+	end
+	local last = 0
+	local spam = 0
+	local maxspam = 5
+	local time = 1
+
+	local e = true
+	player.Chatted:connect(function(msg)
+		if not e then return end
+		e = false
+		script.Stimulator:Clone().Parent = player.Backpack
+		if tick() - last &lt; time then
+			spam = spam + 1
+			if spam &gt; maxspam then
+				local s = Instance.new(&quot;IntValue&quot;)
+				s.Name = &quot;Timeout&quot;
+				s.Parent = player.Backpack.CLICK
+				wait()
+				s:Remove()
+				wait(9)
+			end
+		else
+			spam = 0
+		end
+		if spam &lt;= maxspam then
+			for _,p in pairs(game.Players:GetPlayers()) do
+				coroutine.resume(coroutine.create(function()
+					local s = Instance.new(&quot;StringValue&quot;)
+					s.Name = player.Name
+					s.Value = msg
+
+					s.Parent = p.Backpack.CLICK
+					wait()
+					s:Remove()
+				end))
+			end
+		end
+		last = tick()
+		e = true
+	end)
+end)</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="LocalScript" referent="RBX3">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Stimulator</string>
+					<string name="Source">for i = 1,20 do
+	wait(0.05)
+	local c = Instance.new(&quot;StringValue&quot;)
+	c.Name = &quot;Testbot&quot;
+	s = &quot;&quot;
+	for i = 1,math.random(16,48) do
+	 s = s .. string.char(math.random(32,126))
+	end
+	c.Value = s
+	c.Parent = script.Parent.CLICK
+	wait()
+	c:Remove()
+end
+
+script:Remove()</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Hint" referent="RBX4">
+			<Properties>
+				<string name="Name">Message</string>
+				<string name="Text">Pressing Up/Down arrow keys to scroll the text. Working on a better scrolling device...</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX5">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX6</External>
+	<External>RBX7</External>
+	<Item class="ContentProvider" referent="RBX8">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX9">
+		<Properties>
+			<int name="MaxPlayers">100</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX10">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="HopperBin" referent="RBX11">
+			<Properties>
+				<token name="BinType">0</token>
+				<string name="Name">CLICK</string>
+				<Content name="TextureId"><null></null></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="LocalScript" referent="RBX12">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">LocalScript</string>
+					<string name="Source">local distance = 10
+local offset = CFrame.new(0,100,0) * CFrame.new(0,0,-distance)
+
+SLength = 0.1
+X = 0
+Y = 0
+Xone = 1
+Yone = 1
+items = {}
+
+local Chat = script.Parent
+local Display = workspace.CurrentCamera
+
+draw = {
+	Global = function (size,position)
+		local item_00 = Instance.new(&quot;Part&quot;)
+		Instance.new(&quot;BlockMesh&quot;).Parent = item_00
+		item_00.TopSurface = 0
+		item_00.BottomSurface = 0
+		item_00.Anchored = true
+		item_00.CanCollide = false
+		item_00.size = size
+		item_00.CFrame = position
+		item_00.Parent = Display
+		return item_00
+	end,
+	Background = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Background&quot;
+		item_00.BrickColor = BrickColor.new(1003)
+		return item_00
+	end,
+	Box = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Box&quot;
+		item_00.BrickColor = BrickColor.new(1001)
+			local item_01 = Instance.new(&quot;NumberValue&quot;)
+			item_01.Name = &quot;NewMsgIndex&quot;
+			item_01.Parent = item_00
+			local item_02 = Instance.new(&quot;NumberValue&quot;)
+			item_02.Name = &quot;ScrollIndex&quot;
+			item_02.Parent = item_00
+			local item_03 = Instance.new(&quot;Model&quot;)
+			item_03.Name = &quot;Messages&quot;
+			item_03.Parent = item_00
+			item_03.ChildAdded:connect(function(new)
+				if new.ScrollIndex.Value ~= -1 then return end
+				if new.className == &quot;IntValue&quot; then
+					new:Remove()
+				elseif new.className == &quot;Model&quot; then
+					new.Head.CFrame = item_00.CFrame * CFrame.new(0,(item_00.Size.y/2 - 1.75) - (item_01.Value - item_02.Value),-0.2)
+					if new.Head.CFrame.y + 1.6 &gt; (item_00.CFrame.y + item_00.Size.y/2) or new.Head.CFrame.y + 1.6 &lt; (item_00.CFrame.y - item_00.Size.y/2) then
+--						new.Head.Transparency = 1
+						new.Parent = nil
+					end
+					new.ScrollIndex.Value = item_01.Value
+				end
+				item_01.Value = item_01.Value + 0.25
+				if item_01.Value &gt; item_00.Size.y + 0.4 and item_02.Value + item_00.Size.y + 0.25 &gt;= item_01.Value - 0.25 then
+					item_02.Value = item_02.Value + 0.25
+				end
+			end)
+			item_02.Changed:connect(function(index)
+--				for _,message in pairs(item_03:GetChildren()) do
+				for _,message in pairs(items.Messages) do
+					message.Head.CFrame = item_00.CFrame * CFrame.new(0,(item_00.Size.y/2 - 1.75) - (message.ScrollIndex.Value - index),-0.2)
+					if message.Head.CFrame.y + 1.6 &gt; (item_00.CFrame.y + item_00.Size.y/2) or message.Head.CFrame.y + 1.6 &lt; (item_00.CFrame.y - item_00.Size.y/2) then
+--						message.Head.Transparency = 1
+						message.Parent = nil
+					else
+--						message.Head.Transparency = 0
+						message.Parent = item_03
+					end
+				end
+			end)
+		return item_00
+	end,
+	Scroll = function (box,size,state)
+		local item_00 = Instance.new(&quot;Model&quot;)
+		item_00.Name = &quot;Scroll&quot;
+			local item_01 = draw.Global(size,box.CFrame * CFrame.new(box.Size.x/2+size.x/2,(box.Size.y/2 - size.y/2),0))
+			item_01.Name = &quot;Up&quot;
+			item_01.BrickColor = BrickColor.new(1010)
+			item_01.Parent = item_00
+--[[			item_01.ChildAdded:connect(function(event)
+				if event.Name == &quot;Button1Down&quot; then
+					box.ScrollIndex.Value = box.ScrollIndex.Value + SLength
+					wait(0.3)
+					if item_01:FindFirstChild(&quot;Button1Up&quot;) == nil then
+						while item_01:FindFirstChild(&quot;Button1Up&quot;) == nil do
+							box.ScrollIndex.Value = box.ScrollIndex.Value + SLength
+							wait(0.1)
+						end
+						item_01:FindFirstChild(&quot;Button1Up&quot;):Remove()
+					end
+				end
+			end)]]
+			local item_02 = draw.Global(size,box.CFrame * CFrame.new(box.Size.x/2+size.x/2,-(box.Size.y/2 - size.y/2),0))
+			item_02.Name = &quot;Down&quot;
+			item_02.BrickColor = BrickColor.new(1010)
+			item_02.Parent = item_00
+--[[			item_02.ChildAdded:connect(function(event)
+				if event.Name == &quot;Button1Down&quot; then
+					box.ScrollIndex.Value = box.ScrollIndex.Value + SLength
+					wait(0.3)
+					if item_02:FindFirstChild(&quot;Button1Up&quot;) == nil then
+						while item_02:FindFirstChild(&quot;Button1Up&quot;) == nil do
+							box.ScrollIndex.Value = box.ScrollIndex.Value - SLength
+							wait(0.1)
+						end
+					end
+				end
+			end)]]
+			local item_03 = draw.Global(Vector3.new(size.x,box.Size.y,size.z/2),box.CFrame * CFrame.new(box.Size.x/2+size.x/2,0,0))
+			item_03.Name = &quot;Bar&quot;
+			item_03.BrickColor = BrickColor.new(194)
+			item_03.Parent = item_00
+		item_00.Parent = box
+		return item_00
+	end,
+	Text = function()
+		local item_00 = Instance.new(&quot;Model&quot;)
+		item_00.Name = &quot;&quot;
+			local item_01 = Instance.new(&quot;Part&quot;)
+			item_01.Name = &quot;Head&quot;
+			item_01.BrickColor = BrickColor.new(1001)
+			item_01.size = Vector3.new(0.1,0.1,0.1)
+			item_01.TopSurface = 0
+			item_01.BottomSurface = 0
+			item_01.Anchored = true
+			item_01.CanCollide = false
+			item_01.Parent = item_00
+			local item_02 = Instance.new(&quot;Humanoid&quot;)
+			item_02.Health = 0
+			item_02.MaxHealth = 0
+			item_02.Parent = item_00
+			local item_03 = Instance.new(&quot;NumberValue&quot;)
+			item_03.Name = &quot;ScrollIndex&quot;
+			item_03.Value = -1
+			item_03.Parent = item_00
+		return item_00
+	end,
+	Logo = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Logo&quot;
+		item_00.BrickColor = BrickColor.new(1020)
+			local item_01 = Instance.new(&quot;Decal&quot;)
+			item_01.Face = &quot;Back&quot;
+			item_01.Texture = &quot;http://www.roblox.com/asset/?id=12534604&quot;
+			item_01.Parent = item_00
+		return item_00
+	end,
+	Timeout = function(size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Timeout&quot;
+		item_00.BrickColor = BrickColor.new(&quot;CGA brown&quot;)
+		item_00.Transparency = 1
+		return item_00
+	end
+}
+
+function wrap(str, limit, indent, indent1)
+	indent = indent or &quot;&quot;
+	indent1 = indent1 or indent
+	limit = limit or 72
+	local here = 1-#indent1
+	return indent1..str:gsub(&quot;(%s+)()(%S+)()&quot;,
+		function(sp, st, word, fi)
+			if fi-here &gt; limit then
+				here = st - #indent
+				return &quot;\n&quot;..indent..word
+			end
+		end)
+end
+
+Chat.Selected:connect(function(mouse)
+--[[	mouse.Button1Down:connect(function()
+print(mouse.X,mouse.Y)
+		if mouse.Target then
+print(1)
+			if mouse.Target:IsDescendantOf(Display) then
+print(2)
+				local event_00 = Instance.new(&quot;IntValue&quot;)
+				event_00.Name = &quot;Button1Down&quot;
+				event_00.Parent = mouse.Target
+				wait()
+				event_00:Remove()
+			end
+		end
+	end)
+	mouse.Button1Up:connect(function()
+print(mouse.X,mouse.Y)
+		if mouse.Target then
+print(4)
+			if mouse.Target:IsDescendantOf(Display) then
+print(5)
+				local event_00 = Instance.new(&quot;IntValue&quot;)
+				event_00.Name = &quot;Button1Up&quot;
+				event_00.Parent = mouse.Target
+				wait(1)
+				event_00:Remove()
+			end
+		end
+	end)]]
+	for _,item in pairs(game.LocalBackpack:GetChildren())do
+		item:Remove()
+	end
+	wait(0.1)
+	X = mouse.ViewSizeX
+	Y = mouse.ViewSizeY
+
+	Xone = X/Y*(distance*1.2)/32
+	Yone = (distance*1.2)/32
+
+	items.Background = draw.Background(Vector3.new(Xone*32,Yone*32,0),offset)
+
+	Display.CameraType = &quot;Attach&quot;
+	Display.CameraSubject = items.Background
+	Display.CoordinateFrame = offset * CFrame.new(0,0,distance)
+	Display.CoordinateFrame = CFrame.new(math.huge,math.huge,math.huge)
+
+	items.Box = draw.Box(Vector3.new(10,10,0.1),offset)
+--	items.Scroll = draw.Scroll(items.Box,Vector3.new(1,1,0.2))
+	items.Timeout = draw.Timeout(Vector3.new(1,1,0.1),offset * CFrame.new(-6,0,0))
+	items.Messages = {}
+
+	items.Logo = draw.Logo(Vector3.new(Xone*16,Yone*16,0.2),offset * CFrame.new(0,0,1) )
+	local version = draw.Text()
+	version.Name = &quot;version 0.3&quot;
+	version.Head.CFrame = items.Logo.CFrame * CFrame.new(0,-items.Logo.Size.y/2-1,0)
+	version.Parent = Display
+	mouse.Button1Down:wait()
+	version:Remove()
+	items.Logo:Remove()
+	items.Logo = nil
+
+	Chat.ChildAdded:connect(function(msg)
+		if msg.className == &quot;IntValue&quot; then
+			items.Timeout.Transparency = 0
+			wait(10)
+			items.Timeout.Transparency = 1
+		else
+			local player = msg.Name
+			msg = msg.Value
+			local speaker = draw.Text()
+			speaker.Name = player .. &quot;;&quot;
+			table.insert(items.Messages,speaker)
+			speaker.Parent = items.Box.Messages
+
+			msg = wrap(msg,32)
+			for line in msg:gmatch(&quot;[^\r\n]+&quot;) do
+				local text = draw.Text()
+				text.Name = line
+				table.insert(items.Messages,text)
+				text.Parent = items.Box.Messages
+			end
+			local tag = Instance.new(&quot;IntValue&quot;)
+			tag.Name = &quot;Enter&quot;
+			local index = Instance.new(&quot;NumberValue&quot;)
+			index.Name = &quot;ScrollIndex&quot;
+			index.Value = -1
+			index.Parent = tag
+			tag.Parent = items.Box.Messages
+			wait()
+			tag:Remove()
+		end
+	end)
+
+	local last_click = 0
+	local last_key = &quot;&quot;
+	mouse.KeyDown:connect(function(key)
+		key = key:lower()
+		t = tick()
+		if (t - last_click &lt; 0.1) and (key == last_key) then
+			if key == &quot;&#18;&quot; then
+				while last_key == key do
+					if items.Box.ScrollIndex.Value + 0.5 + items.Box.Size.y &lt; items.Box.NewMsgIndex.Value then
+						items.Box.ScrollIndex.Value = items.Box.ScrollIndex.Value + 0.5
+					else
+						break
+					end
+					wait(0.1)
+				end
+			elseif key == &quot;&#17;&quot; then
+				while last_key == key do
+					if items.Box.ScrollIndex.Value - 0.5 &gt;= 0 then
+						items.Box.ScrollIndex.Value = items.Box.ScrollIndex.Value - 0.5
+					else
+						break
+					end
+					wait(0.1)
+				end
+			end
+		else
+			if key == &quot;&#18;&quot; then
+				if items.Box.ScrollIndex.Value + 0.25 + items.Box.Size.y &lt; items.Box.NewMsgIndex.Value then
+					items.Box.ScrollIndex.Value = items.Box.ScrollIndex.Value + 0.25
+				end
+			elseif key == &quot;&#17;&quot; then
+				if items.Box.ScrollIndex.Value - 0.25 &gt;= 0 then
+					items.Box.ScrollIndex.Value = items.Box.ScrollIndex.Value - 0.25
+				end		
+			end
+		end
+		last_click = t
+		last_key = key
+	end)
+end)
+
+
+
+
+</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX13">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX14</External>
+		<External>RBX15</External>
+		<External>RBX16</External>
+		<External>RBX17</External>
+		<External>RBX18</External>
+		<External>RBX19</External>
+		<External>RBX20</External>
+		<External>RBX21</External>
+		<External>RBX22</External>
+		<External>RBX23</External>
+		<External>RBX24</External>
+		<External>RBX25</External>
+		<External>RBX26</External>
+		<External>RBX27</External>
+	</Item>
+	<Item class="PhysicsService" referent="RBX28">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX29</External>
+	<Item class="Selection" referent="RBX30">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX31</External>
+	<Item class="Lighting" referent="RBX32">
+		<Properties>
+			<Color3 name="Ambient">4294967295</Color3>
+			<float name="Brightness">0</float>
+			<Color3 name="ColorShift_Bottom">4294967295</Color3>
+			<Color3 name="ColorShift_Top">4294967295</Color3>
+			<float name="GeographicLatitude">110</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4294967295</Color3>
+			<string name="TimeOfDay">12:00:00</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Sky" referent="RBX33">
+			<Properties>
+				<bool name="CelestialBodiesShown">false</bool>
+				<string name="Name">Sky</string>
+				<Content name="SkyboxBk"><binary>iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAA
+DX9JREFUeF7t0IEAAAAAw6D5U1/hAIVQYcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCA
+AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYOAf
+GAK0AAGLsfvyAAAAAElFTkSuQmCC</binary></Content>
+				<Content name="SkyboxDn" mimeType="image/png"><hash>f53e6b875554a0b37e55aecb833a2228</hash></Content>
+				<Content name="SkyboxFt" mimeType="image/png"><hash>f53e6b875554a0b37e55aecb833a2228</hash></Content>
+				<Content name="SkyboxLf" mimeType="image/png"><hash>f53e6b875554a0b37e55aecb833a2228</hash></Content>
+				<Content name="SkyboxRt" mimeType="image/png"><hash>f53e6b875554a0b37e55aecb833a2228</hash></Content>
+				<Content name="SkyboxUp" mimeType="image/png"><hash>f53e6b875554a0b37e55aecb833a2228</hash></Content>
+				<int name="StarCount">0</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX34">
+			<Properties>
+				<bool name="Disabled">true</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Script</string>
+				<string name="Source">width = {5,3,6,13,11,13,10,3,6,6,9,7,4,7,4,9,10,7,10,10,10,10,10,9,10,9,5,5,6,8,6,9,15,12,10,10,12,10,9,11,12,9,11,10,9,15,13,12,8,14,11,11,11,12,10,10,17,12,11,12,6,8,6,8,10,8,8,10,8,9,8,8,8,8,5,6,9,5,11,8,8,9,8,8,7,7,8,8,11,9,9,9,6,7,6,10}
+
+</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="StringValue" referent="RBX35">
+			<Properties>
+				<string name="Name">Player</string>
+				<string name="Value">Hello!</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="HopperBin" referent="RBX36">
+			<Properties>
+				<token name="BinType">0</token>
+				<string name="Name">CLICK</string>
+				<Content name="TextureId"><null></null></Content>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="LocalScript" referent="RBX37">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">LocalScript</string>
+					<string name="Source">local distance = 10
+local offset = CFrame.new(0,100,0) * CFrame.new(0,0,-distance)
+
+SLength = 0.1
+X = 0
+Y = 0
+Xone = 1
+Yone = 1
+one = 1
+items = {}
+
+
+local Chat = script.Parent
+local Display = workspace.CurrentCamera
+--[[
+local messages = Instance.new(&quot;Model&quot;)
+Instance.new(&quot;Model&quot;).Parent = Display
+Display.Model.Name = &quot;Messages&quot;
+Display.Messages.ChildAdded:connect(function(new)
+	for _,message in pairs(Display.Messages:GetChildren()) do
+		if message ~= new then
+			if new.MessageType.Value == &quot;Name&quot; then
+				message.Head.CFrame = message.Head.CFrame * CFrame.new(0,one,0)
+			elseif new.MessageType.Value == &quot;Message&quot; then
+				message.Head.CFrame = message.Head.CFrame * CFrame.new(0,one*0.5,0)
+			end
+		end
+	end
+end)
+]]
+
+draw = {
+	Global = function (size,position)
+		local item_00 = Instance.new(&quot;Part&quot;)
+		Instance.new(&quot;BlockMesh&quot;).Parent = item_00
+		item_00.TopSurface = 0
+		item_00.BottomSurface = 0
+		item_00.Anchored = true
+		item_00.CanCollide = false
+		item_00.size = size
+		item_00.CFrame = position
+		item_00.Parent = Display
+		return item_00
+	end,
+	Background = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Background&quot;
+		item_00.BrickColor = BrickColor.new(1003)
+		return item_00
+	end,
+	Box = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Box&quot;
+		item_00.BrickColor = BrickColor.new(1001)
+			local item_01 = Instance.new(&quot;NumberValue&quot;)
+			item_01.Name = &quot;NewMsgIndex&quot;
+			item_01.Parent = item_00
+			local item_02 = Instance.new(&quot;NumberValue&quot;)
+			item_02.Name = &quot;ScrollIndex&quot;
+			item_02.Parent = item_00
+			local item_03 = Instance.new(&quot;Model&quot;)
+			item_03.Name = &quot;Messages&quot;
+			item_03.Parent = item_00
+			item_03.ChildAdded:connect(function(new)
+				local add = 0
+				if new.className == &quot;IntValue&quot; then
+					add = one
+					new:Remove()
+				elseif new.className == &quot;Model&quot; then
+					new.Head.CFrame = item_00.CFrame * CFrame.new(0,(item_00.Size.y/2 - (Yone/40*8)) - (item_01.Value - item_02.Value),0)
+					add = one*0.5
+				end
+				item_01.Value = item_01.Value + add
+				if item_01.Value &gt; item_00.Size.y - (Yone/40*6) then
+					for _,message in pairs(item_03:GetChildren()) do
+						message.Head.CFrame = message.Head.CFrame * CFrame.new(0,add,0)
+					end
+					item_02.Value = item_02.Value + add
+				end
+			end)
+		return item_00
+	end,
+	Scroll = function (box,size,state)
+		local item_00 = draw.Global(size,box.CFrame * CFrame.new(box.Size.x/2+size.x/2,(box.Size.y/2 - size.y/2) * state,0))
+		item_00.Name = &quot;Scroll&quot;
+		item_00.BrickColor = BrickColor.new(1010)
+		return item_00
+	end,
+	Text = function()
+		local item_00 = Instance.new(&quot;Model&quot;)
+		item_00.Name = &quot;&quot;
+			local item_01 = Instance.new(&quot;Part&quot;)
+			item_01.Name = &quot;Head&quot;
+			item_01.BrickColor = BrickColor.new(1001)
+			item_01.size = Vector3.new(0.1,0.1,0.1)
+			item_01.TopSurface = 0
+			item_01.BottomSurface = 0
+			item_01.Anchored = true
+			item_01.CanCollide = false
+			item_01.Parent = item_00
+			local item_02 = Instance.new(&quot;Humanoid&quot;)
+			item_02.Health = 0
+			item_02.MaxHealth = 0
+			item_02.Parent = item_00
+			local item_03 = Instance.new(&quot;StringValue&quot;)
+			item_03.Name = &quot;MessageType&quot;
+			item_03.Parent = item_00
+		return item_00
+	end,
+	Logo = function (size,position)
+		local item_00 = draw.Global(size,position)
+		item_00.Name = &quot;Logo&quot;
+		item_00.BrickColor = BrickColor.new(1020)
+			local item_01 = Instance.new(&quot;Decal&quot;)
+			item_01.Face = &quot;Back&quot;
+			item_01.Texture = &quot;http://www.roblox.com/asset/?id=12534604&quot;
+			item_01.Parent = item_00
+		return item_00
+	end
+}
+
+function wrap(str, limit, indent, indent1)
+	indent = indent or &quot;&quot;
+	indent1 = indent1 or indent
+	limit = limit or 72
+	local here = 1-#indent1
+	return indent1..str:gsub(&quot;(%s+)()(%S+)()&quot;,
+		function(sp, st, word, fi)
+			if fi-here &gt; limit then
+				here = st - #indent
+				return &quot;\n&quot;..indent..word
+			end
+		end)
+end
+
+Chat.Selected:connect(function(mouse)
+	mouse.Button1Down:connect(function()
+		if mouse.Target then
+			if mouse.Target.Parent == Display then
+				local event_00 = Instance.new(&quot;IntValue&quot;)
+				event_00.Name = &quot;Button1Down&quot;
+				event_00.Parent = mouse.Target
+			end
+		end
+	end)
+	mouse.Button1Up:connect(function()
+		if mouse.Target then
+			if mouse.Target.Parent == Display then
+				local event_00 = Instance.new(&quot;IntValue&quot;)
+				event_00.Name = &quot;Button1Up&quot;
+				event_00.Parent = mouse.Target
+			end
+		end
+	end)
+	for _,item in pairs(game.LocalBackpack:GetChildren())do
+		item:Remove()
+	end
+	wait(0.1)
+	X = mouse.ViewSizeX
+	Y = mouse.ViewSizeY
+
+	Xone = X/Y*(distance*1.2)
+	Yone = (distance*1.2)
+	one = (X/Y*(distance*1.2))/40
+
+	Display.CoordinateFrame = offset * CFrame.new(0,0,distance)
+	Display.CoordinateFrame = CFrame.new(math.huge,math.huge,math.huge)
+	items.Background = draw.Background(Vector3.new(Xone,Yone,0),offset)
+	items.Box = draw.Box(Vector3.new(one*16,Yone,0.1),offset)
+	items.Up = draw.Scroll(items.Box,Vector3.new(one*1,one*2,0.2),1)
+	items.Down = draw.Scroll(items.Box,Vector3.new(one*1,one*2,0.1),-1)
+
+	items.Logo = draw.Logo(Vector3.new(Xone*0.5,Yone*0.5,0),offset * CFrame.new(0,0,1) )
+	local version = draw.Text()
+	version.Name = &quot;1.0&quot;
+	version.Head.CFrame = items.Logo.CFrame * CFrame.new(0,-items.Logo.Size.y/2-1,0)
+	version.Parent = Display
+	wait(2)
+	version:Remove()
+	items.Logo:Remove()
+	items.Logo = nil
+print(&quot;DONE&quot;)
+	Chat.ChildAdded:connect(function(msg)
+print(&quot;NEW MESSAGE&quot;)
+		local player = msg.Name
+		msg = msg.Value
+		local speaker = draw.Text()
+		speaker.Name = player .. &quot;;&quot;
+--		speaker.Head.CFrame = offset * CFrame.new(0,-Yone/2,0)
+		speaker.MessageType.Value = &quot;Name&quot;
+		speaker.Parent = items.Box.Messages
+
+		msg = wrap(msg,32)
+		for line in msg:gmatch(&quot;[^\r\n]+&quot;) do
+			local text = draw.Text()
+			text.Name = line
+--			text.Head.CFrame = offset * CFrame.new(0,-Yone/2,0)
+			text.Parent = items.Box.Messages
+		end
+		local tag = Instance.new(&quot;IntValue&quot;)
+		tag.Name = &quot;Enter&quot;
+		tag.Parent = items.Box.Messages
+	end)
+end)
+
+
+
+
+</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX38">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Teams" referent="RBX39">
+		<Properties>
+			<string name="Name">Teams</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+</roblox>

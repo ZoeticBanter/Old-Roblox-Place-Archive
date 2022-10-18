@@ -1,0 +1,1127 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Model">
+		<Properties>
+			<token name="Controller">0</token>
+			<bool name="ControllerFlagShown">true</bool>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">HoverTank</string>
+			<Ref name="PrimaryPart">RBX0</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Part" referent="RBX0">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">2</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>7</X>
+					<Y>0.800000012</Y>
+					<Z>10</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CastsShadows">true</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="Cullable">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
+				<float name="Friction">2</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">2</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">2</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<string name="Name">Engine</string>
+				<float name="Reflectance">0.200000003</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">2</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">2</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>8</X>
+					<Y>0.800000012</Y>
+					<Z>12</Z>
+				</Vector3>
+			</Properties>
+			<Item class="BodyForce">
+				<Properties>
+					<string name="Name">HoverForce</string>
+					<bool name="archivable">true</bool>
+					<Vector3 name="force">
+						<X>0</X>
+						<Y>91684.4922</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="BodyThrust">
+				<Properties>
+					<string name="Name">LeftThrust</string>
+					<bool name="archivable">true</bool>
+					<Vector3 name="force">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<Vector3 name="location">
+						<X>-4</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="BodyThrust">
+				<Properties>
+					<string name="Name">RightThrust</string>
+					<bool name="archivable">true</bool>
+					<Vector3 name="force">
+						<X>0</X>
+						<Y>-0</Y>
+						<Z>-0</Z>
+					</Vector3>
+					<Vector3 name="location">
+						<X>4</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="NumberValue">
+				<Properties>
+					<string name="Name">TopSpeed</string>
+					<float name="Value">24</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="NumberValue">
+				<Properties>
+					<string name="Name">TurnSpeed</string>
+					<float name="Value">2</float>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="BodyGyro">
+				<Properties>
+					<float name="D">500</float>
+					<string name="Name">Stabilizer</string>
+					<float name="P">3000</float>
+					<bool name="archivable">true</bool>
+					<CoordinateFrame name="cframe">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<Vector3 name="maxTorque">
+						<X>400000</X>
+						<Y>0</Y>
+						<Z>400000</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Script">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">EngineScript</string>
+					<string name="Source">engine = script.Parent&#13;&#10;r = game:service(&quot;RunService&quot;)&#13;&#10;print(&quot;Loading hovercraft script...&quot;)&#13;&#10;&#13;&#10;wait(0.01)&#13;&#10;&#13;&#10;function mass(thing)&#13;&#10;&#9;if thing.className == &quot;Part&quot; then&#13;&#10;&#9;&#9;return thing:getMass()&#13;&#10;&#9;end&#13;&#10;&#9;if thing.className == &quot;Model&quot; then&#13;&#10;&#9;&#9;local child = thing:children()&#13;&#10;&#9;&#9;local massTotal = 0&#13;&#10;&#9;&#9;for x = 1, #child do&#13;&#10;&#9;&#9;&#9;massTotal = massTotal + mass(child[x])&#13;&#10;&#9;&#9;end&#13;&#10;&#9;&#9;return massTotal&#13;&#10;&#9;end&#13;&#10;&#9;return 0&#13;&#10;end&#13;&#10;&#13;&#10;function Destroy()&#13;&#10;&#9;engine.Stabilizer:remove()&#13;&#10;&#9;engine.LeftThrust:remove()&#13;&#10;&#9;engine.RightThrust:remove()&#13;&#10;&#9;engine.HoverForce:remove()&#13;&#10;end&#13;&#10;&#13;&#10;hovercraftMass = mass(script.Parent.Parent)&#13;&#10;print(&quot;Hovercraft mass calculated to be &quot; .. hovercraftMass .. &quot; units.&quot;)&#13;&#10;print(&quot;Hovercraft script succesfully loaded.&quot;)&#13;&#10;&#13;&#10;connection = script.ChildAdded:connect(onAdded)&#13;&#10;&#13;&#10;while true do&#13;&#10;&#9;if (engine.Parent:findFirstChild(&quot;EngineRequirement&quot;) == nil) then&#13;&#10;&#9;&#9;Destroy()&#13;&#10;&#9;end&#13;&#10;&#9;&#13;&#10;&#9;r.Stepped:wait()&#13;&#10;&#13;&#10;&#9;local dir = engine.CFrame.lookVector&#13;&#10;&#9;--dir = Vector3.new(dir.x, 0, dir.z)&#13;&#10;&#13;&#10;&#9;local speedForce = ((dir.unit * script.Speed.Value) - engine.Velocity) * 1000&#13;&#10;&#9;local dirForce = (dir.unit * (script.Turn.Value / 4 - engine.RotVelocity.y)) * 10000&#13;&#10;&#13;&#10;&#9;engine.LeftThrust.force = speedForce - dirForce&#13;&#10;&#9;engine.RightThrust.force = speedForce + dirForce&#13;&#10;&#13;&#10;&#9;local myHoverHeight = script.HoverHeight.Value + 196.5 * hovercraftMass / script.HoverForce.Value&#13;&#10;&#9;local hover = myHoverHeight - engine.Position.y --script.HoverHeight.Value - engine.Position.y&#13;&#10;&#9;if hover &lt; 0 then&#13;&#10;&#9;&#9;hover = 0&#13;&#10;&#9;end&#13;&#10;&#13;&#10;&#9;engine.HoverForce.force = Vector3.new(0, hover * script.HoverForce.Value, 0)&#13;&#10;end</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+				<Item class="NumberValue">
+					<Properties>
+						<string name="Name">Speed</string>
+						<float name="Value">0</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="NumberValue">
+					<Properties>
+						<string name="Name">HoverHeight</string>
+						<float name="Value">2.5</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="NumberValue">
+					<Properties>
+						<string name="Name">HoverForce</string>
+						<float name="Value">35000</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="NumberValue">
+					<Properties>
+						<string name="Name">Turn</string>
+						<float name="Value">0</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="Part">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">104</int>
+				<CoordinateFrame name="CFrame">
+					<X>7</X>
+					<Y>1</Y>
+					<Z>16.5</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>-1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>1</R20>
+					<R21>0</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">false</bool>
+				<bool name="CastsShadows">false</bool>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<bool name="Cullable">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<string name="Name">Bumper</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">1</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>1</X>
+					<Y>1.20000005</Y>
+					<Z>8</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Script">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">AI</string>
+				<string name="Source">print(&quot;Drone Hoversled AI initialized.&quot;)&#13;&#10;&#13;&#10;engine = script.Parent.Engine&#13;&#10;&#13;&#10;function onBumper(hit)&#13;&#10;&#9;if not hit.CanCollide then return end&#13;&#10;&#9;engine.EngineScript.Speed.Value = engine.TopSpeed.Value / -2&#13;&#10;&#9;engine.EngineScript.Turn.Value = math.random(-engine.TurnSpeed.Value, engine.TurnSpeed.Value)&#13;&#10;end&#13;&#10;&#13;&#10;bumperConnection = script.Parent.Bumper.Touched:connect(onBumper)&#13;&#10;&#13;&#10;while true do&#13;&#10;&#9;wait(math.random(0.5, 2))&#13;&#10;&#9;engine.EngineScript.Speed.Value = math.random(engine.TopSpeed.Value / 2, engine.TopSpeed.Value)&#13;&#10;&#9;engine.EngineScript.Turn.Value = math.random(-engine.TurnSpeed.Value, engine.TurnSpeed.Value)&#13;&#10;end</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Model">
+			<Properties>
+				<token name="Controller">0</token>
+				<bool name="ControllerFlagShown">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Turret</string>
+				<Ref name="PrimaryPart">RBX1</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">27</int>
+					<CoordinateFrame name="CFrame">
+						<X>6.99996948</X>
+						<Y>2.9996419</Y>
+						<Z>9.00000763</Z>
+						<R00>-1</R00>
+						<R01>-5.12757651e-005</R01>
+						<R02>1.95529519e-005</R02>
+						<R10>-5.2026393e-005</R10>
+						<R11>0.999179721</R11>
+						<R12>-0.040495012</R12>
+						<R20>-1.74733705e-005</R20>
+						<R21>-0.0404950157</R21>
+						<R22>-0.99917978</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">0</float>
+					<float name="LeftParamB">0</float>
+					<token name="LeftSurface">6</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">GunSwivel</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">0</float>
+					<float name="RightParamB">0</float>
+					<token name="RightSurface">6</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">2</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>2</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">4</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">27</int>
+					<CoordinateFrame name="CFrame">
+						<X>6.99989128</X>
+						<Y>3.16162205</Y>
+						<Z>12.996727</Z>
+						<R00>1</R00>
+						<R01>-5.12757651e-005</R01>
+						<R02>-1.95529519e-005</R02>
+						<R10>5.2026393e-005</R10>
+						<R11>0.999179721</R11>
+						<R12>0.040495012</R12>
+						<R20>1.74733705e-005</R20>
+						<R21>-0.0404950157</R21>
+						<R22>0.99917978</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">0</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">2</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">GunBarrel</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>1</Y>
+						<Z>6</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Script">
+					<Properties>
+						<bool name="Disabled">true</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">RocketScript</string>
+						<string name="Source">r = game:service(&quot;RunService&quot;)&#13;&#10;&#13;&#10;shaft = script.Parent&#13;&#10;position = shaft.Position&#13;&#10;&#13;&#10;function fly()&#13;&#10;&#9;direction = shaft.CFrame.lookVector &#13;&#10;&#9;position = position + direction&#13;&#10;&#9;error = position - shaft.Position&#13;&#10;&#9;shaft.Velocity = 7*error&#13;&#10;end&#13;&#10;&#13;&#10;function blow()&#13;&#10;&#9;swoosh:stop()&#13;&#10;&#9;explosion = Instance.new(&quot;Explosion&quot;)&#13;&#10;&#9;explosion.Position = shaft.Position&#13;&#10;&#13;&#10;&#13;&#10;&#9;-- find instigator tag&#13;&#10;&#9;local creator = script.Parent:findFirstChild(&quot;creator&quot;)&#13;&#10;&#9;if creator ~= nil then&#13;&#10;&#9;&#9;explosion.Hit:connect(function(part, distance)  onPlayerBlownUp(part, distance, creator) end)&#13;&#10;&#9;end&#13;&#10;&#13;&#10;&#9;explosion.Parent = game.Workspace&#13;&#10;&#9;connection:disconnect()&#13;&#10;&#9;wait(.1)&#13;&#10;&#9;shaft:remove()&#13;&#10;end&#13;&#10;&#13;&#10;function onPlayerBlownUp(part, distance, creator)&#13;&#10;&#9;&#13;&#10;&#9;if part.Name == &quot;Head&quot; then&#13;&#10;&#9;&#13;&#10;&#9;&#9;local humanoid = part.Parent:findFirstChild(&quot;Humanoid&quot;)&#13;&#10;&#9;&#9;tagHumanoid(humanoid, creator)&#13;&#10;&#9;end&#13;&#10;end&#13;&#10;&#13;&#10;function tagHumanoid(humanoid, creator)&#13;&#10;&#9;-- tag does not need to expire iff all explosions lethal&#13;&#10;&#9;&#13;&#10;&#9;if creator ~= nil then&#13;&#10;&#9;&#9;local new_tag = creator:clone()&#13;&#10;&#9;&#9;new_tag.Parent = humanoid&#13;&#10;&#9;&#9;&#13;&#10;&#9;end&#13;&#10;end&#13;&#10;&#13;&#10;function untagHumanoid(humanoid)&#13;&#10;&#9;if humanoid ~= nil then&#13;&#10;&#9;&#9;local tag = humanoid:findFirstChild(&quot;creator&quot;)&#13;&#10;&#9;&#9;if tag ~= nil then&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;tag.Parent = nil&#13;&#10;&#9;&#9;end&#13;&#10;&#9;end&#13;&#10;end&#13;&#10;&#13;&#10;t, s = r.Stepped:wait()&#13;&#10;&#13;&#10;swoosh = script.Parent.Swoosh&#13;&#10;swoosh:play()&#13;&#10;&#13;&#10;d = t + 10.0 - s&#13;&#10;connection = shaft.Touched:connect(blow)&#13;&#10;&#13;&#10;while t &lt; d do&#13;&#10;&#9;fly()&#13;&#10;&#9;t = r.Stepped:wait()&#13;&#10;end&#13;&#10;&#13;&#10;-- at max range&#13;&#10;script.Parent.Explosion.PlayOnRemove = false&#13;&#10;swoosh:stop()&#13;&#10;shaft:remove()&#13;&#10;</string>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Sound">
+					<Properties>
+						<bool name="Looped">false</bool>
+						<string name="Name">Explosion</string>
+						<int name="PlayCount">0</int>
+						<bool name="PlayOnRemove">true</bool>
+						<Content name="SoundId"><url>rbxasset://sounds\collide.wav</url></Content>
+						<float name="Volume">1</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Sound">
+					<Properties>
+						<bool name="Looped">true</bool>
+						<string name="Name">Swoosh</string>
+						<int name="PlayCount">0</int>
+						<bool name="PlayOnRemove">false</bool>
+						<Content name="SoundId"><url>rbxasset://sounds\Rocket whoosh 01.wav</url></Content>
+						<float name="Volume">0.699999988</float>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="BodyThrust">
+					<Properties>
+						<string name="Name">CounterThrust</string>
+						<bool name="archivable">true</bool>
+						<Vector3 name="force">
+							<X>-5136.34863</X>
+							<Y>1195.25037</Y>
+							<Z>-6015.75439</Z>
+						</Vector3>
+						<Vector3 name="location">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>9</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+				<Item class="BodyThrust">
+					<Properties>
+						<string name="Name">BodyThrust</string>
+						<bool name="archivable">true</bool>
+						<Vector3 name="force">
+							<X>5136.34863</X>
+							<Y>-1195.25037</Y>
+							<Z>6015.75439</Z>
+						</Vector3>
+						<Vector3 name="location">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>-3</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+				<Item class="BodyGyro">
+					<Properties>
+						<float name="D">50</float>
+						<string name="Name">Resistance</string>
+						<float name="P">100</float>
+						<bool name="archivable">true</bool>
+						<CoordinateFrame name="cframe">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+							<R00>1</R00>
+							<R01>0</R01>
+							<R02>0</R02>
+							<R10>0</R10>
+							<R11>1</R11>
+							<R12>0</R12>
+							<R20>0</R20>
+							<R21>0</R21>
+							<R22>1</R22>
+						</CoordinateFrame>
+						<Vector3 name="maxTorque">
+							<X>100</X>
+							<Y>0</Y>
+							<Z>100</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+				<Item class="Script">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">GunScript</string>
+						<string name="Source">wait(0.01) -- Wait for everything to be placed into the model&#13;&#10;print(&quot;Weapon armed.&quot;)&#13;&#10;&#13;&#10;targetName = &quot;&quot;&#13;&#10;gun = script.Parent&#13;&#10;fireCountDown = 4&#13;&#10;swivel = gun.Parent.GunSwivel&#13;&#10;engine = gun.Parent.Parent.Engine&#13;&#10;relPosition = swivel.CFrame:pointToObjectSpace(gun.Position)&#13;&#10;myDist = Vector3.new(0, 0, 0)&#13;&#10;&#13;&#10;function isOnHoverSled(object) -- Checks if an object is on the hoversled&#13;&#10;&#9;local relPos = engine.CFrame:pointToObjectSpace(object.Position)&#13;&#10;&#13;&#10;&#9;if (relPos.x * 2 &lt;= engine.Size.x + 1) and (relPos.z * 2 &lt;= engine.Size.z + 1) and (relPos.x * 2 &gt;= -engine.Size.x - 1) and (relPos.z * 2 &gt;= -engine.Size.z - 1) and (relPos.y * 2 &gt; engine.Size.y) and (relPos.y &lt; 6) then&#13;&#10;&#9;&#9;return true&#13;&#10;&#9;else&#13;&#10;&#9;&#9;return false&#13;&#10;&#9;end&#13;&#10;end&#13;&#10;&#13;&#10;function fire(target)&#13;&#10;&#9;local dir = -gun.CFrame.lookVector&#13;&#10;&#9;dir = dir.unit&#13;&#10;&#9;local dist = target.Character.PrimaryPart.Position - gun.Position&#13;&#10;&#9;if dist.magnitude &lt; 10 then&#13;&#10;&#9;&#9;return false&#13;&#10;&#9;end&#13;&#10;&#13;&#10;&#9;print(&quot;Fired missile at &quot; .. targetName)&#13;&#10;&#13;&#10;&#9;local missile = Instance.new(&quot;Part&quot;)&#13;&#10;&#9;local temp = gun.RocketScript:clone()&#13;&#10;&#9;temp.Parent = missile&#13;&#10;&#9;local temp = gun.Explosion:clone()&#13;&#10;&#9;temp.Parent = missile&#13;&#10;&#9;local temp = gun.Swoosh:clone()&#13;&#10;&#9;temp.Parent = missile&#13;&#10;&#13;&#10;&#9;local spawnPos = gun.Position&#13;&#10;&#13;&#10;&#9;local pos = spawnPos + (dir * 8)&#13;&#10;&#9;&#13;&#10;&#9;missile.CFrame = CFrame.new(pos,  pos + dir)&#13;&#10;&#9;missile.formFactor = 0&#13;&#10;&#9;missile.Size = Vector3.new(1, 1, 4)&#13;&#10;&#9;missile.BackSurface = 4&#13;&#10;&#9;missile.LeftSurface = 3&#13;&#10;&#9;missile.FrontSurface = 3&#13;&#10;&#9;missile.BottomSurface = 3&#13;&#10;&#9;missile.RightSurface = 3&#13;&#10;&#9;missile.Locked = true&#13;&#10;&#9;missile.archivable = false&#13;&#10;&#9;missile.Name = &quot;Rocket&quot;&#13;&#10;&#9;missile.BrickColor = BrickColor.new(21)&#13;&#10;&#9;&#13;&#10;&#9;missile.RocketScript.Disabled = false&#13;&#10;&#13;&#10;&#9;missile.Parent = game.Workspace&#13;&#10;&#9;return true&#13;&#10;end&#13;&#10;&#13;&#10;while isOnHoverSled(swivel) and (myDist.magnitude &lt; 2) do&#13;&#10;&#9;wait(0.2)&#13;&#10;&#9;myDist = relPosition - swivel.CFrame:pointToObjectSpace(gun.Position)&#13;&#10;&#9;myTarget = game.Players:findFirstChild(targetName)&#13;&#10;&#9;if game.Players.numPlayers &gt; 0 then&#13;&#10;&#9;&#9;if (myTarget == nil) then&#13;&#10;&#9;&#9;&#9;playerList = game.Players:players()&#13;&#10;&#9;&#9;&#9;myTarget = playerList[math.random(1, #playerList)]&#13;&#10;&#9;&#9;&#9;targetName = myTarget.Name&#13;&#10;&#9;&#9;end&#13;&#10;&#9;&#9;if (myTarget.Character ~= nil) and (myTarget.Character:findFirstChild(&quot;Head&quot;) ~= nil) then&#13;&#10;&#9;&#9;&#9;wait(0.01)&#13;&#10;&#9;&#9;&#9;local aimThrust = myTarget.Character.Head.Position - gun.Position&#13;&#10;&#9;&#9;&#9;aimThrust = aimThrust.unit * 8000&#13;&#10;&#13;&#10;&#9;&#9;&#9;gun.BodyThrust.force = -aimThrust&#13;&#10;&#9;&#9;&#9;gun.CounterThrust.force = aimThrust&#13;&#10;&#13;&#10;&#9;&#9;&#9;if fireCountDown &lt;= 0 then&#13;&#10;&#9;&#9;&#9;&#9;if fire(myTarget) then&#13;&#10;&#9;&#9;&#9;&#9;&#9;playerList = game.Players:players()&#13;&#10;&#9;&#9;&#9;&#9;&#9;myTarget = playerList[math.random(1, #playerList)]&#13;&#10;&#9;&#9;&#9;&#9;&#9;targetName = myTarget.Name&#13;&#10;&#9;&#9;&#9;&#9;&#9;fireCountDown = 2&#13;&#10;&#9;&#9;&#9;&#9;end&#13;&#10;&#9;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;&#9;fireCountDown = fireCountDown - 0.2&#13;&#10;&#9;&#9;&#9;end&#13;&#10;&#9;&#9;end&#13;&#10;&#9;else&#13;&#10;&#9;&#9;wait(4)&#13;&#10;&#9;end&#13;&#10;end&#13;&#10;&#13;&#10;print(&quot;Gun dismatled&quot;)&#13;&#10;gun.BodyThrust:remove()&#13;&#10;gun.CounterThrust:remove()&#13;&#10;gun.Resistance:remove()&#13;&#10;gun.Parent.TurretBase.Stabilizer:remove()&#13;&#10;wait(0.15)&#13;&#10;script.Parent.Parent.Parent.EngineRequirement:remove()&#13;&#10;wait(0.3)&#13;&#10;explosion = Instance.new(&quot;Explosion&quot;)&#13;&#10;explosion.Position = swivel.Position&#13;&#10;explosion.BlastRadius = 4&#13;&#10;explosion.Parent = game.Workspace</string>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part" referent="RBX1">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">0</float>
+					<float name="BottomParamB">0</float>
+					<token name="BottomSurface">6</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>7</X>
+						<Y>1.40103042</Y>
+						<Z>8.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">TurretBase</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>3.15678062e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>4.82980781e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>6</X>
+						<Y>0.400000006</Y>
+						<Z>5</Z>
+					</Vector3>
+				</Properties>
+				<Item class="BodyGyro">
+					<Properties>
+						<float name="D">10</float>
+						<string name="Name">Stabilizer</string>
+						<float name="P">0.100000001</float>
+						<bool name="archivable">true</bool>
+						<CoordinateFrame name="cframe">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+							<R00>1</R00>
+							<R01>0</R01>
+							<R02>0</R02>
+							<R10>0</R10>
+							<R11>1</R11>
+							<R12>0</R12>
+							<R20>0</R20>
+							<R21>0</R21>
+							<R22>1</R22>
+						</CoordinateFrame>
+						<Vector3 name="maxTorque">
+							<X>50</X>
+							<Y>1</Y>
+							<Z>50</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>7</X>
+						<Y>2.80103064</Y>
+						<Z>6.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>4.50421469e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>4.82980781e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>6</X>
+						<Y>2.4000001</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>5</X>
+						<Y>2.8010304</Y>
+						<Z>8.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>3.15678062e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>3.48237373e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>2.4000001</Y>
+						<Z>3</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>9</X>
+						<Y>2.80103064</Y>
+						<Z>8.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>3.15678062e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>6.17724188e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>2.4000001</Y>
+						<Z>3</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>5</X>
+						<Y>2.20103049</Y>
+						<Z>10.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>1.80934642e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>3.48237373e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>1.20000005</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>9</X>
+						<Y>2.20103049</Y>
+						<Z>10.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">1</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>1.80934642e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>6.17724188e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>2</X>
+						<Y>1.20000005</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="Part">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">2</int>
+					<CoordinateFrame name="CFrame">
+						<X>7</X>
+						<Y>4.20103073</Y>
+						<Z>7.5</Z>
+						<R00>-1</R00>
+						<R01>-1.54377836e-014</R01>
+						<R02>2.79554093e-012</R02>
+						<R10>-1.54377836e-014</R10>
+						<R11>1</R11>
+						<R12>1.55238591e-014</R12>
+						<R20>-2.79554093e-012</R20>
+						<R21>1.55238591e-014</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="CastsShadows">true</bool>
+					<token name="Controller">0</token>
+					<bool name="ControllerFlagShown">true</bool>
+					<bool name="Cullable">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">true</bool>
+					<string name="Name">Turret</string>
+					<float name="Reflectance">0.150000006</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>-3.42253973e-031</X>
+						<Y>-6.73717102e-017</Y>
+						<Z>1.93458158e-030</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>3.83049766e-016</X>
+						<Y>-5.22575756e-005</Y>
+						<Z>4.82980781e-016</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>6</X>
+						<Y>0.400000006</Y>
+						<Z>3</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="BoolValue">
+			<Properties>
+				<string name="Name">EngineRequirement</string>
+				<bool name="Value">false</bool>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+</roblox>

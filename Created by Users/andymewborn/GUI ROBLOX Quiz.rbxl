@@ -1,0 +1,1257 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">RBX2</Ref>
+				<token name="CameraType">5</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>0.373051435</X>
+					<Y>-61.353508</Y>
+					<Z>8.43495846</Z>
+					<R00>0.999122798</R00>
+					<R01>-0.0187274069</R01>
+					<R02>0.037454959</R02>
+					<R10>-0</R10>
+					<R11>0.894427836</R11>
+					<R12>0.447212219</R12>
+					<R20>-0.0418758839</R20>
+					<R21>-0.446819931</R21>
+					<R22>0.89364332</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>-0.00149816251</X>
+					<Y>-65.8256302</Y>
+					<Z>-0.501473963</Z>
+					<R00>-1</R00>
+					<R01>-3.93817499e-021</R01>
+					<R02>-2.28919145e-021</R02>
+					<R10>-3.93817499e-021</R10>
+					<R11>1</R11>
+					<R12>5.67556366e-021</R12>
+					<R20>2.28919145e-021</R20>
+					<R21>5.67556366e-021</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX3">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX4</External>
+	<External>RBX5</External>
+	<Item class="ContentProvider" referent="RBX6">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ContentFilter" referent="RBX7">
+		<Properties>
+			<string name="Name">ContentFilter</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="KeyframeSequenceProvider" referent="RBX8">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="GuiService" referent="RBX9">
+		<Properties>
+			<string name="Name">GuiService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX10">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX11">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBX12">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="ScreenGui" referent="RBX13">
+			<Properties>
+				<string name="Name">ScreenGui</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Script" referent="RBX14">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">repeat wait() until script.Parent.Parent.Parent.Character ~= nil
+script.Parent.Parent.Parent.Character:Remove()</ProtectedString>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+			<Item class="Frame" referent="RBX15">
+				<Properties>
+					<bool name="Active">false</bool>
+					<Color3 name="BackgroundColor3">4278231552</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4278231552</Color3>
+					<int name="BorderSizePixel">1</int>
+					<string name="Name">Main_BG</string>
+					<UDim2 name="Position">
+						<XS>0</XS>
+						<XO>0</XO>
+						<YS>0</YS>
+						<YO>-25</YO>
+					</UDim2>
+					<UDim2 name="Size">
+						<XS>1</XS>
+						<XO>0</XO>
+						<YS>1</YS>
+						<YO>25</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+					<bool name="archivable">true</bool>
+				</Properties>
+				<Item class="Script" referent="RBX16">
+					<Properties>
+						<bool name="Disabled">true</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">Script</string>
+						<ProtectedString name="Source">while true do
+local num = math.random(1, 300)
+local num2 = math.random(1, 300)
+local num3 = math.random(1, 300)
+for i = 1, 1000 do
+wait()
+num = num + 1
+num2 = num2 + 1
+num3 = num3 + 1
+script.Parent.BackgroundColor3 = Color3.new(num, num2, num3)
+script.Parent.BorderColor3 = Color3.new(num, num2, num3)
+end
+end </ProtectedString>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="TextLabel" referent="RBX17">
+					<Properties>
+						<bool name="Active">false</bool>
+						<Color3 name="BackgroundColor3">4278716424</Color3>
+						<float name="BackgroundTransparency">0.800000012</float>
+						<Color3 name="BorderColor3">4278716424</Color3>
+						<int name="BorderSizePixel">0</int>
+						<string name="Name">Shadow</string>
+						<UDim2 name="Position">
+							<XS>0.5</XS>
+							<XO>-185</XO>
+							<YS>0.5</YS>
+							<YO>-160</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>0</XS>
+							<XO>370</XO>
+							<YS>0</YS>
+							<YO>320</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<string name="Text"></string>
+						<Color3 name="TextColor3">4279970357</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Frame" referent="RBX18">
+					<Properties>
+						<bool name="Active">false</bool>
+						<Color3 name="BackgroundColor3">4294967295</Color3>
+						<float name="BackgroundTransparency">0</float>
+						<Color3 name="BorderColor3">4294967295</Color3>
+						<int name="BorderSizePixel">1</int>
+						<string name="Name">Main</string>
+						<UDim2 name="Position">
+							<XS>0.5</XS>
+							<XO>-175</XO>
+							<YS>0.5</YS>
+							<YO>-150</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>0</XS>
+							<XO>350</XO>
+							<YS>0</YS>
+							<YO>300</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+						<bool name="archivable">true</bool>
+					</Properties>
+					<Item class="Frame" referent="RBX19">
+						<Properties>
+							<bool name="Active">false</bool>
+							<Color3 name="BackgroundColor3">4294967295</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4294967295</Color3>
+							<int name="BorderSizePixel">1</int>
+							<string name="Name">Question</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<bool name="Visible">false</bool>
+							<int name="ZIndex">1</int>
+							<bool name="archivable">true</bool>
+						</Properties>
+						<Item class="TextLabel" referent="RBX20">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4278716424</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">QuestionNumber</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Question #NUMBER</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX21">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4278716424</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">QuestionNumber_</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">__________</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX22">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4278716424</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">QuestionTitle</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>60</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Question:</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX23">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4278716424</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">Question</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>80</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">[ QUESTION ]</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX24">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4278716424</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">YourAnswer</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>160</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Your answer:</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextBox" referent="RBX25">
+							<Properties>
+								<bool name="Active">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">Answer</string>
+								<UDim2 name="Position">
+									<XS>0.5</XS>
+									<XO>-100</XO>
+									<YS>0</YS>
+									<YO>190</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>200</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Type your answer here.</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX26">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">OK</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>30</XO>
+									<YS>0</YS>
+									<YO>240</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>100</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">OK</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX27">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">QUIT</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>220</XO>
+									<YS>0</YS>
+									<YO>240</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>100</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">QUIT</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="Script" referent="RBX28">
+						<Properties>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">_Main</string>
+							<ProtectedString name="Source">local questions = {
+&quot;Who created this game?&quot;,
+&quot;Who is ONE of the two users that came up with the idea of ROBLOX?&quot;,
+&quot;Who created the Stylin&apos; Intern Shades?&quot;,
+&quot;Who created the original paintball game?&quot;,
+&quot;Who created the original Farm Tycoon?&quot;,
+&quot;How much did the Crown of Warlords hat cost in Tickets?&quot;,
+&quot;What is the username of the second user that joined ROBLOX?&quot;,
+&quot;What is Telamon&apos;s user ID?&quot;,
+&quot;How much was the Dominus Infernus cost originally in ROBUX?&quot;,
+&quot;Who originally created the game, Two Player Company Tycoon?&quot;,
+&quot;Is HatHelper a outrageous forumer?&quot;,
+&quot;Who created RO-Port Tycoon?&quot;,
+&quot;How many eggs hats do I own?&quot;,
+&quot;Who created A Pirate&apos;s Life?&quot;,
+&quot;If you have more than 1,000 friend requests what will it say? + --&gt; =&quot;,
+&quot;Who has the user ID 537?&quot;,
+&quot;How many groups can someone join with TBC?&quot;,
+&quot;How many forum categories are there in the Forums?&quot;,
+&quot;Which contest was dated 3/8/2010 - 3/15/2010?&quot;,
+&quot;What was the very first game ever created on ROBLOX?&quot;
+}
+
+local answers = {
+&quot;andymewborn&quot;,
+&quot;builderman, erik.cassel&quot;,
+&quot;classicx89&quot;,
+&quot;miked&quot;,
+&quot;uberubert&quot;,
+&quot;50000, 50,000&quot;,
+&quot;john doe&quot;,
+&quot;261&quot;,
+&quot;26000, 26,000&quot;,
+&quot;c0py&quot;,
+&quot;yes&quot;,
+&quot;crazyman32&quot;,
+&quot;12&quot;,
+&quot;lando64000&quot;,
+&quot;1k= friend requests&quot;,
+&quot;coca&quot;,
+&quot;20&quot;,
+&quot;20&quot;,
+&quot;urban skate jungle&quot;,
+&quot;crossroads&quot;
+}
+
+local q = 0
+local maxQ = 20
+local player = script.Parent.Parent.Parent.Parent.Parent
+local wFrame = script.Parent.Won
+local sFrame = script.Parent.StartFrame
+local iFrame = script.Parent.Incorrect
+local qFrame = script.Parent.Question
+local okButton = qFrame.OK
+local answerBox = qFrame.Answer
+local startButton = sFrame.Start
+local iOkButton = iFrame.OK
+local wOkButton = wFrame.OK
+local quitButton = qFrame.QUIT
+local beatenQuiz = sFrame.BeatenQuiz
+local quizResults = sFrame.QuizResults
+local screen = script.Parent.Trans
+local correctAnswer = &quot;&quot;
+
+function nextQuestion()
+if q &lt; maxQ then
+q = q + 1
+local question = questions[q]
+local answer = answers[q]
+qFrame.QuestionNumber.Text = &quot;Question #&quot; ..q
+qFrame.Question.Text = question
+qFrame.Answer.Text = &quot;Type your answer here.&quot;
+correctAnswer = answer
+if q == maxQ then
+q = q + 1
+end
+end
+end
+
+function Won()
+wFrame.Visible = true
+game:GetService(&quot;BadgeService&quot;):AwardBadge(player.userId, 31636382)
+end
+
+function Start()
+screen.Visible = true
+for i = 1, 0, -0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 0
+wait(1)
+sFrame.Visible = false
+qFrame.Visible = true
+if q == maxQ+1 then
+Won()
+end
+nextQuestion()
+wait(1)
+for i = 0, 1, 0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 1
+screen.Visible = false
+end
+
+okButton.MouseButton1Down:connect(function()
+if q == 2 then
+if answerBox.Text == &quot;builderman&quot; or answerBox.Text == &quot;erik.cassel&quot; then
+Start()
+return
+end
+end
+if q == 6 then
+if answerBox.Text == &quot;50000&quot; or answerBox.Text == &quot;50,000&quot; then
+Start()
+return
+end
+end
+if q == 9 then
+if answerBox.Text == &quot;26000&quot; or answerBox.Text == &quot;26,000&quot; then
+Start()
+return
+end
+end
+if answerBox.Text == correctAnswer then
+Start()
+else
+iFrame.Visible = true
+end
+end)
+
+quitButton.MouseButton1Down:connect(function()
+screen.Visible = true
+for i = 1, 0, -0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 0
+wait(1)
+sFrame.Visible = true
+iFrame.Visible = false
+qFrame.Visible = false
+quizResults.Text = &quot;Last quiz results: &quot; ..q-1 .. &quot; out of &quot; ..maxQ.. &quot; correct&quot;
+q = 0
+wait(1)
+for i = 0, 1, 0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 1
+screen.Visible = false
+end)
+
+startButton.MouseButton1Down:connect(function()
+Start()
+end)
+
+iOkButton.MouseButton1Down:connect(function()
+iFrame.Visible = false
+end)
+
+wOkButton.MouseButton1Down:connect(function()
+screen.Visible = true
+for i = 1, 0, -0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 0
+wait(1)
+sFrame.Visible = true
+wFrame.Visible = false
+qFrame.Visible = false
+quizResults.Text = &quot;Last quiz results: &quot; ..q-1 .. &quot; out of &quot; ..maxQ.. &quot; correct&quot;
+q = 0
+wait(1)
+for i = 0, 1, 0.05 do
+wait()
+screen.Transparency = i
+end
+screen.Transparency = 1
+screen.Visible = false
+end)
+
+function checkBadge()
+while true do
+wait(.5)
+if game:GetService(&quot;BadgeService&quot;):UserHasBadge(player.userId, 31636382) then
+beatenQuiz.Visible = true
+wait(.5)
+beatenQuiz.Visible = false
+end
+end
+end
+
+checkBadge()</ProtectedString>
+							<bool name="archivable">true</bool>
+						</Properties>
+					</Item>
+					<Item class="Frame" referent="RBX29">
+						<Properties>
+							<bool name="Active">false</bool>
+							<Color3 name="BackgroundColor3">4289637808</Color3>
+							<float name="BackgroundTransparency">1</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<string name="Name">StartFrame</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+							<bool name="archivable">true</bool>
+						</Properties>
+						<Item class="ImageLabel" referent="RBX30">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4289703601</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<Content name="Image"><url>http://www.roblox.com/asset/?id=31631587</url></Content>
+								<string name="Name">HeadingImage</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>130</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="ImageButton" referent="RBX31">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4289703601</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<Content name="Image"><url>http://www.roblox.com/asset/?id=31631591</url></Content>
+								<string name="Name">Start</string>
+								<UDim2 name="Position">
+									<XS>0.5</XS>
+									<XO>-150</XO>
+									<YS>0</YS>
+									<YO>170</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>300</XO>
+									<YS>0</YS>
+									<YO>100</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX32">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4289637808</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">BeatenQuiz</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>1</YS>
+									<YO>-20</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">You have already beaten the quiz!</string>
+								<Color3 name="TextColor3">4294901760</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">false</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX33">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4289703601</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">QuizResults</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>1</YS>
+									<YO>-35</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Last quiz results: N / A</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="Frame" referent="RBX34">
+						<Properties>
+							<bool name="Active">false</bool>
+							<Color3 name="BackgroundColor3">4294901760</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4294967295</Color3>
+							<int name="BorderSizePixel">1</int>
+							<string name="Name">Incorrect</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<bool name="Visible">false</bool>
+							<int name="ZIndex">1</int>
+							<bool name="archivable">true</bool>
+						</Properties>
+						<Item class="TextLabel" referent="RBX35">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4294967295</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">IAnswer</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>70</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Incorrect answer!</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextLabel" referent="RBX36">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4294967295</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">IAnswer</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>70</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>20</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Incorrect answer!</string>
+								<Color3 name="TextColor3">4294967295</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+						<Item class="TextButton" referent="RBX37">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4294967295</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">OK</string>
+								<UDim2 name="Position">
+									<XS>0.5</XS>
+									<XO>-75</XO>
+									<YS>0</YS>
+									<YO>180</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>150</XO>
+									<YS>0</YS>
+									<YO>70</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">OK</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="Frame" referent="RBX38">
+						<Properties>
+							<bool name="Active">false</bool>
+							<Color3 name="BackgroundColor3">4294967295</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<string name="Name">Won</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<bool name="Visible">false</bool>
+							<int name="ZIndex">1</int>
+							<bool name="archivable">true</bool>
+						</Properties>
+						<Item class="ImageLabel" referent="RBX39">
+							<Properties>
+								<bool name="Active">false</bool>
+								<Color3 name="BackgroundColor3">4289506222</Color3>
+								<float name="BackgroundTransparency">1</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<Content name="Image"><url>http://www.roblox.com/asset/?id=31636370</url></Content>
+								<string name="Name">Badge</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>0</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>150</XO>
+									<YS>0</YS>
+									<YO>150</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+							<Item class="Script" referent="RBX40">
+								<Properties>
+									<bool name="Disabled">false</bool>
+									<Content name="LinkedSource"><null></null></Content>
+									<string name="Name">Script</string>
+									<ProtectedString name="Source">local gui = script.Parent
+
+function Move()
+repeat
+wait()
+repeat
+wait()
+gui.Position = gui.Position + UDim2.new(0, 10, 0, 0)
+until gui.Position == UDim2.new(0, 200, 0, 0)
+repeat
+wait()
+gui.Position = gui.Position + UDim2.new(0, 0, 0, 10)
+until gui.Position == UDim2.new(0, 200, 0, 150)
+repeat
+wait()
+gui.Position = gui.Position - UDim2.new(0, 10, 0, 0)
+until gui.Position == UDim2.new(0, 0, 0, 150)
+repeat
+wait()
+gui.Position = gui.Position - UDim2.new(0, 0, 0, 10)
+until gui.Position == UDim2.new(0, 0, 0, 0)
+until script.Parent.Parent.Visible == false
+end
+
+script.Parent.Parent.Changed:connect(function()
+if script.Parent.Parent.Visible == true then
+Move()
+end
+end)</ProtectedString>
+									<bool name="archivable">true</bool>
+								</Properties>
+							</Item>
+						</Item>
+						<Item class="TextButton" referent="RBX41">
+							<Properties>
+								<bool name="Active">true</bool>
+								<bool name="AutoButtonColor">true</bool>
+								<Color3 name="BackgroundColor3">4294967295</Color3>
+								<float name="BackgroundTransparency">0</float>
+								<Color3 name="BorderColor3">4278716424</Color3>
+								<int name="BorderSizePixel">1</int>
+								<string name="Name">OK</string>
+								<UDim2 name="Position">
+									<XS>0.5</XS>
+									<XO>-35</XO>
+									<YS>0.5</YS>
+									<YO>-25</YO>
+								</UDim2>
+								<bool name="Selected">false</bool>
+								<UDim2 name="Size">
+									<XS>0</XS>
+									<XO>70</XO>
+									<YS>0</YS>
+									<YO>50</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">OK</string>
+								<Color3 name="TextColor3">4278716424</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+								<bool name="archivable">true</bool>
+							</Properties>
+						</Item>
+					</Item>
+					<Item class="TextButton" referent="RBX42">
+						<Properties>
+							<bool name="Active">true</bool>
+							<bool name="AutoButtonColor">false</bool>
+							<Color3 name="BackgroundColor3">4294967295</Color3>
+							<float name="BackgroundTransparency">1</float>
+							<Color3 name="BorderColor3">4294967295</Color3>
+							<int name="BorderSizePixel">1</int>
+							<string name="Name">Trans</string>
+							<UDim2 name="Position">
+								<XS>0</XS>
+								<XO>0</XO>
+								<YS>0</YS>
+								<YO>0</YO>
+							</UDim2>
+							<bool name="Selected">false</bool>
+							<UDim2 name="Size">
+								<XS>1</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<string name="Text"></string>
+							<Color3 name="TextColor3">4279970357</Color3>
+							<float name="TextTransparency">0</float>
+							<bool name="TextWrap">false</bool>
+							<token name="TextXAlignment">2</token>
+							<token name="TextYAlignment">1</token>
+							<bool name="Visible">false</bool>
+							<int name="ZIndex">1</int>
+							<bool name="archivable">true</bool>
+						</Properties>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX43">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX44</External>
+		<External>RBX45</External>
+		<External>RBX46</External>
+		<External>RBX47</External>
+		<External>RBX48</External>
+		<External>RBX49</External>
+		<External>RBX50</External>
+		<External>RBX51</External>
+		<External>RBX52</External>
+		<External>RBX53</External>
+		<External>RBX54</External>
+		<External>RBX55</External>
+		<External>RBX56</External>
+		<External>RBX57</External>
+	</Item>
+	<Item class="PhysicsService" referent="RBX58">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX59">
+		<Properties>
+			<string name="Name">BadgeService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX60">
+		<Properties>
+			<string name="Name">Geometry</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX61</External>
+	<Item class="Debris" referent="RBX62">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX63">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX64">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX65</External>
+	<Item class="Selection" referent="RBX66">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX67</External>
+	<Item class="Lighting" referent="RBX68">
+		<Properties>
+			<Color3 name="Ambient">4287795858</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4291151306</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX69">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="GuidRegistryService" referent="RBX70">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Teams" referent="RBX71">
+		<Properties>
+			<string name="Name">Teams</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX72</External>
+</roblox>

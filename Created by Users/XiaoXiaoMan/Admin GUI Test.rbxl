@@ -1,0 +1,1988 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>31.6788425</X>
+					<Y>24.236269</Y>
+					<Z>-22.6688805</Z>
+					<R00>-0.693846583</R00>
+					<R01>-0.339356244</R01>
+					<R02>0.635149062</R02>
+					<R10>-1.49011612e-008</R10>
+					<R11>0.882000983</R11>
+					<R12>0.471247703</R12>
+					<R20>-0.720122874</R20>
+					<R21>0.326973617</R21>
+					<R22>-0.611973345</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>4</X>
+					<Y>3.70000029</Y>
+					<Z>4</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<bool name="Archivable">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">26</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0.600000024</Y>
+					<Z>0</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Base</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>512</X>
+					<Y>1.20000005</Y>
+					<Z>512</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX3">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Global</string>
+				<ProtectedString name="Source">--Ripped directly out of Kiseki CTF and modified to suit the place&apos;s needs
+texture = &quot;http://www.roblox.com/asset/?id=41742315&quot;
+
+_G[&quot;debug&quot;] = false
+
+_G[&quot;FindFirstEnemy&quot;] =
+function(name)
+	for i,v in ipairs(game.Players:children()) do
+		if v.Name == name then
+			return v
+		end
+	end
+	return nil
+end
+
+_G[&quot;GetBlood&quot;] =
+function(startPos)
+	local blood = Instance.new(&quot;Part&quot;)
+	blood.FormFactor = 2
+	blood.Size = Vector3.new(1, .2, 1)
+	blood.BrickColor = BrickColor.Red()
+	blood.Position = startPos + Vector3.new(math.random(-5,5), math.random(-5,5), math.random(-5,5))
+	blood.Velocity = Vector3.new(math.random(-10,10), math.random(-10,10), math.random(-10,10))
+	blood.RotVelocity = Vector3.new(math.random(-3,3), math.random(-3,3), math.random(-3,3))
+	return blood
+end
+
+_G[&quot;Stun&quot;] =
+function(target_char, time)
+	local bodyVel = Instance.new(&quot;BodyVelocity&quot;)
+	bodyVel.velocity = Vector3.new(0, -50, 0)
+	bodyVel.maxForce = Vector3.new(1e+008, 1e+004, 1e+008)
+	bodyVel.Parent = target_char.Torso
+	game:service(&quot;Debris&quot;):AddItem(bodyVel, time)
+end
+
+_G[&quot;DealDamage&quot;]=
+
+function(source_char, target_char, damage, stun, ignoreDef)
+	if stun == nil then stun = true end
+	if ignoreDef == nil then ignoreDef = false end
+
+	if source_char == nil or target_char == nil then return  end
+	if target_char:findFirstChild(&quot;ForceField&quot;) ~= nil then return end
+	if source_char.Humanoid.Health == 0 or target_char.Humanoid.Health == 0 then return end
+	if source_char == target_char then return end
+
+	source_player = game.Players:GetPlayerFromCharacter(source_char)
+	target_player = game.Players:GetPlayerFromCharacter(target_char)
+
+	if source_player == nil or target_player == nil then return end
+
+	if source_char:findFirstChild(&quot;Torso&quot;) == nil then return end
+	if target_char:findFirstChild(&quot;Torso&quot;) == nil then return end
+
+	print(&quot;Damage: &quot;, damage)
+
+	target_char:findFirstChild(&quot;Humanoid&quot;):TakeDamage(damage)
+
+	-- blood
+	blood = math.ceil(damage / 10.0)
+	if blood &gt; 10 then blood = 10 end
+	for i=1, blood do
+		local blood = GetBlood(target_char.Torso.Position)
+		blood.Parent = game.Workspace
+		game:service(&quot;Debris&quot;):AddItem(blood, 3)
+	end
+end
+
+_G[&quot;GetClosestPlayer&quot;] = 
+
+function(startChar)
+	if startChar:findFirstChild(&quot;Torso&quot;) == nil then return nil end
+
+	players = game.Players:children()
+
+	minPlayer = nil
+	minDist = 1000
+	for i,v in ipairs(players) do
+		if v.Character ~= nil then
+			if v.Character ~= startChar then
+				if v.Character:findFirstChild(&quot;Torso&quot;) ~= nil then
+					if (v.Character.Torso.Position - startChar.Torso.Position).magnitude &lt; minDist then
+						minPlayer = v
+						minDist = (v.Character.Torso.Position - startChar.Torso.Position).magnitude
+					end
+				end
+			end
+		end
+	end
+
+	return minPlayer
+end
+
+_G[&quot;GetClosestEnemy&quot;] = 
+function(player, dist)
+	if player.Character == nil or player.Character:findFirstChild(&quot;Torso&quot;) == nil then return end
+
+	players = game.Players:children()
+
+	minPlayer = nil
+	minDist = dist
+	for i,v in ipairs(players) do
+		if v.Character ~= nil then
+			if v.Character ~= startChar then
+				if v.Character:findFirstChild(&quot;Torso&quot;) ~= nil then
+					if (v.Character.Torso.Position - player.Character.Torso.Position).magnitude &lt; minDist then
+						minPlayer = v
+						minDist = (v.Character.Torso.Position - player.Character.Torso.Position).magnitude
+					end
+				end
+			end
+		end
+	end
+
+	return minPlayer
+end
+
+_G[&quot;tagHumanoid&quot;] = 
+function (ball, humanoid)
+	if ball.className == &quot;Player&quot; then
+		local new_tag = Instance.new(&quot;ObjectValue&quot;)
+		new_tag.Name = &quot;creator&quot;
+		new_tag.Value = ball
+		new_tag.Parent = humanoid
+		game:service(&quot;Debris&quot;):AddItem(new_tag, 2)
+		return
+	end
+
+	local tag = ball:findFirstChild(&quot;creator&quot;)
+	if tag ~= nil then
+		local new_tag = tag:clone()
+		new_tag.Parent = humanoid
+		game:service(&quot;Debris&quot;):AddItem(new_tag, 2)
+	end
+end
+
+--[[_G[&quot;giveGun&quot;] = 
+function (player, properties)
+	if properties.Name == &quot;Chainsaw&quot; or properties.Name == &quot;Combat Knife&quot; then
+		-- the chainsaw and knife are ready to go already
+		properties:clone().Parent = player.Backpack
+		return
+	end
+
+	local gun = game.Lighting.GunTemplate:clone()
+
+	for i,v in ipairs(properties:children()) do
+		v:clone().Parent = gun
+	end
+
+	gun.Name = properties.Name
+	gun.GripPos = properties.GripPos.Value
+	gun.Parent = player.Backpack
+end]]
+
+function contains(needle, haystack)
+	for i,v in ipairs(haystack) do
+		if string.lower(v) == string.lower(needle) then
+			return true
+		end
+	end
+	return false
+end
+
+-- a list of implemented weapons
+--[[implemented_weapons = {}
+for i,v in ipairs(game.Lighting.WeaponContainer:children()) do
+	table.insert(implemented_weapons, v.Name)
+end
+
+print(&quot;Implemented weapons: &quot; .. table.concat(implemented_weapons, &quot;, &quot;))]]
+
+function onPlayerRespawn(property, player)
+	while player.Character == nil do
+		wait(1)
+	end
+	if property == &quot;Character&quot; and player.Character ~= nil then
+
+		local stuff = player:findFirstChild(&quot;Inventory&quot;)
+		if stuff ~= nil then
+			stuff = stuff:getChildren()
+			for i = 1, #stuff do
+				stuff[i]:clone().Parent = player.Backpack
+			end
+		end
+
+		--[[local obtained = player:findFirstChild(&quot;AchList&quot;)
+		if obtained == nil then]]
+			obtained = game.Workspace:findFirstChild(&quot;Data&quot;):findFirstChild(player.Name):findFirstChild(&quot;AchList&quot;)
+			if obtained ~= nil then
+				local list = player.PlayerGui:findFirstChild(&quot;AchievementList&quot;):findFirstChild(&quot;Background&quot;)
+				local game_list = game.Lighting:findFirstChild(&quot;AchievementList&quot;):findFirstChild(&quot;Background&quot;)
+				if list ~= nil then
+					local ob_list = obtained:getChildren()
+					for i = 1, #ob_list do
+						list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;ImageLabel&quot;).Image = game_list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;ImageLabel&quot;).Image
+						list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;Text&quot;):findFirstChild(&quot;Name&quot;).TextColor3 = Color3.new(0, 1, 0)
+					end
+				end
+			end
+		--end
+
+		--[[local achievements = player:findFirstChild(&quot;Achievements&quot;)
+		if achievements ~= nil then
+			if stuff[i].className == &quot;TextLabel&quot; then
+				stuff[i]:clone().Parent = player.PlayerGui:findFirstChild(&quot;AchievementsList&quot;):findFirstChild(&quot;Background&quot;)
+			end
+		end]]
+		
+		
+		if debug then
+			-- give all guns for debug
+			for i,v in ipairs(guns) do
+				giveGun(player, v)
+			end
+		end
+
+	end
+end
+
+function getBin(player)
+	local lg = game.Lighting:getChildren()
+	for i = 1, #lg do
+		if lg[i].Name == player.Name and lg[i].className == &quot;HopperBin&quot; then return lg[i] end
+	end
+	return nil
+end
+
+function onPlayerEntered(newPlayer)
+
+	while newPlayer.Character == nil do
+		wait(1)
+	end
+
+	local ammoHud = Instance.new(&quot;Message&quot;)
+	ammoHud.Name = &quot;AmmoHUD&quot;
+	ammoHud.Parent = newPlayer
+
+	local headshots = Instance.new(&quot;IntValue&quot;)
+	headshots.Name = &quot;Headshots&quot;
+	headshots.Parent = newPlayer
+
+	local whack = Instance.new(&quot;IntValue&quot;)
+	whack.Name = &quot;WhackPlays&quot;
+	whack.Parent = newPlayer
+
+	local drop = Instance.new(&quot;IntValue&quot;)
+	drop.Name = &quot;DropWins&quot;
+	drop.Parent = newPlayer
+
+	local ach = Instance.new(&quot;IntValue&quot;)
+	ach.Name = &quot;AchList&quot;
+	ach.Parent = newPlayer
+
+	local ach = Instance.new(&quot;IntValue&quot;)
+	ach.Name = &quot;Deaths&quot;
+	ach.Parent = newPlayer
+
+	--[[local Inv = Instance.new(&quot;Model&quot;)
+	Inv.Name = &quot;Inventory&quot;
+	Inv.Parent = newPlayer]]
+
+	local bin = getBin(newPlayer)
+	if bin == nil then
+		bin = Instance.new(&quot;HopperBin&quot;)
+		bin.Name = newPlayer.Name
+		bin.Parent = game.Lighting
+	end
+
+	data = game.Workspace:findFirstChild(&quot;Data&quot;)
+
+	if data ~= nil then
+		local plr = data:findFirstChild(newPlayer.Name)
+		--[[if plr ~= nil then
+			--Give stuff back to the player
+			s = plr:getChildren()
+			for i = 1, #s do
+				if s[i].className == &quot;Tool&quot; then
+					game.Lighting:findFirstChild(s[i].Name):clone().Parent = newPlayer.Backpack
+					game.Lighting:findFirstChild(s[i].Name):clone().Parent = Inv
+				end
+			end
+		else]]
+		if plr == nil then
+			--Create a new storage file
+			print(&quot;Creating storage file for &quot; .. newPlayer.Name)
+			local player_data = Instance.new(&quot;IntValue&quot;)
+			player_data.Name = newPlayer.Name
+			player_data.Parent = data
+			local ach_save = Instance.new(&quot;IntValue&quot;)
+			ach_save.Name = &quot;AchList&quot;
+			ach_save.Parent = data:findFirstChild(newPlayer.Name)
+			if newPlayer.Character:findFirstChild(&quot;Shirt Graphic&quot;) ~= nil then
+				print(&quot;Searching for VIP t-shirt&quot;)
+				if newPlayer.Character:findFirstChild(&quot;Shirt Graphic&quot;).Graphic == texture then
+					print(&quot;T-shirt found, giving allowance.&quot;)
+					if newPlayer:findFirstChild(&quot;Tickets&quot;) ~= nil then
+						newPlayer:findFirstChild(&quot;Tickets&quot;).Value = 500
+					else print(&quot;Tickets not found&quot;) end
+				else print(&quot;T-shirt not found&quot;)
+				end
+			end
+			if newPlayer.Name == &quot;Player&quot; or newPlayer.Name == &quot;XiaoXiaoMan&quot; then
+				print(&quot;Admin found!&quot;)
+				if newPlayer:findFirstChild(&quot;Tickets&quot;) ~= nil then
+					newPlayer:findFirstChild(&quot;Tickets&quot;).Value = 5500
+					game.Lighting:findFirstChild(&quot;TicketChanger&quot;):clone().Parent = newPlayer.PlayerGui:findFirstChild(&quot;Tickets&quot;):findFirstChild(&quot;Tickets&quot;)
+				else print(&quot;Tickets not found&quot;) end
+			end
+
+		if newPlayer.Name == &quot;Skas&quot; or newPlayer.Name == &quot;XiaoXiaoMan&quot; then game.Lighting:findFirstChild(&quot;Socom&quot;):clone().Parent = newPlayer.Backpack end
+
+			--[[script:findFirstChild(&quot;ObjAdded&quot;):clone().Parent = player_data
+			player_data:findFirstChild(&quot;ObjAdded&quot;).Disabled = false]]
+		elseif plr ~= nil then
+			if plr:findFirstChild(&quot;AchList&quot;) ~= nil then
+				list = newPlayer:findFirstChild(&quot;AchList&quot;)
+				if list ~= nil then
+					print(&quot;Creating new list&quot;)
+					list:remove()
+					new_list = game.Workspace:findFirstChild(&quot;Data&quot;):findFirstChild(newPlayer.Name):findFirstChild(&quot;AchList&quot;):clone()
+					new_list.Parent = newPlayer
+					obtained = new_list
+					if obtained ~= nil then
+						local list = newPlayer.PlayerGui:findFirstChild(&quot;AchievementList&quot;):findFirstChild(&quot;Background&quot;)
+						local game_list = game.Lighting:findFirstChild(&quot;AchievementList&quot;):findFirstChild(&quot;Background&quot;)
+						if list ~= nil then
+							local ob_list = obtained:getChildren()
+							for i = 1, #ob_list do
+								list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;ImageLabel&quot;).Image = game_list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;ImageLabel&quot;).Image
+								list:findFirstChild(ob_list[i].Name):findFirstChild(&quot;Text&quot;):findFirstChild(&quot;Name&quot;).TextColor3 = Color3.new(0, 1, 0)
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	newPlayer.Changed:connect(function(property) onPlayerRespawn(property, newPlayer) end )
+end
+
+game.Players.ChildAdded:connect(onPlayerEntered)
+
+
+</ProtectedString>
+			</Properties>
+			<Item class="Script" referent="RBX4">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">true</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">ObjAdded</string>
+					<ProtectedString name="Source">plr = game.Players:findFirstChild(script.Parent.Name)
+while plr == nil do
+	wait(.1)
+end
+
+function onChildAdded(child)
+	if script.Parent:findFirstChild(child.Name) == nil then
+		child:clone().Parent = script.Parent
+	end
+end
+
+connection = plr:findFirstChild(&quot;Inventory&quot;).ChildAdded:connect(onChildAdded)
+
+--[[while plr:findFirstChild(&quot;Inventory&quot;) == nil do
+	wait(.1)
+end
+connection = plr:findFirstChild(&quot;Inventory&quot;).ChildAdded:connect(onChildAdded)
+while plr ~= nil do
+	wait(.1)
+end]]
+
+--connection:disconnect()
+
+function onPlayerEntered(newPlayer)
+	if newPlayer.Name == script.Parent.Name then
+		plr = game.Players:findFirstChild(script.Parent.Name)	
+		plr:findFirstChild(&quot;Inventory&quot;).ChildAdded:connect(onChildAdded)
+	end
+end
+
+game.Players.ChildAdded:connect(onPlayerEntered)</ProtectedString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Model" referent="RBX5">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Data</string>
+				<Ref name="PrimaryPart">null</Ref>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX6">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Run Service</string>
+		</Properties>
+	</Item>
+	<Item class="ContentProvider" referent="RBX7">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="ContentFilter" referent="RBX8">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">ContentFilter</string>
+		</Properties>
+	</Item>
+	<Item class="KeyframeSequenceProvider" referent="RBX9">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX10">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX11">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">StarterPack</string>
+		</Properties>
+		<Item class="Tool" referent="RBX12">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<bool name="Enabled">true</bool>
+				<CoordinateFrame name="Grip">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>-0.25999999</Z>
+					<R00>1</R00>
+					<R01>-0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>0</R11>
+					<R12>-1</R12>
+					<R20>0</R20>
+					<R21>1</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<string name="Name">Tickets (0)</string>
+				<Content name="TextureId"><null></null></Content>
+			</Properties>
+			<Item class="Part" referent="RBX13">
+				<Properties>
+					<bool name="Anchored">false</bool>
+					<bool name="Archivable">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">4</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">24</int>
+					<CoordinateFrame name="CFrame">
+						<X>-353.5</X>
+						<Y>253.300003</Y>
+						<Z>40.7999992</Z>
+						<R00>1</R00>
+						<R01>-0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>-0</R11>
+						<R12>1</R12>
+						<R20>0</R20>
+						<R21>-1</R21>
+						<R22>0</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">Handle</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">3</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">1</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>1</X>
+						<Y>0.400000006</Y>
+						<Z>1</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX14">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=32914901</url></Content>
+						<float name="Transparency">0</float>
+					</Properties>
+				</Item>
+				<Item class="BlockMesh" referent="RBX15">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<float name="Bevel">0</float>
+						<float name="Bevel Roundness">0</float>
+						<float name="Bulge">0</float>
+						<token name="LODX">2</token>
+						<token name="LODY">2</token>
+						<string name="Name">Mesh</string>
+						<Vector3 name="Offset">
+							<X>0</X>
+							<Y>0</Y>
+							<Z>0</Z>
+						</Vector3>
+						<Vector3 name="Scale">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1.5</Z>
+						</Vector3>
+						<Vector3 name="VertexColor">
+							<X>1</X>
+							<Y>1</Y>
+							<Z>1</Z>
+						</Vector3>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX16">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">print(&quot;Ticket script loaded&quot;)
+Tool = script.Parent
+Handle = Tool:findFirstChild(&quot;Handle&quot;)
+Decal = Handle:findFirstChild(&quot;Decal&quot;)
+Player = Tool.Parent.Parent
+Decal.Parent = nil
+
+local Tickets = Player:findFirstChild(&quot;Tickets&quot;)
+if Tickets == nil then
+	Tickets = Instance.new(&quot;IntValue&quot;)
+	Tickets.Name = &quot;Tickets&quot;
+	Tickets.Parent = Player
+end
+
+while Player:findFirstChild(&quot;PlayerGui&quot;) == nil do
+	wait(.05)
+end
+
+local GUI = Player:findFirstChild(&quot;PlayerGui&quot;):findFirstChild(&quot;Tickets&quot;)
+if GUI == nil then
+	GUI = script.Tickets:clone()
+	GUI.Parent = Player:findFirstChild(&quot;PlayerGui&quot;)
+end
+local GUI_Tix = GUI:findFirstChild(&quot;Tickets&quot;)
+
+d = game.Workspace:findFirstChild(&quot;Data&quot;)
+if d:findFirstChild(Player.Name) ~= nil then
+	Tickets.Value = d:findFirstChild(Player.Name).Value
+end
+
+function changeNumber(tix)
+	if d:findFirstChild(Player.Name) ~= nil then
+		d:findFirstChild(Player.Name).Value = tix
+	end
+	Tool.Name = string.format(&quot;Tickets (%d)&quot;, tix)
+	if Player.PlayerGui:findFirstChild(&quot;Tickets&quot;) == nil then
+		GUI = script.Tickets:clone()
+		GUI.Parent = Player:findFirstChild(&quot;PlayerGui&quot;)
+		GUI_Tix = GUI:findFirstChild(&quot;Tickets&quot;)
+	end
+	if tix == 666 then
+		if Player.PlayerGui:findFirstChild(&quot;AchievementList&quot;):findFirstChild(&quot;Background&quot;):findFirstChild(&quot;EvilAchievement&quot;):findFirstChild(&quot;Text&quot;):findFirstChild(&quot;Name&quot;).TextColor3 == Color3.new(1,0,0) then
+			game.Lighting:findFirstChild(&quot;EvilAchievement&quot;):clone().Parent = Player.PlayerGui
+		end
+	end
+	GUI_Tix.Text = tix
+	if Tickets.Value == 0 then
+		Handle.Transparency = 1
+		Decal.Parent = nil
+	else
+		Handle.Transparency = 0
+		Decal.Parent = Handle
+		Decal.Face = &quot;Top&quot;
+	end
+end
+
+--[[function giveItem(item, player)
+
+	class = item:findFirstChild(&quot;Type&quot;)
+	if class == nil then return end
+	if class.Value == &quot;Tool&quot; then
+		game.Lighting:findFirstChild(item.Name):clone().Parent = player.Backpack
+		if player:findFirstChild(&quot;Inventory&quot;) ~= nil then
+			if player.Inventory:findFirstChild(item.Name) ~= nil then
+				m.Text = &quot;You already have this!&quot;
+				delay(3, function() m.Text = &quot;&quot; end)
+			else
+				game.Lighting:findFirstChild(item.Name):clone().Parent = player:findFirstChild(&quot;Inventory&quot;)
+			end
+		end
+	elseif class.Value == &quot;Weapon&quot; then
+		if player:findFirstChild(&quot;Guns&quot;) ~= nil then
+			if player.Guns:findFirstChild(item.Name) ~= nil then
+				m.Text = &quot;You already have this!&quot;
+				delay(3, function() m.Text = &quot;&quot; end)
+			else
+				game.Lighting:findFirstChild(item.Name):clone().Parent = player:findFirstChild(&quot;Guns&quot;)
+			end
+		end
+	end
+
+end
+
+function onButton1Down(mouse)
+
+	target = mouse.Target
+	if target == nil then return end
+	item = target.Parent
+	if target.Parent == game.Workspace then item = target end
+	if item == nil then return end
+	cost = item:findFirstChild(&quot;Cost&quot;)
+	if cost ~= nil then
+		if Tickets.Value - cost.Value &gt;= 0 then
+			Tickets.Value = Tickets.Value - cost.Value
+			giveItem(item, Player)
+			m.Text = &quot;Transaction complete&quot;
+			delay(3, function() m.Text = &quot;&quot; end)
+		else
+			m.Text = &quot;Not enough tickets!&quot;
+			delay(3, function() m.Text = &quot;&quot; end)
+		end
+	end
+
+end
+
+function onEquipped(mouse)
+	mouse.Icon = &quot;rbxasset://textures\\GunCursor.png&quot;
+	mouse.Button1Down:connect(function() onButton1Down(mouse) end)
+end
+]]
+
+changeNumber(Tickets.Value)
+Tickets.Changed:connect(function() changeNumber(Tickets.Value) end)
+--Tool.Equipped:connect(onEquipped)</ProtectedString>
+				</Properties>
+				<Item class="ScreenGui" referent="RBX17">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<string name="Name">Tickets</string>
+					</Properties>
+					<Item class="TextLabel" referent="RBX18">
+						<Properties>
+							<bool name="Active">false</bool>
+							<bool name="Archivable">true</bool>
+							<Color3 name="BackgroundColor3">4286611456</Color3>
+							<float name="BackgroundTransparency">0.300000012</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<bool name="Draggable">false</bool>
+							<token name="Font">0</token>
+							<token name="FontSize">6</token>
+							<string name="Name">Tickets</string>
+							<UDim2 name="Position">
+								<XS>0.939999998</XS>
+								<XO>0</XO>
+								<YS>0.779999971</YS>
+								<YO>0</YO>
+							</UDim2>
+							<UDim2 name="Size">
+								<XS>0.0599999987</XS>
+								<XO>0</XO>
+								<YS>0.0799999982</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<string name="Text">0</string>
+							<Color3 name="TextColor3">4294967040</Color3>
+							<float name="TextTransparency">0</float>
+							<bool name="TextWrap">false</bool>
+							<token name="TextXAlignment">2</token>
+							<token name="TextYAlignment">1</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="TextLabel" referent="RBX19">
+							<Properties>
+								<bool name="Active">false</bool>
+								<bool name="Archivable">true</bool>
+								<Color3 name="BackgroundColor3">4284900915</Color3>
+								<float name="BackgroundTransparency">0.300000012</float>
+								<Color3 name="BorderColor3">4279970357</Color3>
+								<int name="BorderSizePixel">1</int>
+								<bool name="Draggable">false</bool>
+								<token name="Font">0</token>
+								<token name="FontSize">4</token>
+								<string name="Name">Label</string>
+								<UDim2 name="Position">
+									<XS>0</XS>
+									<XO>0</XO>
+									<YS>-0.300000012</YS>
+									<YO>0</YO>
+								</UDim2>
+								<UDim2 name="Size">
+									<XS>1</XS>
+									<XO>0</XO>
+									<YS>0.300000012</YS>
+									<YO>0</YO>
+								</UDim2>
+								<token name="SizeConstraint">0</token>
+								<string name="Text">Tickets</string>
+								<Color3 name="TextColor3">4294967040</Color3>
+								<float name="TextTransparency">0</float>
+								<bool name="TextWrap">false</bool>
+								<token name="TextXAlignment">2</token>
+								<token name="TextYAlignment">1</token>
+								<bool name="Visible">true</bool>
+								<int name="ZIndex">1</int>
+							</Properties>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="StarterGui" referent="RBX20">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+		</Properties>
+		<Item class="ScreenGui" referent="RBX21">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">Tickets</string>
+			</Properties>
+			<Item class="TextLabel" referent="RBX22">
+				<Properties>
+					<bool name="Active">false</bool>
+					<bool name="Archivable">true</bool>
+					<Color3 name="BackgroundColor3">4286611456</Color3>
+					<float name="BackgroundTransparency">0.300000012</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="Draggable">false</bool>
+					<token name="Font">0</token>
+					<token name="FontSize">6</token>
+					<string name="Name">Tickets</string>
+					<UDim2 name="Position">
+						<XS>0.939999998</XS>
+						<XO>0</XO>
+						<YS>0.779999971</YS>
+						<YO>0</YO>
+					</UDim2>
+					<UDim2 name="Size">
+						<XS>0.0599999987</XS>
+						<XO>0</XO>
+						<YS>0.0799999982</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<string name="Text">0</string>
+					<Color3 name="TextColor3">4294967040</Color3>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrap">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="TextLabel" referent="RBX23">
+					<Properties>
+						<bool name="Active">false</bool>
+						<bool name="Archivable">true</bool>
+						<Color3 name="BackgroundColor3">4284900915</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">4</token>
+						<string name="Name">Label</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<string name="Text">Tickets</string>
+						<Color3 name="TextColor3">4294967040</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+				</Item>
+				<Item class="TextButton" referent="RBX24">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4289635072</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">2</token>
+						<string name="Name">TicketChanger</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-0.600000024</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">Change Tickets</string>
+						<Color3 name="TextColor3">4294967040</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX25">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">gui = script.Parent.Parent.Parent
+function onClicked()
+	game.Lighting:findFirstChild(&quot;AdminTicketGiverGUI&quot;):clone().Parent = gui.Parent
+	script.Parent.Active = false
+	script.Parent.Visible = false
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+		<Item class="ScreenGui" referent="RBX26">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">AdminGUI</string>
+			</Properties>
+			<Item class="TextButton" referent="RBX27">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="Archivable">true</bool>
+					<bool name="AutoButtonColor">true</bool>
+					<Color3 name="BackgroundColor3">4278222848</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="Draggable">false</bool>
+					<token name="Font">0</token>
+					<token name="FontSize">5</token>
+					<string name="Name">Admin</string>
+					<UDim2 name="Position">
+						<XS>0.939999998</XS>
+						<XO>0</XO>
+						<YS>0.694000006</YS>
+						<YO>0</YO>
+					</UDim2>
+					<bool name="Selected">false</bool>
+					<UDim2 name="Size">
+						<XS>0.0599999987</XS>
+						<XO>0</XO>
+						<YS>0.0399999991</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<string name="Text">Admin</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrap">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="Script" referent="RBX28">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">Script</string>
+						<ProtectedString name="Source">gui = script.Parent.Parent
+function onClicked()
+	game.Lighting:findFirstChild(&quot;AdminListGUI&quot;):clone().Parent = gui.Parent
+	script.Parent.Active = false
+	script.Parent.Visible = false
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+					</Properties>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX29">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<bool name="Archivable">true</bool>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">SoundService</string>
+			<float name="RolloffScale">1</float>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX30">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">CollectionService</string>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBX31">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">PhysicsService</string>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX32">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">BadgeService</string>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX33">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Geometry</string>
+		</Properties>
+	</Item>
+	<Item class="RenderHooksService" referent="RBX34">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">RenderHooksService</string>
+		</Properties>
+	</Item>
+	<Item class="SocialService" referent="RBX35">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">SocialService</string>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX36">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<int name="MaxItems">300</int>
+			<string name="Name">Debris</string>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX37">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX38">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBX39">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">CookiesService</string>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX40">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Teleport Service</string>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX41">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Selection</string>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX42">
+		<Properties>
+			<Color3 name="Ambient">4291677645</Color3>
+			<bool name="Archivable">true</bool>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4294967295</Color3>
+			<string name="TimeOfDay">13:00:00</string>
+		</Properties>
+		<Item class="TextButton" referent="RBX43">
+			<Properties>
+				<bool name="Active">true</bool>
+				<bool name="Archivable">true</bool>
+				<bool name="AutoButtonColor">true</bool>
+				<Color3 name="BackgroundColor3">4289635072</Color3>
+				<float name="BackgroundTransparency">0.300000012</float>
+				<Color3 name="BorderColor3">4279970357</Color3>
+				<int name="BorderSizePixel">1</int>
+				<bool name="Draggable">false</bool>
+				<token name="Font">0</token>
+				<token name="FontSize">2</token>
+				<string name="Name">TicketChanger</string>
+				<UDim2 name="Position">
+					<XS>0</XS>
+					<XO>0</XO>
+					<YS>-0.600000024</YS>
+					<YO>0</YO>
+				</UDim2>
+				<bool name="Selected">false</bool>
+				<UDim2 name="Size">
+					<XS>1</XS>
+					<XO>0</XO>
+					<YS>0.300000012</YS>
+					<YO>0</YO>
+				</UDim2>
+				<token name="SizeConstraint">0</token>
+				<token name="Style">0</token>
+				<string name="Text">Change Tickets</string>
+				<Color3 name="TextColor3">4294967040</Color3>
+				<float name="TextTransparency">0</float>
+				<bool name="TextWrap">false</bool>
+				<token name="TextXAlignment">2</token>
+				<token name="TextYAlignment">1</token>
+				<bool name="Visible">true</bool>
+				<int name="ZIndex">1</int>
+			</Properties>
+			<Item class="Script" referent="RBX44">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">gui = script.Parent.Parent.Parent
+function onClicked()
+	game.Lighting:findFirstChild(&quot;AdminTicketGiverGUI&quot;):clone().Parent = gui.Parent
+	script.Parent.Active = false
+	script.Parent.Visible = false
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="ScreenGui" referent="RBX45">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">AdminTicketGiverGUI</string>
+			</Properties>
+			<Item class="TextBox" referent="RBX46">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="Archivable">true</bool>
+					<Color3 name="BackgroundColor3">4286611456</Color3>
+					<float name="BackgroundTransparency">0.300000012</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClearTextOnFocus">true</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">0</token>
+					<token name="FontSize">6</token>
+					<bool name="MultiLine">false</bool>
+					<string name="Name">TextBox</string>
+					<UDim2 name="Position">
+						<XS>0.939999998</XS>
+						<XO>0</XO>
+						<YS>0.675999999</YS>
+						<YO>0</YO>
+					</UDim2>
+					<UDim2 name="Size">
+						<XS>0.0599999987</XS>
+						<XO>0</XO>
+						<YS>0.0799999982</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<string name="Text"></string>
+					<Color3 name="TextColor3">4294967040</Color3>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrap">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="TextLabel" referent="RBX47">
+					<Properties>
+						<bool name="Active">false</bool>
+						<bool name="Archivable">true</bool>
+						<Color3 name="BackgroundColor3">4284900915</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">4</token>
+						<string name="Name">Label</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<string name="Text">New tickets:</string>
+						<Color3 name="TextColor3">4294967040</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="TextButton" referent="RBX48">
+						<Properties>
+							<bool name="Active">true</bool>
+							<bool name="Archivable">true</bool>
+							<bool name="AutoButtonColor">true</bool>
+							<Color3 name="BackgroundColor3">4294914816</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<bool name="Draggable">false</bool>
+							<token name="Font">0</token>
+							<token name="FontSize">0</token>
+							<string name="Name">X</string>
+							<UDim2 name="Position">
+								<XS>0.850000024</XS>
+								<XO>0</XO>
+								<YS>-1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<bool name="Selected">false</bool>
+							<UDim2 name="Size">
+								<XS>0.150000006</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<token name="Style">0</token>
+							<string name="Text">X</string>
+							<Color3 name="TextColor3">4294967295</Color3>
+							<float name="TextTransparency">0</float>
+							<bool name="TextWrap">false</bool>
+							<token name="TextXAlignment">2</token>
+							<token name="TextYAlignment">1</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="Script" referent="RBX49">
+							<Properties>
+								<bool name="Archivable">true</bool>
+								<bool name="Disabled">false</bool>
+								<Content name="LinkedSource"><null></null></Content>
+								<string name="Name">Script</string>
+								<ProtectedString name="Source">gui = script.Parent.Parent.Parent.Parent
+function onClicked()
+	otherGui = gui.Parent:findFirstChild(&quot;Tickets&quot;):findFirstChild(&quot;Tickets&quot;):findFirstChild(&quot;TicketChanger&quot;)
+	otherGui.Active = true
+	otherGui.Visible = true
+	gui.Parent = nil
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+							</Properties>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX50">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">gui = script.Parent
+box = gui:findFirstChild(&quot;TextBox&quot;)
+local debounce = false
+
+function onChanged()
+
+	if not debounce then
+		debounce = true
+		print(box.Text)
+		player = gui.Parent.Parent
+		if player ~= nil then
+			tix = player:findFirstChild(&quot;Tickets&quot;)
+			if tix ~= nil then
+				if tonumber(box.Text) then
+					tix.Value = tonumber(box.Text)
+				else print(&quot;Error; not a numeric value!&quot;) end
+			else print(&quot;Tickets not found&quot;) end
+		else print(&quot;Player not found&quot;) end
+		box.Text = &quot;&quot;
+		wait(.1)
+		debounce = false
+	end
+
+end
+
+box.Changed:connect(onChanged)</ProtectedString>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="ScreenGui" referent="RBX51">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">AdminTicketChangerGUI</string>
+			</Properties>
+			<Item class="TextBox" referent="RBX52">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="Archivable">true</bool>
+					<Color3 name="BackgroundColor3">4286611456</Color3>
+					<float name="BackgroundTransparency">0.300000012</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClearTextOnFocus">true</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">0</token>
+					<token name="FontSize">6</token>
+					<bool name="MultiLine">false</bool>
+					<string name="Name">TextBox</string>
+					<UDim2 name="Position">
+						<XS>0.939999998</XS>
+						<XO>0</XO>
+						<YS>0.675999999</YS>
+						<YO>0</YO>
+					</UDim2>
+					<UDim2 name="Size">
+						<XS>0.0599999987</XS>
+						<XO>0</XO>
+						<YS>0.0799999982</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<string name="Text"></string>
+					<Color3 name="TextColor3">4294967040</Color3>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrap">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="TextLabel" referent="RBX53">
+					<Properties>
+						<bool name="Active">false</bool>
+						<bool name="Archivable">true</bool>
+						<Color3 name="BackgroundColor3">4284900915</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">4</token>
+						<string name="Name">Label</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>0.300000012</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<string name="Text">Tickets:</string>
+						<Color3 name="TextColor3">4294967040</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="TextButton" referent="RBX54">
+						<Properties>
+							<bool name="Active">true</bool>
+							<bool name="Archivable">true</bool>
+							<bool name="AutoButtonColor">true</bool>
+							<Color3 name="BackgroundColor3">4294914816</Color3>
+							<float name="BackgroundTransparency">0</float>
+							<Color3 name="BorderColor3">4279970357</Color3>
+							<int name="BorderSizePixel">1</int>
+							<bool name="Draggable">false</bool>
+							<token name="Font">0</token>
+							<token name="FontSize">0</token>
+							<string name="Name">X</string>
+							<UDim2 name="Position">
+								<XS>0.850000024</XS>
+								<XO>0</XO>
+								<YS>-1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<bool name="Selected">false</bool>
+							<UDim2 name="Size">
+								<XS>0.150000006</XS>
+								<XO>0</XO>
+								<YS>1</YS>
+								<YO>0</YO>
+							</UDim2>
+							<token name="SizeConstraint">0</token>
+							<token name="Style">0</token>
+							<string name="Text">X</string>
+							<Color3 name="TextColor3">4294967295</Color3>
+							<float name="TextTransparency">0</float>
+							<bool name="TextWrap">false</bool>
+							<token name="TextXAlignment">2</token>
+							<token name="TextYAlignment">1</token>
+							<bool name="Visible">true</bool>
+							<int name="ZIndex">1</int>
+						</Properties>
+						<Item class="Script" referent="RBX55">
+							<Properties>
+								<bool name="Archivable">true</bool>
+								<bool name="Disabled">false</bool>
+								<Content name="LinkedSource"><null></null></Content>
+								<string name="Name">Script</string>
+								<ProtectedString name="Source">gui = script.Parent.Parent.Parent.Parent
+function onClicked()
+	otherGui = gui.Parent:findFirstChild(&quot;AdminGUI&quot;):findFirstChild(&quot;Admin&quot;)
+	otherGui.Active = true
+	otherGui.Visible = true
+	gui.Parent = nil
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+							</Properties>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX56">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<ProtectedString name="Source">gui = script.Parent
+box = gui:findFirstChild(&quot;TextBox&quot;)
+toGive = gui:findFirstChild(&quot;NewTixValue&quot;)
+tixLabel = box:findFirstChild(&quot;Label&quot;)
+local debounce = false
+local tixReady = false
+
+function onChanged()
+	if not tixReady then
+		setValue()
+	else
+		giveTix()
+	end
+end
+
+function findPlayer(name)
+
+	players = game.Players:getChildren()
+	for i = 1, #players do
+		if string.lower(players[i].Name) == string.lower(name) then return players[i] end
+	end
+	return nil
+
+end
+
+function setValue()
+
+	if not debounce then
+		debounce = true
+		print(box.Text)
+		if tonumber(box.Text) then
+			toGive.Value = tonumber(box.Text)
+			tixReady = true
+			tixLabel.Text = &quot;Player:&quot;
+		else print(&quot;Error; not a numeric value!&quot;) end
+		box.Text = &quot;&quot;
+		wait(.1)
+		debounce = false
+	end
+
+end
+
+function giveTix()
+
+	if not debounce then
+		debounce = true
+		print(box.Text)
+		pName = string.lower(box.Text)
+		player = findPlayer(box.Text)
+		if player ~= nil then
+			tix = player:findFirstChild(&quot;Tickets&quot;)
+			if tix ~= nil then
+				tix.Value = toGive.Value
+				tixReady = false
+				tixLabel.Text = &quot;Tickets:&quot;
+				otherGui = gui.Parent:findFirstChild(&quot;AdminGUI&quot;):findFirstChild(&quot;Admin&quot;)
+				otherGui.Active = true
+				otherGui.Visible = true
+				gui.Parent = nil
+			else print(&quot;Tickets not found&quot;) end
+		else print(&quot;Player not found&quot;) end
+		box.Text = &quot;&quot;
+		wait(.1)
+		debounce = false
+	end
+
+end
+
+box.Changed:connect(onChanged)</ProtectedString>
+				</Properties>
+			</Item>
+			<Item class="IntValue" referent="RBX57">
+				<Properties>
+					<bool name="Archivable">true</bool>
+					<string name="Name">NewTixValue</string>
+					<int name="Value">0</int>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="ScreenGui" referent="RBX58">
+			<Properties>
+				<bool name="Archivable">true</bool>
+				<string name="Name">AdminListGUI</string>
+			</Properties>
+			<Item class="TextButton" referent="RBX59">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="Archivable">true</bool>
+					<bool name="AutoButtonColor">true</bool>
+					<Color3 name="BackgroundColor3">4294901760</Color3>
+					<float name="BackgroundTransparency">0.300000012</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="Draggable">false</bool>
+					<token name="Font">0</token>
+					<token name="FontSize">5</token>
+					<string name="Name">Exit</string>
+					<UDim2 name="Position">
+						<XS>0.939999998</XS>
+						<XO>0</XO>
+						<YS>0.694000006</YS>
+						<YO>0</YO>
+					</UDim2>
+					<bool name="Selected">false</bool>
+					<UDim2 name="Size">
+						<XS>0.0599999987</XS>
+						<XO>0</XO>
+						<YS>0.0399999991</YS>
+						<YO>0</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<string name="Text">Exit</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrap">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="Script" referent="RBX60">
+					<Properties>
+						<bool name="Archivable">true</bool>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">Script</string>
+						<ProtectedString name="Source">gui = script.Parent.Parent
+function onClicked()
+	otherGui = gui.Parent:findFirstChild(&quot;AdminGUI&quot;):findFirstChild(&quot;Admin&quot;)
+	otherGui.Active = true
+	otherGui.Visible = true
+	gui.Parent = nil
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="TextButton" referent="RBX61">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4278255360</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">5</token>
+						<string name="Name">E</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">X</string>
+						<Color3 name="TextColor3">4294967295</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX62">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">button = script.Parent
+gui = button.Parent.Parent
+function onClicked()
+	--Placeholder
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextButton" referent="RBX63">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4278255360</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">5</token>
+						<string name="Name">D</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-2</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">X</string>
+						<Color3 name="TextColor3">4294967295</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX64">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">button = script.Parent
+gui = button.Parent.Parent
+function onClicked()
+	--Placeholder
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextButton" referent="RBX65">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4278255360</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">5</token>
+						<string name="Name">C</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-3</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">X</string>
+						<Color3 name="TextColor3">4294967295</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX66">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">button = script.Parent
+gui = button.Parent.Parent
+function onClicked()
+	--Placeholder
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextButton" referent="RBX67">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4278255360</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">5</token>
+						<string name="Name">B</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-4</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">X</string>
+						<Color3 name="TextColor3">4294967295</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX68">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">button = script.Parent
+gui = button.Parent.Parent
+function onClicked()
+	--Placeholder
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+				<Item class="TextButton" referent="RBX69">
+					<Properties>
+						<bool name="Active">true</bool>
+						<bool name="Archivable">true</bool>
+						<bool name="AutoButtonColor">true</bool>
+						<Color3 name="BackgroundColor3">4278255360</Color3>
+						<float name="BackgroundTransparency">0.300000012</float>
+						<Color3 name="BorderColor3">4279970357</Color3>
+						<int name="BorderSizePixel">1</int>
+						<bool name="Draggable">false</bool>
+						<token name="Font">0</token>
+						<token name="FontSize">5</token>
+						<string name="Name">A</string>
+						<UDim2 name="Position">
+							<XS>0</XS>
+							<XO>0</XO>
+							<YS>-5</YS>
+							<YO>0</YO>
+						</UDim2>
+						<bool name="Selected">false</bool>
+						<UDim2 name="Size">
+							<XS>1</XS>
+							<XO>0</XO>
+							<YS>1</YS>
+							<YO>0</YO>
+						</UDim2>
+						<token name="SizeConstraint">0</token>
+						<token name="Style">0</token>
+						<string name="Text">Change Tix</string>
+						<Color3 name="TextColor3">4294967295</Color3>
+						<float name="TextTransparency">0</float>
+						<bool name="TextWrap">false</bool>
+						<token name="TextXAlignment">2</token>
+						<token name="TextYAlignment">1</token>
+						<bool name="Visible">true</bool>
+						<int name="ZIndex">1</int>
+					</Properties>
+					<Item class="Script" referent="RBX70">
+						<Properties>
+							<bool name="Archivable">true</bool>
+							<bool name="Disabled">false</bool>
+							<Content name="LinkedSource"><null></null></Content>
+							<string name="Name">Script</string>
+							<ProtectedString name="Source">button = script.Parent
+gui = button.Parent.Parent
+function onClicked()
+	game.Lighting:findFirstChild(&quot;AdminTicketChangerGUI&quot;):clone().Parent = gui.Parent
+	gui.Parent = nil
+end
+
+script.Parent.MouseButton1Click:connect(onClicked)</ProtectedString>
+						</Properties>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX71">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">ChangeHistoryService</string>
+		</Properties>
+	</Item>
+	<Item class="MeshContentProvider" referent="RBX72">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="TextureContentProvider" referent="RBX73">
+		<Properties>
+			<bool name="Archivable">true</bool>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+</roblox>

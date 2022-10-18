@@ -1,0 +1,1239 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">0</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>25.3526974</X>
+					<Y>39.0757523</Y>
+					<Z>-13.1069851</Z>
+					<R00>-0.233010948</R00>
+					<R01>-0.760230958</R01>
+					<R02>0.606427908</R02>
+					<R10>-0</R10>
+					<R11>0.623592854</R11>
+					<R12>0.781749308</R12>
+					<R20>-0.972474098</R20>
+					<R21>0.182156146</R21>
+					<R22>-0.145303965</R22>
+				</CoordinateFrame>
+				<CoordinateFrame name="Focus">
+					<X>6.40182686</X>
+					<Y>14.6460886</Y>
+					<Z>-8.5662365</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">26</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0.600000024</Y>
+					<Z>0</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Base</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>512</X>
+					<Y>1.20000005</Y>
+					<Z>512</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="SpawnLocation" referent="RBX3">
+			<Properties>
+				<bool name="AllowTeamChangeOnTouch">false</bool>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">2</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>-25</X>
+					<Y>1.80000007</Y>
+					<Z>-10</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<int name="Duration">10</int>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">1</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">2</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">2</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">256</token>
+				<string name="Name">SpawnLocation</string>
+				<bool name="Neutral">true</bool>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">2</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<int name="TeamColor">194</int>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>6</X>
+					<Y>1.20000005</Y>
+					<Z>6</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX4">
+				<Properties>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>rbxasset://Textures\SpawnLocation.png</url></Content>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Part" referent="RBX5">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">23</int>
+				<CoordinateFrame name="CFrame">
+					<X>10.5</X>
+					<Y>1.4000001</Y>
+					<Z>17.5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">256</token>
+				<string name="Name">CaptureZoneBlue</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>7</X>
+					<Y>0.400000006</Y>
+					<Z>7</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Script" referent="RBX6">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<string name="Source">base = script.Parent
+teamcolor = base.BrickColor
+local debounce = false
+
+function sendMessage(success, failure)
+
+	players = game.Players:getChildren()
+	for i = 1, #players do 
+		m = players[i]:findFirstChild(&quot;Attention&quot;)
+		if m == nil then
+			m.Parent = players[i]
+			m.Name = &quot;Attention&quot;
+		end
+		if players[i].TeamColor == teamcolor then
+			m.Text = success
+		else
+			m.Text = failure
+		end
+	end
+
+end
+
+function onTouched(hit)
+
+	print(&quot;Touched&quot;)
+	p = game.Players:getPlayerFromCharacter(hit.Parent)
+	if p ~= nil and p.TeamColor == teamcolor and p.Character:findFirstChild(&quot;RedIntel&quot;) ~= nil and not debounce then
+		print(&quot;Player has intel&quot;)
+		debounce = true
+		p.Character.RedIntel:remove()
+		intel = game.Lighting:findFirstChild(&quot;RedIntel&quot;)
+		intel.Parent = game.Workspace
+		intel:MakeJoints()
+		sendMessage(&quot;Success! We have secured the enemy intelligence!&quot;, &quot;You failed. The enemy has secured our intelligence.&quot;)
+		stats = p:findFirstChild(&quot;leaderstats&quot;)
+		if stats ~= nil then
+			caps = stats:findFirstChild(&quot;Captures&quot;)
+			if caps ~= nil then caps.Value = caps.Value + 1 end
+		end
+		wait(.01)
+		debounce = false
+	end
+
+end
+
+base.Touched:connect(onTouched)</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Part" referent="RBX7">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">21</int>
+				<CoordinateFrame name="CFrame">
+					<X>1.5</X>
+					<Y>1.4000001</Y>
+					<Z>-17.5</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">2</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">256</token>
+				<string name="Name">CaptureZoneRed</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>7</X>
+					<Y>0.400000006</Y>
+					<Z>7</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Script" referent="RBX8">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<string name="Source">base = script.Parent
+teamcolor = base.BrickColor
+local debounce = false
+
+function sendMessage(success, failure)
+
+	players = game.Players:getChildren()
+	for i = 1, #players do 
+		m = players[i]:findFirstChild(&quot;Attention&quot;)
+		if m == nil then
+			m.Parent = players[i]
+			m.Name = &quot;Attention&quot;
+		end
+		if players[i].TeamColor == teamcolor then
+			m.Text = success
+		else
+			m.Text = failure
+		end
+	end
+
+end
+
+function onTouched(hit)
+
+	print(&quot;Touched&quot;)
+	p = game.Players:getPlayerFromCharacter(hit.Parent)
+	if p ~= nil and p.TeamColor == teamcolor and p.Character:findFirstChild(&quot;BlueIntel&quot;) ~= nil and not debounce then
+		print(&quot;Player has intel&quot;)
+		debounce = true
+		p.Character.BlueIntel:remove()
+		intel = game.Lighting:findFirstChild(&quot;BlueIntel&quot;)
+		intel.Parent = game.Workspace
+		intel:MakeJoints()
+		sendMessage(&quot;Success! We have secured the enemy intelligence!&quot;, &quot;You failed. The enemy has secured our intelligence.&quot;)
+		stats = p:findFirstChild(&quot;leaderstats&quot;)
+		if stats ~= nil then
+			caps = stats:findFirstChild(&quot;Captures&quot;)
+			if caps ~= nil then caps.Value = caps.Value + 1 end
+		end
+		wait(.01)
+		debounce = false
+	end
+
+end
+
+base.Touched:connect(onTouched)</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Script" referent="RBX9">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">LinkedLeaderboard</string>
+				<string name="Source">print(&quot;LinkedLeaderboard script version 5.00 loaded&quot;)
+
+
+function onHumanoidDied(humanoid, player)
+	local stats = player:findFirstChild(&quot;leaderstats&quot;)
+	if stats ~= nil then
+		local deaths = stats:findFirstChild(&quot;Deaths&quot;)
+		deaths.Value = deaths.Value + 1
+
+		-- do short dance to try and find the killer
+
+		local killer = getKillerOfHumanoidIfStillInGame(humanoid)
+
+		handleKillCount(humanoid, player)
+	end
+end
+
+function onPlayerRespawn(property, player)
+	-- need to connect to new humanoid
+	
+	if property == &quot;Character&quot; and player.Character ~= nil then
+		local humanoid = player.Character.Humanoid
+			local p = player
+			local h = humanoid
+			humanoid.Died:connect(function() onHumanoidDied(h, p) end )
+	end
+end
+
+function getKillerOfHumanoidIfStillInGame(humanoid)
+	-- returns the player object that killed this humanoid
+	-- returns nil if the killer is no longer in the game
+
+	-- check for kill tag on humanoid - may be more than one - todo: deal with this
+	local tag = humanoid:findFirstChild(&quot;creator&quot;)
+
+	-- find player with name on tag
+	if tag ~= nil then
+		
+		local killer = tag.Value
+		if killer.Parent ~= nil then -- killer still in game
+			return killer
+		end
+	end
+
+	return nil
+end
+
+function handleKillCount(humanoid, player)
+	local killer = getKillerOfHumanoidIfStillInGame(humanoid)
+	if killer ~= nil then
+		local stats = killer:findFirstChild(&quot;leaderstats&quot;)
+		if stats ~= nil then
+			local kills = stats:findFirstChild(&quot;Kills&quot;)
+			if killer ~= player then
+				kills.Value = kills.Value + 1
+				
+			else
+				kills.Value = kills.Value - 1
+				
+			end
+		end
+	end
+end
+
+
+-----------------------------------------------
+
+function onPlayerEntered(newPlayer)
+
+	local stats = Instance.new(&quot;IntValue&quot;)
+	stats.Name = &quot;leaderstats&quot;
+
+	local kills = Instance.new(&quot;IntValue&quot;)
+	kills.Name = &quot;Kills&quot;
+	kills.Value = 0
+
+	local deaths = Instance.new(&quot;IntValue&quot;)
+	deaths.Name = &quot;Deaths&quot;
+	deaths.Value = 0
+
+	local captures = Instance.new(&quot;IntValue&quot;)
+	captures.Name = &quot;Captures&quot;
+	captures.Value = 0
+
+
+	kills.Parent = stats
+	deaths.Parent = stats
+	captures.Parent = stats
+
+	-- VERY UGLY HACK
+	-- Will this leak threads?
+	-- Is the problem even what I think it is (player arrived before character)?
+	while true do
+		if newPlayer.Character ~= nil then break end
+		wait(5)
+	end
+
+	stats.Parent = newPlayer
+
+end
+
+game.Players.ChildAdded:connect(onPlayerEntered)
+
+
+</string>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Model" referent="RBX10">
+			<Properties>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">RedIntel</string>
+				<Ref name="PrimaryPart">null</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX11">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">21</int>
+					<CoordinateFrame name="CFrame">
+						<X>-3.5</X>
+						<Y>1.60000002</Y>
+						<Z>-24</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>-0</R02>
+						<R10>-0</R10>
+						<R11>1</R11>
+						<R12>-0</R12>
+						<R20>-0</R20>
+						<R21>0</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">RedIntel</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>3</X>
+						<Y>0.800000012</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX12">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097599</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX13">
+					<Properties>
+						<token name="Face">2</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097860</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX14">
+					<Properties>
+						<token name="Face">0</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX15">
+					<Properties>
+						<token name="Face">5</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX16">
+					<Properties>
+						<token name="Face">3</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX17">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097599</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX18">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<string name="Source">obj = script.Parent
+intel = obj.RedIntel
+teamcolor = intel.BrickColor
+local debounce = false
+local carrier = &quot;No one&quot;
+alert, captured = &quot;ALERT: The enemy has taken our intelligence!&quot;, &quot;We have taken the enemy intelligence.&quot;
+team_drop, enemy_drop = &quot;We have dropped the enemy intelligence!&quot;, &quot;The enemy has dropped our intelligence.&quot;
+team_return, enemy_return = &quot;Our intelligence has returned to our  base.&quot;, &quot;The enemy intelligence was returned to the base.&quot;
+
+
+function sendMessage(team, enemy)
+
+	players = game.Players:getChildren()
+	for i = 1, #players do 
+		m = players[i]:findFirstChild(&quot;Attention&quot;)
+		if m == nil then
+			m = Instance.new(&quot;Hint&quot;)
+			m.Parent = players[i]
+			m.Name = &quot;Attention&quot;
+		end
+		if players[i].TeamColor == teamcolor then
+			m.Text = team
+		else
+			m.Text = enemy
+		end
+	end
+
+end
+--[[
+function clearMessage()
+
+	players = game.Players:getChildren()
+	for i = 1, #players do
+		if players[i]:findFirstChild(&quot;Message&quot;) ~= nil then players[i]:findFirstChild(&quot;Message&quot;):remove() end
+	end
+
+end
+]]--
+function onTouched(hit)
+
+	--clearMessage()
+	p = game.Players:getPlayerFromCharacter(hit.Parent)
+	if p ~= nil and p.Character.Humanoid.Health &gt; 0 then
+		--Player check passed
+		if p.TeamColor ~= teamcolor and not debounce then
+			--Grab the intel
+			debounce = true
+			carrier = p.Name
+			print(carrier)
+			local Case, Weld = obj:clone(), Instance.new(&quot;Weld&quot;)
+			NewIntel = Case.RedIntel
+			Case[&quot;Script&quot;]:remove()
+			NewIntel.Anchored = false
+			Case.Parent = p.Character
+			Weld.Parent = p.Character[&quot;Torso&quot;]
+			Weld.Part0 = p.Character[&quot;Torso&quot;]
+			Weld.Part1 = NewIntel
+			Weld.Name = &quot;Weld&quot;
+			Weld.C1 = CFrame.new(0, -.93, 0) --[[* CFrame.fromEulerAnglesXYZ(1.5, 0, 0) --]]* CFrame.fromEulerAnglesXYZ(-1.5, 0, 0.7)
+			obj.Parent = game.Lighting
+			sendMessage(alert, captured)
+			p.Character.Humanoid.Died:connect(onDied)
+			debounce = false
+		end
+	end
+
+end
+
+function onDied()
+
+	p = game.Players:findFirstChild(carrier)
+	Case = p.Character:findFirstChild(intel.Name)
+	Case.Parent = game.Workspace
+	sendMessage(enemy_drop, team_drop)
+	script:clone().Parent = Case
+	for i = 1, 60 do
+		if Case.Parent ~= game.Workspace then break end
+		if i &gt;= 60 then
+			game.Lighting:findFirstChild(Case.Name).Parent = game.Workspace
+			Case:remove()
+			sendMessage(team_return, enemy_return)
+		end
+		wait(1)
+	end
+
+end
+
+intel.Touched:connect(onTouched)</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Model" referent="RBX19">
+			<Properties>
+				<CoordinateFrame name="ModelInPrimary">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">BlueIntel</string>
+				<Ref name="PrimaryPart">null</Ref>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="Part" referent="RBX20">
+				<Properties>
+					<bool name="Anchored">true</bool>
+					<float name="BackParamA">-0.5</float>
+					<float name="BackParamB">0.5</float>
+					<token name="BackSurface">0</token>
+					<token name="BackSurfaceInput">0</token>
+					<float name="BottomParamA">-0.5</float>
+					<float name="BottomParamB">0.5</float>
+					<token name="BottomSurface">0</token>
+					<token name="BottomSurfaceInput">0</token>
+					<int name="BrickColor">23</int>
+					<CoordinateFrame name="CFrame">
+						<X>1.5</X>
+						<Y>1.60000002</Y>
+						<Z>8</Z>
+						<R00>-1</R00>
+						<R01>0</R01>
+						<R02>-0</R02>
+						<R10>-0</R10>
+						<R11>1</R11>
+						<R12>-0</R12>
+						<R20>-0</R20>
+						<R21>0</R21>
+						<R22>-1</R22>
+					</CoordinateFrame>
+					<bool name="CanCollide">true</bool>
+					<bool name="DraggingV1">false</bool>
+					<float name="Elasticity">0.5</float>
+					<token name="FormFactor">2</token>
+					<float name="Friction">0.300000012</float>
+					<float name="FrontParamA">-0.5</float>
+					<float name="FrontParamB">0.5</float>
+					<token name="FrontSurface">0</token>
+					<token name="FrontSurfaceInput">0</token>
+					<float name="LeftParamA">-0.5</float>
+					<float name="LeftParamB">0.5</float>
+					<token name="LeftSurface">0</token>
+					<token name="LeftSurfaceInput">0</token>
+					<bool name="Locked">false</bool>
+					<token name="Material">256</token>
+					<string name="Name">BlueIntel</string>
+					<float name="Reflectance">0</float>
+					<float name="RightParamA">-0.5</float>
+					<float name="RightParamB">0.5</float>
+					<token name="RightSurface">0</token>
+					<token name="RightSurfaceInput">0</token>
+					<Vector3 name="RotVelocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<float name="TopParamA">-0.5</float>
+					<float name="TopParamB">0.5</float>
+					<token name="TopSurface">0</token>
+					<token name="TopSurfaceInput">0</token>
+					<float name="Transparency">0</float>
+					<Vector3 name="Velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+					<bool name="archivable">true</bool>
+					<token name="shape">1</token>
+					<Vector3 name="size">
+						<X>3</X>
+						<Y>0.800000012</Y>
+						<Z>2</Z>
+					</Vector3>
+				</Properties>
+				<Item class="Decal" referent="RBX21">
+					<Properties>
+						<token name="Face">1</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097599</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX22">
+					<Properties>
+						<token name="Face">2</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097860</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX23">
+					<Properties>
+						<token name="Face">0</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX24">
+					<Properties>
+						<token name="Face">5</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX25">
+					<Properties>
+						<token name="Face">3</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097877</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+				<Item class="Decal" referent="RBX26">
+					<Properties>
+						<token name="Face">4</token>
+						<string name="Name">Decal</string>
+						<float name="Shiny">20</float>
+						<float name="Specular">0</float>
+						<Content name="Texture"><url>http://www.roblox.com/asset/?id=19097599</url></Content>
+						<bool name="archivable">true</bool>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="Script" referent="RBX27">
+				<Properties>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Script</string>
+					<string name="Source">obj = script.Parent
+intel = obj.BlueIntel
+teamcolor = intel.BrickColor
+local debounce = false
+local carrier = &quot;No one&quot;
+alert, captured = &quot;ALERT: The enemy has taken our intelligence!&quot;, &quot;We have taken the enemy intelligence.&quot;
+team_drop, enemy_drop = &quot;We have dropped the enemy intelligence!&quot;, &quot;The enemy has dropped our intelligence.&quot;
+team_return, enemy_return = &quot;Our intelligence has returned to our  base.&quot;, &quot;The enemy intelligence was returned to the base.&quot;
+
+
+function sendMessage(team, enemy)
+
+	players = game.Players:getChildren()
+	for i = 1, #players do 
+		m = players[i]:findFirstChild(&quot;Attention&quot;)
+		if m == nil then
+			m = Instance.new(&quot;Hint&quot;)
+			m.Parent = players[i]
+			m.Name = &quot;Attention&quot;
+		end
+		if players[i].TeamColor == teamcolor then
+			m.Text = team
+		else
+			m.Text = enemy
+		end
+	end
+
+end
+--[[
+function clearMessage()
+
+	players = game.Players:getChildren()
+	for i = 1, #players do
+		if players[i]:findFirstChild(&quot;Message&quot;) ~= nil then players[i]:findFirstChild(&quot;Message&quot;):remove() end
+	end
+
+end
+]]--
+function onTouched(hit)
+
+	--clearMessage()
+	p = game.Players:getPlayerFromCharacter(hit.Parent)
+	if p ~= nil and p.Character.Humanoid.Health &gt; 0 then
+		--Player check passed
+		if p.TeamColor ~= teamcolor and not debounce then
+			--Grab the intel
+			debounce = true
+			carrier = p.Name
+			print(carrier)
+			local Case, Weld = obj:clone(), Instance.new(&quot;Weld&quot;)
+			NewIntel = Case.BlueIntel
+			Case[&quot;Script&quot;]:remove()
+			NewIntel.Anchored = false
+			Case.Parent = p.Character
+			Weld.Parent = p.Character[&quot;Torso&quot;]
+			Weld.Part0 = p.Character[&quot;Torso&quot;]
+			Weld.Part1 = NewIntel
+			Weld.Name = &quot;Weld&quot;
+			Weld.C1 = CFrame.new(0, -.93, 0) --[[* CFrame.fromEulerAnglesXYZ(1.5, 0, 0) --]]* CFrame.fromEulerAnglesXYZ(-1.5, 0, 0.7)
+			obj.Parent = game.Lighting
+			sendMessage(alert, captured)
+			p.Character.Humanoid.Died:connect(onDied)
+			debounce = false
+		end
+	end
+
+end
+
+function onDied()
+
+	p = game.Players:findFirstChild(carrier)
+	Case = p.Character:findFirstChild(intel.Name)
+	Case.Parent = game.Workspace
+	sendMessage(enemy_drop, team_drop)
+	script:clone().Parent = Case
+	for i = 1, 10 do
+		if Case.Parent ~= game.Workspace then break end
+		if i &gt;= 10 then
+			game.Lighting:findFirstChild(Case.Name).Parent = game.Workspace
+			Case:remove()
+			sendMessage(team_return, enemy_return)
+		end
+		wait(1)
+	end
+
+end
+
+intel.Touched:connect(onTouched)</string>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="RunService" referent="RBX28">
+		<Properties>
+			<string name="Name">Run Service</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX29</External>
+	<External>RBX30</External>
+	<Item class="ContentProvider" referent="RBX31">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ContentFilter" referent="RBX32">
+		<Properties>
+			<string name="Name">ContentFilter</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX33">
+		<Properties>
+			<int name="MaxPlayers">12</int>
+			<string name="Name">Players</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterPack" referent="RBX34">
+		<Properties>
+			<string name="Name">StarterPack</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBX35">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX36">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">SoundService</string>
+			<float name="RolloffScale">1</float>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<External>RBX37</External>
+		<External>RBX38</External>
+		<External>RBX39</External>
+		<External>RBX40</External>
+		<External>RBX41</External>
+		<External>RBX42</External>
+		<External>RBX43</External>
+		<External>RBX44</External>
+		<External>RBX45</External>
+		<External>RBX46</External>
+		<External>RBX47</External>
+		<External>RBX48</External>
+		<External>RBX49</External>
+		<External>RBX50</External>
+	</Item>
+	<Item class="PhysicsService" referent="RBX51">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX52">
+		<Properties>
+			<string name="Name">BadgeService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX53">
+		<Properties>
+			<string name="Name">Geometry</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="InsertService" referent="RBX54">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX55">
+		<Properties>
+			<int name="MaxItems">300</int>
+			<string name="Name">Debris</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Timer" referent="RBX56">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX57">
+		<Properties>
+			<string name="Name">Instance</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX58</External>
+	<Item class="Selection" referent="RBX59">
+		<Properties>
+			<string name="Name">Selection</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<External>RBX60</External>
+	<External>RBX61</External>
+	<Item class="Lighting" referent="RBX62">
+		<Properties>
+			<Color3 name="Ambient">4288848546</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<float name="GeographicLatitude">41.7332993</float>
+			<string name="Name">Lighting</string>
+			<Color3 name="ShadowColor">4294967295</Color3>
+			<string name="TimeOfDay">13:00:00</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX63">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+	</Item>
+	<Item class="Teams" referent="RBX64">
+		<Properties>
+			<string name="Name">Teams</string>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Team" referent="RBX65">
+			<Properties>
+				<bool name="AutoAssignable">true</bool>
+				<bool name="AutoColorCharacters">true</bool>
+				<string name="Name">RED</string>
+				<int name="Score">0</int>
+				<int name="TeamColor">21</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+		<Item class="Team" referent="RBX66">
+			<Properties>
+				<bool name="AutoAssignable">true</bool>
+				<bool name="AutoColorCharacters">true</bool>
+				<string name="Name">BLU</string>
+				<int name="Score">0</int>
+				<int name="TeamColor">23</int>
+				<bool name="archivable">true</bool>
+			</Properties>
+		</Item>
+	</Item>
+</roblox>
